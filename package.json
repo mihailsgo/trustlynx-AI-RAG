@@ -1,0 +1,14 @@
+{
+  "name": "trustlynx-ai-rag",
+  "version": "2026.7.2",
+  "private": true,
+  "description": "RAG-ready public knowledge package about TrustLynx PadSign for an AI support agent",
+  "type": "module",
+  "scripts": {
+    "build": "node build-index.mjs",
+    "test": "node retrieval-smoke.mjs"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

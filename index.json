@@ -1,0 +1,3461 @@
+{
+  "schema_version": "1.0",
+  "package": {
+    "name": "padsign-public-kb",
+    "version": "2026.07.2",
+    "language": "en",
+    "sensitivity": "public",
+    "generated_at": "2026-07-31T00:00:00Z",
+    "chunk_count": 59,
+    "image_count": 16
+  },
+  "defaults": {
+    "chunk_root": "chunks/",
+    "image_root": "images/",
+    "base_url": null
+  },
+  "retrieval": {
+    "embed_fields": [
+      "title",
+      "summary",
+      "questions",
+      "keywords",
+      "body"
+    ],
+    "filter_fields": [
+      "audience",
+      "section",
+      "confidence"
+    ],
+    "image_captions_are_retrievable": true,
+    "max_chunk_tokens": 900,
+    "notes": [
+      "questions holds verbatim user phrasings and is the strongest retrieval signal here.",
+      "Append a chunk's disclaimer verbatim to any answer built on it (carried in this manifest).",
+      "do_not_state lists claims the agent must not make from that chunk (carried in this manifest).",
+      "Image captions are retrieval units too: rank them on alt + keywords + questions, filter on audience.",
+      "All names, addresses and identities visible in screenshots are fictional examples, not real environments.",
+      "CLAUDE.md, MAINTAINERS.md, provenance.json and the .mjs tooling are not part of the corpus - never index them."
+    ]
+  },
+  "sections": [
+    {
+      "id": "product",
+      "order": 0,
+      "title": "Product orientation",
+      "description": "What PadSign is, what it is for, and the vocabulary around it."
+    },
+    {
+      "id": "positioning",
+      "order": 1,
+      "title": "Positioning and options",
+      "description": "How PadSign compares to other approaches, and what can be configured."
+    },
+    {
+      "id": "journey",
+      "order": 2,
+      "title": "The signing journey",
+      "description": "What a person signing on the pad does, step by step."
+    },
+    {
+      "id": "screens",
+      "order": 3,
+      "title": "Screens and messages",
+      "description": "What is on screen and what each message means."
+    },
+    {
+      "id": "signature-law",
+      "order": 4,
+      "title": "The signature and the law",
+      "description": "What the signature is technically and legally. Answers here are hedged and carry disclaimers."
+    },
+    {
+      "id": "components",
+      "order": 5,
+      "title": "What it is made of",
+      "description": "The parts of the system and what each does."
+    },
+    {
+      "id": "deployment",
+      "order": 6,
+      "title": "Running and evaluating it",
+      "description": "Hosting, prerequisites, installation, demo mode, resilience, updates."
+    },
+    {
+      "id": "delivery",
+      "order": 7,
+      "title": "After signing",
+      "description": "Where the signed document goes and what format it is in."
+    },
+    {
+      "id": "companions",
+      "order": 8,
+      "title": "Companion app and integration",
+      "description": "The Windows virtual printer, and connecting to other systems."
+    },
+    {
+      "id": "devices",
+      "order": 9,
+      "title": "Devices and data",
+      "description": "What hardware works, and where data sits."
+    },
+    {
+      "id": "troubleshooting",
+      "order": 10,
+      "title": "Common problems",
+      "description": "Symptoms a signer or staff member can hit, and what to do."
+    },
+    {
+      "id": "boundaries",
+      "order": 11,
+      "title": "Limits and help",
+      "description": "What PadSign does not do, and who to ask."
+    }
+  ],
+  "chunks": [
+    {
+      "id": "00-01-what-is-padsign",
+      "path": "chunks/00-01-what-is-padsign.md",
+      "title": "What is PadSign?",
+      "summary": "PadSign is TrustLynx's e-signing solution for touchscreen devices. A document is sent to a tablet or phone, the person in front of you fills in any fields and signs with a finger or stylus, and the signed PDF goes straight into your systems.",
+      "section": "product",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "what is padsign",
+        "padsign",
+        "trustlynx padsign",
+        "e-signing",
+        "electronic signature",
+        "touchscreen signing",
+        "tablet signing",
+        "signature pad",
+        "sign on tablet"
+      ],
+      "questions": [
+        "What is PadSign?",
+        "What does PadSign do?",
+        "What is TrustLynx PadSign used for?",
+        "Is PadSign an app?",
+        "What kind of product is this?"
+      ],
+      "images": [
+        "screen-document-view"
+      ],
+      "related": [
+        "00-02-problem-and-business-value",
+        "00-04-capabilities-at-a-glance",
+        "02-01-signing-journey-overview"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That PadSign is a remote or email-based e-signature service.",
+        "That PadSign is a document management system or an archive product."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 447,
+      "last_reviewed": "2026-07-31",
+      "sha256": "ee40db36e3dcf0d4c068d79e71a8d4bf27cbcdf2cebe32157f8c9c5ba798cd70"
+    },
+    {
+      "id": "00-02-problem-and-business-value",
+      "path": "chunks/00-02-problem-and-business-value.md",
+      "title": "What problem does PadSign solve, and what is it worth?",
+      "summary": "PadSign removes the print-sign-scan-file round trip for documents signed in person. The gain is staff time, no paper archive, and a searchable digital record available the moment the signature is made.",
+      "section": "product",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "business value",
+        "roi",
+        "benefits",
+        "why padsign",
+        "save time",
+        "paperless",
+        "reduce paperwork",
+        "efficiency",
+        "cost saving",
+        "digital transformation"
+      ],
+      "questions": [
+        "Why would we buy PadSign?",
+        "What is the business case for PadSign?",
+        "What problem does PadSign solve?",
+        "How much time does PadSign save?",
+        "What are the benefits of PadSign?",
+        "How does PadSign reduce costs?"
+      ],
+      "images": [],
+      "related": [
+        "00-03-who-it-is-for-and-typical-use-cases",
+        "00-01-what-is-padsign",
+        "07-02-delivery-options-folder-and-webhook"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any specific figure for savings, payback period, or return on investment beyond what the published customer testimonial says.",
+        "That results seen by one customer are typical or guaranteed."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 711,
+      "last_reviewed": "2026-07-31",
+      "sha256": "dcddd181c9fd923396e6481a42c0b258166b507e85500a57045e3e04b06a6bf2"
+    },
+    {
+      "id": "00-03-who-it-is-for-and-typical-use-cases",
+      "path": "chunks/00-03-who-it-is-for-and-typical-use-cases.md",
+      "title": "Who uses PadSign, and what for?",
+      "summary": "PadSign suits any organisation that collects signatures face to face. The two patterns TrustLynx highlights are goods delivery paperwork and customer service desks. Typical documents are contracts, onboarding forms, consent forms and approvals.",
+      "section": "product",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "use cases",
+        "who uses padsign",
+        "industries",
+        "delivery notes",
+        "consent forms",
+        "onboarding",
+        "reception",
+        "front desk",
+        "logistics",
+        "healthcare",
+        "examples"
+      ],
+      "questions": [
+        "Who uses PadSign?",
+        "What are typical PadSign use cases?",
+        "Which industries is PadSign for?",
+        "Can PadSign be used for delivery notes?",
+        "Can we use PadSign for consent forms?",
+        "Is PadSign suitable for our reception desk?",
+        "Who else uses PadSign? Are there references or case studies?"
+      ],
+      "images": [],
+      "related": [
+        "00-02-problem-and-business-value",
+        "08-01-virtual-printer-overview",
+        "01-01-in-person-signing-vs-remote-e-signature"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "The names of specific PadSign customers other than the one published on the TrustLynx website.",
+        "That PadSign is certified or approved for use in any regulated industry."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 583,
+      "last_reviewed": "2026-07-31",
+      "sha256": "ccf28e7353810c89986c38cac70d56fec774b5e7ab3bef5a767b9e84fd4f1cf9"
+    },
+    {
+      "id": "00-04-capabilities-at-a-glance",
+      "path": "chunks/00-04-capabilities-at-a-glance.md",
+      "title": "What can PadSign do? Capabilities at a glance",
+      "summary": "PadSign shows a PDF on a touchscreen, lets the signer fill in form fields and draw a signature, places that signature into the page, optionally applies a cryptographic seal, and then delivers the finished PDF onward.",
+      "section": "product",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "features",
+        "capabilities",
+        "what can it do",
+        "fillable forms",
+        "interactive forms",
+        "e-seal",
+        "visual signature",
+        "integration",
+        "functions"
+      ],
+      "questions": [
+        "What features does PadSign have?",
+        "What can PadSign do?",
+        "Can PadSign handle fillable forms?",
+        "Does PadSign add a digital seal?",
+        "Can PadSign integrate with our systems?",
+        "What is included in PadSign?"
+      ],
+      "images": [
+        "screen-progress-steps"
+      ],
+      "related": [
+        "00-01-what-is-padsign",
+        "02-01-signing-journey-overview",
+        "04-01-two-things-that-happen-when-you-sign"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That every capability listed is switched on in every deployment.",
+        "That the seal step is mandatory — it is optional and configurable."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 645,
+      "last_reviewed": "2026-07-31",
+      "sha256": "0e769e0a6268143c4539233c8fe15e517c83d467304dbc0cd9c37106c954ca66"
+    },
+    {
+      "id": "00-05-plain-language-glossary",
+      "path": "chunks/00-05-plain-language-glossary.md",
+      "title": "PadSign glossary in plain language",
+      "summary": "Short plain-English definitions of the terms that come up around PadSign: pad, portal, visual signature, e-seal, timestamp, PAdES, eIDAS, qualified and advanced, TSP and TSA.",
+      "section": "product",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "glossary",
+        "definitions",
+        "terminology",
+        "what does that mean",
+        "jargon",
+        "visual signature",
+        "e-seal",
+        "eidas",
+        "pades",
+        "timestamp",
+        "tsp",
+        "qualified"
+      ],
+      "questions": [
+        "What do these terms mean?",
+        "What is a visual signature?",
+        "What is an e-seal?",
+        "What does PAdES mean?",
+        "What is a timestamp authority?",
+        "What is a trust service provider?",
+        "What is the pad in PadSign?"
+      ],
+      "images": [],
+      "related": [
+        "04-01-two-things-that-happen-when-you-sign",
+        "04-03-eidas-levels-simple-advanced-qualified",
+        "04-04-pades-levels-and-long-term-validity"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That any definition here constitutes legal advice or a legal opinion."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 634,
+      "last_reviewed": "2026-07-31",
+      "sha256": "911a9ea247879ea184c0c623a00f62a1a6f0ff9f4b1c5546e9f992db0bdd8443"
+    },
+    {
+      "id": "00-06-about-trustlynx",
+      "path": "chunks/00-06-about-trustlynx.md",
+      "title": "Who is TrustLynx, the company behind PadSign?",
+      "summary": "TrustLynx is a Baltic digital-trust software vendor whose stated mission is promoting the adoption of trust services. It publishes contacts in Latvia, Estonia and Poland, runs a public developer portal, and offers a family of e-signing products of which PadSign is one.",
+      "section": "product",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "trustlynx",
+        "who is trustlynx",
+        "company",
+        "vendor",
+        "about the company",
+        "real company",
+        "where are they based",
+        "baltic",
+        "estonia",
+        "latvia",
+        "poland",
+        "embedded trust"
+      ],
+      "questions": [
+        "Who is TrustLynx?",
+        "Is TrustLynx a real company?",
+        "Where is TrustLynx based?",
+        "How big is TrustLynx and how long have they existed?",
+        "What else does TrustLynx make besides PadSign?",
+        "What is embedded trust?"
+      ],
+      "images": [],
+      "related": [
+        "01-05-padsign-and-the-trustlynx-product-family",
+        "11-02-getting-help",
+        "00-01-what-is-padsign"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Company registration numbers, founding dates, funding amounts, employee counts, or executives' names - none of these are published on the company's own site and third-party data is unverified.",
+        "The names of any customers other than the testimonials TrustLynx itself publishes."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 584,
+      "last_reviewed": "2026-07-31",
+      "sha256": "5e812d179acc8e090587f0a626dcdcfdbf80544157b151d605bd976fdb14ee6d"
+    },
+    {
+      "id": "01-01-in-person-signing-vs-remote-e-signature",
+      "path": "chunks/01-01-in-person-signing-vs-remote-e-signature.md",
+      "title": "How is PadSign different from services like emailed e-signature links?",
+      "summary": "PadSign is for signing face to face on your own device, on your own infrastructure. Emailed e-signature services are for signing remotely on a third-party platform. Different situations, different products.",
+      "section": "positioning",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "versus",
+        "compared to",
+        "docusign",
+        "adobe sign",
+        "dropbox sign",
+        "alternative",
+        "difference",
+        "remote signing",
+        "in person",
+        "on premise",
+        "self hosted",
+        "third party"
+      ],
+      "questions": [
+        "How is PadSign different from other e-signature services?",
+        "Why not just email a signing link?",
+        "Is PadSign like DocuSign?",
+        "Do our documents go to a third party?",
+        "What makes PadSign different?"
+      ],
+      "images": [],
+      "related": [
+        "06-01-hosting-and-deployment-model",
+        "00-03-who-it-is-for-and-typical-use-cases",
+        "09-02-where-your-data-goes"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any comparative claim about a named competitor's features, security, pricing, or compliance.",
+        "That PadSign cannot be used alongside a remote e-signature service."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 488,
+      "last_reviewed": "2026-07-31",
+      "sha256": "d44e0d63731c1ae85be09d27a3460a7651ed82627bedd1ada9075e198c78cd08"
+    },
+    {
+      "id": "01-02-languages-and-localisation",
+      "path": "chunks/01-02-languages-and-localisation.md",
+      "title": "What languages does PadSign support?",
+      "summary": "PadSign ships with Latvian and English interface text, and the language is chosen per document rather than per device. All interface wording lives in a replaceable text file, so it can be adjusted or extended.",
+      "section": "positioning",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "languages",
+        "latvian",
+        "english",
+        "localisation",
+        "localization",
+        "translation",
+        "multilingual",
+        "change language",
+        "interface language"
+      ],
+      "questions": [
+        "What languages does PadSign support?",
+        "Is PadSign available in English?",
+        "Can PadSign show Latvian?",
+        "Can we add another language?",
+        "Can we change the wording on the buttons?",
+        "How is the language chosen?"
+      ],
+      "images": [],
+      "related": [
+        "01-03-branding-and-what-can-be-configured",
+        "03-03-on-screen-message-catalogue"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That any language other than Latvian and English is supported out of the box.",
+        "Whether adding a new language is included in a licence or is chargeable work."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 398,
+      "last_reviewed": "2026-07-31",
+      "sha256": "9670ec99593b0e887cdf4638ab0f37058d8b82d898b8b1545c7eb6e46752ed6f"
+    },
+    {
+      "id": "01-03-branding-and-what-can-be-configured",
+      "path": "chunks/01-03-branding-and-what-can-be-configured.md",
+      "title": "Can PadSign be branded and configured for us?",
+      "summary": "Yes. The logo, page title, all interface wording, the signature area size, the signature position on the page, whether the seal step runs, and where signed documents are delivered are all configuration rather than custom development.",
+      "section": "positioning",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "branding",
+        "customise",
+        "customize",
+        "our logo",
+        "white label",
+        "configuration",
+        "configurable",
+        "can we change",
+        "look and feel"
+      ],
+      "questions": [
+        "Can we put our own logo on it?",
+        "Can PadSign be branded for our organisation?",
+        "What can be configured without custom development?",
+        "Can we change where the signature appears on the page?",
+        "Can we turn the digital seal off?",
+        "Is PadSign customisable?"
+      ],
+      "images": [],
+      "related": [
+        "01-02-languages-and-localisation",
+        "06-06-updates-and-changing-settings-later",
+        "07-02-delivery-options-folder-and-webhook"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Specific configuration file names, setting names, or values.",
+        "That any change not listed here is possible without confirming with TrustLynx."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 542,
+      "last_reviewed": "2026-07-31",
+      "sha256": "8c512f004547e7c72c2d67c6054b33fb4e16ab832b758a0f05d3c207645fa594"
+    },
+    {
+      "id": "01-04-identity-eid-and-who-signs",
+      "path": "chunks/01-04-identity-eid-and-who-signs.md",
+      "title": "Does PadSign verify identity or work with Smart-ID and national eIDs?",
+      "summary": "No. PadSign does not verify the signer's identity - not against Smart-ID, national eID cards, or any register. The evidence of who signed rests on physical presence and the drawn mark. National eID tools belong to a different product category, and TrustLynx offers a separate Authentication Service for that.",
+      "section": "positioning",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "smart-id",
+        "mobile-id",
+        "eid",
+        "national id",
+        "eparaksts",
+        "identity verification",
+        "id card",
+        "authentication",
+        "kyc",
+        "verify who signs",
+        "digital identity",
+        "eu wallet"
+      ],
+      "questions": [
+        "Does PadSign support Smart-ID or Mobile-ID?",
+        "Can PadSign verify the signer's identity?",
+        "Does the signer log in with their national eID?",
+        "How do we know who really signed on the pad?",
+        "Can we combine PadSign with identity verification?",
+        "Does PadSign support the EU Digital Identity Wallet?"
+      ],
+      "images": [],
+      "related": [
+        "04-07-who-is-named-as-the-signer",
+        "04-03-eidas-levels-simple-advanced-qualified",
+        "01-05-padsign-and-the-trustlynx-product-family"
+      ],
+      "disclaimer": "Whether presence-based evidence of identity satisfies a given legal or regulatory requirement depends on the requirement - confirm with TrustLynx and your own advisers.",
+      "do_not_state": [
+        "That PadSign integrates with Smart-ID, Mobile-ID, national eID cards, or the EU Digital Identity Wallet.",
+        "That combining PadSign with the TrustLynx Authentication Service is a supported product configuration, without confirming with TrustLynx.",
+        "That PadSign performs KYC or any identity check against a register."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 620,
+      "last_reviewed": "2026-07-31",
+      "sha256": "2a7bf91ccdac6babc01d0b6e51aa79c00ad007a4f3c7bae959728e0f71f3539c"
+    },
+    {
+      "id": "01-05-padsign-and-the-trustlynx-product-family",
+      "path": "chunks/01-05-padsign-and-the-trustlynx-product-family.md",
+      "title": "PadSign, SignBox, or something else? The TrustLynx product family",
+      "summary": "PadSign is for in-person signing on a touchscreen. SignBox collects signatures from remote, invited people. The API Platform and Connectors embed signing into your own systems, the Authentication Service handles digital identities, and the e-Sealing service seals documents. Which one fits depends on where your signer is.",
+      "section": "positioning",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "signbox",
+        "padsign vs signbox",
+        "product family",
+        "which product",
+        "api platform",
+        "connectors",
+        "authentication service",
+        "e-sealing",
+        "comparison",
+        "remote signing",
+        "sharepoint",
+        "which one do we need"
+      ],
+      "questions": [
+        "What is the difference between PadSign and SignBox?",
+        "Which TrustLynx product do we need?",
+        "Does TrustLynx have a remote signing product?",
+        "Can we sign documents inside SharePoint or our DMS?",
+        "What other products does TrustLynx offer?",
+        "Can we combine PadSign with other TrustLynx products?"
+      ],
+      "images": [],
+      "related": [
+        "01-01-in-person-signing-vs-remote-e-signature",
+        "00-06-about-trustlynx",
+        "01-04-identity-eid-and-who-signs"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Pricing figures for any product in the family.",
+        "That a specific combination of products is a supported configuration, without confirming with TrustLynx.",
+        "Feature claims about sibling products beyond what is summarised here from their public pages."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 856,
+      "last_reviewed": "2026-07-31",
+      "sha256": "f3356c4acde9d07fc01ccd44f9035959525aa6d782d373bc0575ffc7587846a6"
+    },
+    {
+      "id": "02-01-signing-journey-overview",
+      "path": "chunks/02-01-signing-journey-overview.md",
+      "title": "How does signing work, start to finish?",
+      "summary": "Five stages: the document arrives on the pad by itself, you read it, you fill in any fields, you draw your signature and tap Sign, and the system finishes the document and resets the pad for the next person.",
+      "section": "journey",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "how does it work",
+        "signing process",
+        "steps",
+        "start to finish",
+        "what happens",
+        "workflow",
+        "overview",
+        "process"
+      ],
+      "questions": [
+        "How does signing work?",
+        "What are the steps to sign a document?",
+        "What happens from start to finish?",
+        "Walk me through the signing process.",
+        "How long does signing take?"
+      ],
+      "images": [
+        "screen-document-view"
+      ],
+      "related": [
+        "02-05-drawing-and-submitting-your-signature",
+        "03-02-screen-signing-progress-and-outcome",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "A specific duration for the signing process.",
+        "That the signer needs to log in or create an account."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 502,
+      "last_reviewed": "2026-07-31",
+      "sha256": "c60df7e92fadbde47a4f3862c2dede143d9107b917c084f9fcf1dbd58a6e11b3"
+    },
+    {
+      "id": "02-02-a-document-arrives-on-the-pad",
+      "path": "chunks/02-02-a-document-arrives-on-the-pad.md",
+      "title": "The resting screen, and how a document arrives on the pad",
+      "summary": "Between visitors the pad shows a logo and nothing else. When staff or a connected system sends a document to that pad it appears by itself within a few seconds. Nobody has to fetch it.",
+      "section": "journey",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "waiting screen",
+        "idle screen",
+        "resting screen",
+        "blank screen",
+        "just a logo",
+        "nothing on screen",
+        "document appears",
+        "how does it arrive",
+        "refresh"
+      ],
+      "questions": [
+        "Why is there just a logo on the screen?",
+        "How does the document get to the tablet?",
+        "Do I need to refresh or press anything?",
+        "How long does it take for the document to appear?",
+        "The screen is empty, is it broken?"
+      ],
+      "images": [
+        "screen-idle-waiting"
+      ],
+      "related": [
+        "10-01-nothing-appears-on-the-pad",
+        "10-02-the-document-disappeared-before-i-signed",
+        "02-01-signing-journey-overview"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "A guaranteed arrival time for a document.",
+        "That the signer can request or load a document themselves in a normal production setup."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 448,
+      "last_reviewed": "2026-07-31",
+      "sha256": "e605388b60be92fc4200766830117ae3b61761e8cd36702de1bb2bfe3eeee960"
+    },
+    {
+      "id": "02-03-signing-in-on-the-pad",
+      "path": "chunks/02-03-signing-in-on-the-pad.md",
+      "title": "Do I need to log in to sign?",
+      "summary": "No. The pad is signed in once, by the organisation, and stays signed in. The person signing a document never sees a login screen and does not need an account.",
+      "section": "journey",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "login",
+        "log in",
+        "sign in",
+        "account",
+        "password",
+        "do i need an account",
+        "authentication",
+        "who is logged in",
+        "identity"
+      ],
+      "questions": [
+        "Do I need to log in to sign a document?",
+        "Do I need an account?",
+        "Why does it show somebody else's email address?",
+        "Whose account is the tablet using?",
+        "Is my identity checked?",
+        "Do I need to bring my ID card to sign?"
+      ],
+      "images": [],
+      "related": [
+        "04-07-who-is-named-as-the-signer",
+        "02-05-drawing-and-submitting-your-signature",
+        "10-05-cannot-get-into-the-portal"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That PadSign verifies the signer's identity against any official register or identity document.",
+        "The name of the identity software used, or any realm, client or role names."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 408,
+      "last_reviewed": "2026-07-31",
+      "sha256": "479489c8c85b75e80941ea4a79773d1cc4513f2bb4fc7df67a96285675c0b27e"
+    },
+    {
+      "id": "02-04-reading-and-filling-in-the-document",
+      "path": "chunks/02-04-reading-and-filling-in-the-document.md",
+      "title": "Reading the document and filling in its fields",
+      "summary": "Scroll the PDF to read it, then tap any highlighted field and type into it. Nothing is submitted while you do this. If a required field is missed you are told before anything is sent.",
+      "section": "journey",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "fill in",
+        "form fields",
+        "type",
+        "keyboard",
+        "scroll",
+        "zoom",
+        "read document",
+        "required field",
+        "mandatory",
+        "checkbox",
+        "highlighted"
+      ],
+      "questions": [
+        "How do I fill in the form?",
+        "How do I scroll the document?",
+        "Can I zoom in on the document?",
+        "Which fields do I have to fill in?",
+        "Can I type with the on-screen keyboard?",
+        "What if I miss a field?"
+      ],
+      "images": [
+        "screen-form-field-focus"
+      ],
+      "related": [
+        "02-05-drawing-and-submitting-your-signature",
+        "10-03-the-sign-button-will-not-submit",
+        "02-01-signing-journey-overview"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That every document has fillable fields — many are read-and-sign only.",
+        "Specific field names or form content, which differ entirely between organisations."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 635,
+      "last_reviewed": "2026-07-31",
+      "sha256": "b233950e0407364ee852432e599d46e7e02b16316712d388b8e0c8c58cc80458"
+    },
+    {
+      "id": "02-05-drawing-and-submitting-your-signature",
+      "path": "chunks/02-05-drawing-and-submitting-your-signature.md",
+      "title": "Drawing and submitting your signature",
+      "summary": "Draw your signature in the box with a finger or stylus, then tap Sign. Clear wipes the box so you can start again. Once you tap Sign the button stops responding on purpose, to prevent a double submission.",
+      "section": "journey",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "sign",
+        "signature box",
+        "signature pad",
+        "draw signature",
+        "stylus",
+        "finger",
+        "clear",
+        "redo signature",
+        "start again",
+        "sign button greyed out",
+        "nothing happens"
+      ],
+      "questions": [
+        "How do I sign the document?",
+        "Where do I draw my signature?",
+        "Can I redo my signature if it looks wrong?",
+        "Can I use a stylus instead of my finger?",
+        "Why is the Sign button not doing anything after I tapped it?",
+        "Whose name is shown above the signature box?",
+        "My signature looks different from my usual one - does that matter?"
+      ],
+      "images": [
+        "screen-signature-pad",
+        "screen-signature-pad-signed",
+        "screen-signer-name-label"
+      ],
+      "related": [
+        "02-04-reading-and-filling-in-the-document",
+        "03-02-screen-signing-progress-and-outcome",
+        "10-03-the-sign-button-will-not-submit"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That the drawn image alone is a legally qualified electronic signature.",
+        "That signature pressure, speed, or any other biometric data is captured."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 687,
+      "last_reviewed": "2026-07-31",
+      "sha256": "af8a1e08537cd007712afefbd0ac0f1e122010426e19285dfb1c295c1499ba68"
+    },
+    {
+      "id": "02-06-changing-your-mind-and-mistakes",
+      "path": "chunks/02-06-changing-your-mind-and-mistakes.md",
+      "title": "Changing your mind, refusing, and fixing mistakes",
+      "summary": "Before you tap Sign you can refuse, ask questions, or take more time - nothing has been submitted. After signing, the document cannot be edited; a mistake means the organisation reissues the document and you sign the corrected version.",
+      "section": "journey",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "refuse",
+        "do not want to sign",
+        "change my mind",
+        "withdraw",
+        "cancel signature",
+        "mistake",
+        "wrong information",
+        "typo",
+        "fix after signing",
+        "disagree",
+        "on behalf of",
+        "power of attorney",
+        "parent",
+        "child"
+      ],
+      "questions": [
+        "Do I have to sign? Can I refuse?",
+        "What if I do not agree with something in the document?",
+        "I made a mistake in the form - how do I fix it?",
+        "I noticed an error after signing - what now?",
+        "Can I withdraw or cancel my signature after signing?",
+        "Can I sign on behalf of someone else?",
+        "Can a parent sign for a child?",
+        "Can I get more time to read before signing?"
+      ],
+      "images": [],
+      "related": [
+        "02-05-drawing-and-submitting-your-signature",
+        "04-07-who-is-named-as-the-signer",
+        "11-02-getting-help"
+      ],
+      "disclaimer": "What a signature obliges you to, and whether it can be legally withdrawn, depends on the document and the law that applies to it - questions for the organisation you are dealing with and, if it matters, your own adviser. This describes what happens in the PadSign system, not your legal position.",
+      "do_not_state": [
+        "That a signature can be revoked or undone inside PadSign after signing completes.",
+        "Whether signing on behalf of another person is legally valid in any situation.",
+        "That refusing to sign has no consequences, since that depends on the context."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 691,
+      "last_reviewed": "2026-07-31",
+      "sha256": "6be43efa9a17272bde7372ab273bb5b369e404b1995d3cf04d4c9163c7df6ace"
+    },
+    {
+      "id": "03-01-screen-signature-pad",
+      "path": "chunks/03-01-screen-signature-pad.md",
+      "title": "The signature area on screen, element by element",
+      "summary": "A description of the signature area: the box you draw in, the Clear and Sign buttons beneath it, and the optional signer-name line above it.",
+      "section": "screens",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "signature area",
+        "two buttons",
+        "clear button",
+        "sign button",
+        "what is this box",
+        "bottom of screen",
+        "which button",
+        "screen layout"
+      ],
+      "questions": [
+        "What are the two buttons under the signature box?",
+        "What does Clear do?",
+        "What is the box at the bottom of the screen?",
+        "What does the line above the signature box mean?",
+        "What am I looking at on this screen?"
+      ],
+      "images": [
+        "screen-signature-pad",
+        "screen-signer-name-label"
+      ],
+      "related": [
+        "02-05-drawing-and-submitting-your-signature",
+        "03-02-screen-signing-progress-and-outcome"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That the signature area appears before a document has arrived — it does not."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 382,
+      "last_reviewed": "2026-07-31",
+      "sha256": "0d5119308ce5a6487538af59267b6eb9f3f2a54103156159b0214dc460555e5e"
+    },
+    {
+      "id": "03-02-screen-signing-progress-and-outcome",
+      "path": "chunks/03-02-screen-signing-progress-and-outcome.md",
+      "title": "The progress panel, and what success or failure looks like",
+      "summary": "After tapping Sign, a panel shows the remaining steps with a percentage. On success every step turns green and a countdown resets the pad. On failure the step that failed is marked and a Close button appears.",
+      "section": "screens",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "progress",
+        "steps",
+        "percentage",
+        "preparing document",
+        "applying visual signature",
+        "digital stamp",
+        "finalizing",
+        "success",
+        "failed",
+        "page will refresh",
+        "countdown"
+      ],
+      "questions": [
+        "What are the steps shown after I sign?",
+        "What does \"applying visual signature\" mean?",
+        "What does \"applying digital stamp\" mean?",
+        "Why is the page counting down to refresh?",
+        "What happens if a step goes red?",
+        "It says the signing workflow failed, what now?"
+      ],
+      "images": [
+        "screen-progress-steps",
+        "screen-progress-success",
+        "screen-progress-failed"
+      ],
+      "related": [
+        "10-04-signing-failed-message",
+        "04-01-two-things-that-happen-when-you-sign",
+        "02-05-drawing-and-submitting-your-signature"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That all four steps appear in every deployment — the stamp step only appears where sealing is enabled.",
+        "That a failed signing has partially signed the document."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 563,
+      "last_reviewed": "2026-07-31",
+      "sha256": "c4f9f318dd4d7bc97a7d3c75045f3a1ccfb85eae5642844c6440e725342237df"
+    },
+    {
+      "id": "03-03-on-screen-message-catalogue",
+      "path": "chunks/03-03-on-screen-message-catalogue.md",
+      "title": "What each on-screen message means",
+      "summary": "A catalogue of the standard messages PadSign can show, what each one means in plain English, and what to do about it.",
+      "section": "screens",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "message",
+        "error message",
+        "what does this mean",
+        "loading document",
+        "not all mandatory fields",
+        "signing failed",
+        "visual signature error",
+        "stamping service",
+        "upload failed",
+        "xfa"
+      ],
+      "questions": [
+        "What does this message mean?",
+        "What does \"Not all mandatory fields are filled in\" mean?",
+        "What messages can appear on the pad and what do they mean?",
+        "Is there a list of all the messages the screen can show?",
+        "It says \"Loading document\", how long should that take?",
+        "What does \"Signing failed! Please try again.\" mean?"
+      ],
+      "images": [
+        "screen-document-loading"
+      ],
+      "related": [
+        "10-04-signing-failed-message",
+        "10-03-the-sign-button-will-not-submit",
+        "03-02-screen-signing-progress-and-outcome"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any message text specific to one organisation's own document or form content.",
+        "That an error message indicates a partially signed or corrupted document."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 808,
+      "last_reviewed": "2026-07-31",
+      "sha256": "9b8a1989a5f88bbb258779157f1eae311f2745c4572eaa7303bf8e5a063627fe"
+    },
+    {
+      "id": "04-01-two-things-that-happen-when-you-sign",
+      "path": "chunks/04-01-two-things-that-happen-when-you-sign.md",
+      "title": "Two different things happen when you sign",
+      "summary": "Your drawn mark is placed into the page as a picture. Separately, a cryptographic seal can be applied to the whole file. They are different mechanisms with different weight, and the seal is the part that makes the file tamper-evident.",
+      "section": "signature-law",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "visual signature",
+        "digital stamp",
+        "e-seal",
+        "difference",
+        "two steps",
+        "what is the seal",
+        "tamper evident",
+        "integrity",
+        "is the drawing enough"
+      ],
+      "questions": [
+        "What is the difference between the visual signature and the digital stamp?",
+        "Is my drawn signature the legally binding part?",
+        "What does the seal actually do?",
+        "Why are there two signing steps?",
+        "How do I know the document has not been altered?"
+      ],
+      "images": [
+        "screen-progress-steps"
+      ],
+      "related": [
+        "04-02-what-your-signature-legally-is",
+        "04-07-who-is-named-as-the-signer",
+        "05-06-sealing-in-the-cloud-or-on-your-own-servers"
+      ],
+      "disclaimer": "This explains how the mechanisms work, not what legal effect they have in your situation. Legal standing depends on the certificate and timestamp authority the operating organisation chose, and on the jurisdiction. Confirm with TrustLynx and your own legal advisers before relying on it.",
+      "do_not_state": [
+        "That the drawn image is itself an advanced or qualified electronic signature.",
+        "That the seal identifies the individual person who signed.",
+        "That sealing happens in every deployment."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 550,
+      "last_reviewed": "2026-07-31",
+      "sha256": "728ffaddf97e1568d0c12d87cdfef4f9d1b9ab4ff80ede0eaf7a635c4354b0c9"
+    },
+    {
+      "id": "04-02-what-your-signature-legally-is",
+      "path": "chunks/04-02-what-your-signature-legally-is.md",
+      "title": "Is a PadSign signature legally binding?",
+      "summary": "It depends on the certificate and timestamp authority the operating organisation chose, not on PadSign itself. The software produces a standards-based PDF signature; the legal level that signature reaches is a configuration and procurement decision.",
+      "section": "signature-law",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "hedged-legal",
+      "keywords": [
+        "legally binding",
+        "legal",
+        "valid",
+        "court",
+        "enforceable",
+        "is it legal",
+        "does it count",
+        "qualified",
+        "advanced",
+        "eidas"
+      ],
+      "questions": [
+        "Is a PadSign signature legally binding?",
+        "Does this signature count legally?",
+        "Will this hold up in court?",
+        "Is this a qualified electronic signature?",
+        "Is signing on a tablet as good as signing on paper?",
+        "Does an electronic signature from PadSign have legal force?"
+      ],
+      "images": [],
+      "related": [
+        "04-03-eidas-levels-simple-advanced-qualified",
+        "04-05-what-padsign-can-and-cannot-claim",
+        "04-01-two-things-that-happen-when-you-sign"
+      ],
+      "disclaimer": "This is general information, not legal advice. Whether a given signature meets a given legal requirement depends on the certificate, the timestamp authority and the jurisdiction involved. Confirm with TrustLynx and your own legal advisers before relying on it.",
+      "do_not_state": [
+        "That PadSign is \"eIDAS compliant\" or \"eIDAS certified\" as a property of the product.",
+        "That PadSign produces qualified electronic signatures or qualified seals.",
+        "That any particular certificate authority or timestamp authority is in use.",
+        "Any assessment of validity in a named jurisdiction or before a named court."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 609,
+      "last_reviewed": "2026-07-31",
+      "sha256": "b5c0c5dc91a77c2ce3ca906ca9525c0e5998bc8d0e41f7ed4c91a1afa4be0633"
+    },
+    {
+      "id": "04-03-eidas-levels-simple-advanced-qualified",
+      "path": "chunks/04-03-eidas-levels-simple-advanced-qualified.md",
+      "title": "eIDAS signature levels — basic, advanced and qualified",
+      "summary": "eIDAS defines three levels. Basic proves little. Advanced links a signature to a person and document but is bound to parties who agreed to use it. Only qualified, built on a qualified certificate with identity validated against state registries, equals a handwritten signature.",
+      "section": "signature-law",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "hedged-legal",
+      "keywords": [
+        "eidas",
+        "levels",
+        "basic",
+        "advanced",
+        "qualified",
+        "qes",
+        "aes",
+        "article 26",
+        "regulation",
+        "legal power",
+        "trust service provider"
+      ],
+      "questions": [
+        "What are the eIDAS signature levels?",
+        "What is the difference between advanced and qualified?",
+        "What is a qualified electronic signature?",
+        "What does eIDAS require?",
+        "Which level do we need?",
+        "Is an advanced signature enough?"
+      ],
+      "images": [],
+      "related": [
+        "04-02-what-your-signature-legally-is",
+        "04-04-pades-levels-and-long-term-validity",
+        "04-05-what-padsign-can-and-cannot-claim"
+      ],
+      "disclaimer": "This is general information, not legal advice. Which level a given use case requires is a legal question for your own advisers, and reaching a level depends on the certificate and timestamp authority chosen. Confirm with TrustLynx before relying on it.",
+      "do_not_state": [
+        "That PadSign produces a signature at any particular eIDAS level.",
+        "That a level described here is achieved by installing the software."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 737,
+      "last_reviewed": "2026-07-31",
+      "sha256": "cb05a265d9b5fa0ab31a1da6a00c83d46c460495ef32806b109616d1591ec305"
+    },
+    {
+      "id": "04-04-pades-levels-and-long-term-validity",
+      "path": "chunks/04-04-pades-levels-and-long-term-validity.md",
+      "title": "PAdES levels and long-term validity",
+      "summary": "PAdES is the standard family for signatures inside PDFs. The levels add a timestamp, then revocation evidence, then archival timestamps. Higher levels need external authorities to be reachable at signing time, which is a real operational dependency.",
+      "section": "signature-law",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "hedged-legal",
+      "keywords": [
+        "pades",
+        "b-bes",
+        "lt",
+        "lta",
+        "timestamp",
+        "tsa",
+        "ocsp",
+        "revocation",
+        "long term",
+        "archive",
+        "validity",
+        "asic-e"
+      ],
+      "questions": [
+        "What is PAdES?",
+        "What is the difference between PAdES B, T, LT and LTA?",
+        "Do we need a timestamp authority?",
+        "What does long-term validity mean?",
+        "Will the signature still verify in ten years?",
+        "What file format is the output?"
+      ],
+      "images": [],
+      "related": [
+        "04-03-eidas-levels-simple-advanced-qualified",
+        "04-06-checking-a-signed-pdf-yourself",
+        "06-02-prerequisites-at-evaluation-level"
+      ],
+      "disclaimer": "This is general information, not legal advice. Which level you need, and whether a chosen authority is recognised for your purposes, are questions for your own advisers and for TrustLynx.",
+      "do_not_state": [
+        "That PadSign is configured at any particular PAdES level by default.",
+        "The names or addresses of specific timestamp or revocation services in use."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 729,
+      "last_reviewed": "2026-07-31",
+      "sha256": "406a4951ff57bbb1753334d2b700e580a791954295c2d35d2e8950ec0e2c9d00"
+    },
+    {
+      "id": "04-05-what-padsign-can-and-cannot-claim",
+      "path": "chunks/04-05-what-padsign-can-and-cannot-claim.md",
+      "title": "What PadSign can and cannot claim about signature validity",
+      "summary": "PadSign produces a standards-based PDF signature. Whether that signature counts as advanced or qualified depends entirely on the certificate and timestamp authority the operating organisation chose. The software alone does not determine the legal level.",
+      "section": "signature-law",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "hedged-legal",
+      "keywords": [
+        "compliance",
+        "claims",
+        "eidas compliant",
+        "certified",
+        "guarantee",
+        "can you prove",
+        "marketing claim",
+        "what is guaranteed"
+      ],
+      "questions": [
+        "Is PadSign eIDAS compliant?",
+        "Can you guarantee our signatures are qualified?",
+        "What compliance claims can we make about PadSign?",
+        "Is PadSign certified?",
+        "What exactly does PadSign guarantee?"
+      ],
+      "images": [],
+      "related": [
+        "04-02-what-your-signature-legally-is",
+        "04-03-eidas-levels-simple-advanced-qualified",
+        "11-01-known-limits-and-what-padsign-does-not-do"
+      ],
+      "disclaimer": "This is general information, not legal advice. Whether a given signature meets a given legal requirement depends on the certificate, the timestamp authority and the jurisdiction involved. Confirm with TrustLynx and your own legal advisers before relying on it or repeating it in your own materials.",
+      "do_not_state": [
+        "That PadSign is \"eIDAS compliant\" or \"eIDAS certified\" as a product property.",
+        "That PadSign produces qualified electronic signatures or qualified seals.",
+        "That any specific certificate authority or timestamp authority is in use.",
+        "Any assessment of validity in a named jurisdiction or before a named court.",
+        "That TrustLynx holds any particular compliance certification."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 682,
+      "last_reviewed": "2026-07-31",
+      "sha256": "3a9a36878d479f7f9e5eb027d61fe866589e36c2c7b80bdd03bcd806ec318982"
+    },
+    {
+      "id": "04-06-checking-a-signed-pdf-yourself",
+      "path": "chunks/04-06-checking-a-signed-pdf-yourself.md",
+      "title": "How to check a signed PDF yourself",
+      "summary": "Open the PDF in a normal reader and look at its signature panel. There are three outcomes — valid, valid but not trusted, and invalid — and the middle one is the most commonly misread.",
+      "section": "signature-law",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "verify",
+        "check signature",
+        "adobe reader",
+        "signature panel",
+        "validate",
+        "not trusted",
+        "invalid",
+        "warning",
+        "yellow triangle",
+        "is it genuine"
+      ],
+      "questions": [
+        "How do I check a signed PDF is genuine?",
+        "How do I verify the signature?",
+        "Why does Adobe say the signature is not trusted?",
+        "What does \"validity unknown\" mean?",
+        "How do I know the document has not been changed?",
+        "Where do I see who signed it?"
+      ],
+      "images": [],
+      "related": [
+        "04-07-who-is-named-as-the-signer",
+        "04-01-two-things-that-happen-when-you-sign",
+        "07-04-the-final-document-format"
+      ],
+      "disclaimer": "A reader's verdict reflects that reader's own trust settings, not a legal determination. For questions about legal standing, consult TrustLynx and your own advisers.",
+      "do_not_state": [
+        "That a \"valid\" verdict in a PDF reader establishes legal validity.",
+        "Instructions for importing certificates into a trust store, which is operator work."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 683,
+      "last_reviewed": "2026-07-31",
+      "sha256": "cae17debeb8cbc8a6c62df32cb07edf1a1d53216220e25ac3584321f376b2029"
+    },
+    {
+      "id": "04-07-who-is-named-as-the-signer",
+      "path": "chunks/04-07-who-is-named-as-the-signer.md",
+      "title": "Why the signed PDF names a company instead of the person",
+      "summary": "The cryptographic seal uses a certificate issued to an organisation, so that is the name a PDF reader reports. The individual appears as the drawn mark on the page, and optionally as a printed name beside it.",
+      "section": "signature-law",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "who signed",
+        "signed by",
+        "wrong name",
+        "company name",
+        "my name is not there",
+        "signer name",
+        "legal entity",
+        "certificate holder"
+      ],
+      "questions": [
+        "Why does the PDF say it was signed by a company and not by me?",
+        "Where is my name in the signed document?",
+        "Who is named as the signer?",
+        "The signature says the wrong name, is that a problem?",
+        "How does anyone know it was me who signed?"
+      ],
+      "images": [],
+      "related": [
+        "04-01-two-things-that-happen-when-you-sign",
+        "04-06-checking-a-signed-pdf-yourself",
+        "02-05-drawing-and-submitting-your-signature"
+      ],
+      "disclaimer": "This describes how the mechanism attributes a document. It is not advice on whether that attribution satisfies a particular legal or evidential requirement.",
+      "do_not_state": [
+        "That the seal identifies or authenticates the individual signer.",
+        "That PadSign checks the signer's identity against an identity document or official register."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 649,
+      "last_reviewed": "2026-07-31",
+      "sha256": "94f3a4a0903b4d5e346faa335d810e3923172945d25b161e435d7710e5c0bf11"
+    },
+    {
+      "id": "05-01-components-overview",
+      "path": "chunks/05-01-components-overview.md",
+      "title": "What PadSign is made of",
+      "summary": "Five parts: an entry point that handles secure access, the portal the signer uses, an application server that coordinates the signing steps, a login service, and document and signature services. An optional sixth applies seals inside your own network.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "architecture",
+        "components",
+        "what is it made of",
+        "parts",
+        "services",
+        "containers",
+        "how is it built",
+        "technical overview",
+        "moving parts"
+      ],
+      "questions": [
+        "What are the components of PadSign?",
+        "How is PadSign built?",
+        "What does the architecture look like?",
+        "How many services are there?",
+        "What are the moving parts?"
+      ],
+      "images": [],
+      "related": [
+        "05-03-the-application-server",
+        "05-06-sealing-in-the-cloud-or-on-your-own-servers",
+        "06-01-hosting-and-deployment-model"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Port numbers, container image names, hostnames, or internal service addresses.",
+        "Which routes are authenticated or unauthenticated."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 675,
+      "last_reviewed": "2026-07-31",
+      "sha256": "0643435708cded4edc017df16296e81146a009eb72f5783abf99e4ef48b4c070"
+    },
+    {
+      "id": "05-02-the-portal-and-pdf-viewer",
+      "path": "chunks/05-02-the-portal-and-pdf-viewer.md",
+      "title": "The portal — what runs on the tablet",
+      "summary": "The portal is a web application that runs in the device's browser. It renders the PDF, captures the signature, and shows progress. Nothing is installed on the tablet, and its settings are loaded at runtime rather than built in.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "portal",
+        "client",
+        "web app",
+        "browser",
+        "pdf viewer",
+        "nothing to install",
+        "front end",
+        "runs on tablet",
+        "offline"
+      ],
+      "questions": [
+        "What runs on the tablet?",
+        "Is there an app to install?",
+        "How is the PDF displayed?",
+        "What is the portal?",
+        "Does the tablet need special software?"
+      ],
+      "images": [
+        "screen-document-view"
+      ],
+      "related": [
+        "09-01-devices-and-input",
+        "05-01-components-overview",
+        "01-03-branding-and-what-can-be-configured"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "The name or version of the third-party PDF viewer component, or any licence key detail.",
+        "That the portal works without a network connection."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 543,
+      "last_reviewed": "2026-07-31",
+      "sha256": "b3ef8f5f742d16b9c6e2697b4bc58090346da82eee47376c6ee91eea08075328"
+    },
+    {
+      "id": "05-03-the-application-server",
+      "path": "chunks/05-03-the-application-server.md",
+      "title": "The application server — what coordinates signing",
+      "summary": "The application server tracks which document is on which pad, runs the signing steps in order, and triggers delivery. Its tracking state is short-lived and held in memory by design — it is a work queue, not a records system.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "application server",
+        "backend",
+        "coordinator",
+        "state",
+        "in memory",
+        "database",
+        "no database",
+        "queue",
+        "which document"
+      ],
+      "questions": [
+        "What does the application server do?",
+        "Is there a database?",
+        "Where is the state kept?",
+        "What happens if the server restarts?",
+        "How does it know which document belongs to which tablet?"
+      ],
+      "images": [],
+      "related": [
+        "05-01-components-overview",
+        "06-05-volume-concurrency-and-resilience",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "API endpoint names, port numbers, or configuration field names.",
+        "That signed documents themselves are stored in memory — they are not."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 660,
+      "last_reviewed": "2026-07-31",
+      "sha256": "eb9aeb72faa887764208de0b5e528503c51c61de5a68c40dd20fce83f615b9ae"
+    },
+    {
+      "id": "05-04-login-and-identity",
+      "path": "chunks/05-04-login-and-identity.md",
+      "title": "How login and identity work",
+      "summary": "A standard identity service handles authentication using normal OpenID Connect. The pad signs in as the organisation, and that account determines which documents it can receive. Signers are never asked to authenticate.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "identity",
+        "login",
+        "authentication",
+        "sso",
+        "openid connect",
+        "oidc",
+        "single sign on",
+        "accounts",
+        "roles",
+        "multi tenant"
+      ],
+      "questions": [
+        "How does authentication work?",
+        "Does PadSign support single sign-on?",
+        "What identity standard does it use?",
+        "Can we use our own identity provider?",
+        "How does it separate one company's documents from another's?",
+        "Do signers need accounts?"
+      ],
+      "images": [],
+      "related": [
+        "02-03-signing-in-on-the-pad",
+        "05-01-components-overview",
+        "06-01-hosting-and-deployment-model"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Realm names, client names, role names, or any credential.",
+        "That an arbitrary external identity provider is supported without confirming with TrustLynx."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 560,
+      "last_reviewed": "2026-07-31",
+      "sha256": "656be5e9fa9b4df75f5684d1202bc57a9c2ab6ad7825af311eee5d1e948c6016"
+    },
+    {
+      "id": "05-05-document-and-signature-services",
+      "path": "chunks/05-05-document-and-signature-services.md",
+      "title": "The document and signature services",
+      "summary": "These services store document versions, fill in form values, and apply the visual signature. Each signing step creates a new version rather than overwriting, so the original and every intermediate state remain available.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "document service",
+        "archive",
+        "signature service",
+        "versions",
+        "versioning",
+        "storage",
+        "where is the document stored",
+        "audit trail",
+        "history"
+      ],
+      "questions": [
+        "Where is the document stored during signing?",
+        "Does PadSign keep the original document?",
+        "What applies the signature to the page?",
+        "Is there a version history?",
+        "Is there an audit trail?"
+      ],
+      "images": [],
+      "related": [
+        "05-01-components-overview",
+        "07-01-what-happens-to-the-document-after-signing",
+        "09-02-where-your-data-goes"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any data-retention period, since that depends on deployment configuration.",
+        "Service names, ports, container image names, or database details.",
+        "That the included storage is intended as a long-term records archive."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 615,
+      "last_reviewed": "2026-07-31",
+      "sha256": "ca35dd09f4778113e98695b5ef9081f7d8e39640a18c8717e49ddfdb93f41a9e"
+    },
+    {
+      "id": "05-06-sealing-in-the-cloud-or-on-your-own-servers",
+      "path": "chunks/05-06-sealing-in-the-cloud-or-on-your-own-servers.md",
+      "title": "Sealing in the cloud, or entirely inside your own network",
+      "summary": "The cryptographic seal can be applied by a TrustLynx cloud service or by a container running inside your own network. The second option means the document never leaves your environment. Switching between them is configuration, not redevelopment.",
+      "section": "components",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "cloud",
+        "on premise",
+        "on premises",
+        "local sealing",
+        "does the document leave",
+        "data residency",
+        "sovereignty",
+        "hsm",
+        "own certificate",
+        "air gapped"
+      ],
+      "questions": [
+        "Does our document leave our network to be sealed?",
+        "Can sealing happen entirely on our own servers?",
+        "What is the difference between cloud and local sealing?",
+        "Can we use our own signing certificate?",
+        "Is there a data residency option?",
+        "Can we switch sealing modes later?"
+      ],
+      "images": [],
+      "related": [
+        "09-02-where-your-data-goes",
+        "04-01-two-things-that-happen-when-you-sign",
+        "06-06-updates-and-changing-settings-later"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any URL, credential, endpoint, or configuration field name for either sealing mode.",
+        "That the TrustLynx cloud sealing service uses a qualified certificate, which must be confirmed with TrustLynx.",
+        "That the demonstration seal certificate is suitable for production use."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 794,
+      "last_reviewed": "2026-07-31",
+      "sha256": "9030609fa9303bc602bd9f763963b7bb9d36dd69a9e5790cd9bc30fba1f33dc3"
+    },
+    {
+      "id": "06-01-hosting-and-deployment-model",
+      "path": "chunks/06-01-hosting-and-deployment-model.md",
+      "title": "How is PadSign hosted? Where does it run?",
+      "summary": "PadSign runs on your own controlled infrastructure — cloud or on-premises — behind your firewalls, so you do not share data with a third party. It is delivered as containers you configure and run, not a SaaS sign-up.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "hosting",
+        "saas",
+        "cloud",
+        "on premise",
+        "on premises",
+        "self hosted",
+        "deployment model",
+        "single tenant",
+        "who hosts it",
+        "containers",
+        "docker"
+      ],
+      "questions": [
+        "Is PadSign a SaaS product?",
+        "Where does PadSign run?",
+        "Can we host PadSign ourselves?",
+        "Is it on-premises or cloud?",
+        "Do we sign up for an account somewhere?",
+        "Is it multi-tenant?"
+      ],
+      "images": [],
+      "related": [
+        "06-02-prerequisites-at-evaluation-level",
+        "06-07-commercial-model-trials-and-rollout",
+        "05-06-sealing-in-the-cloud-or-on-your-own-servers",
+        "01-01-in-person-signing-vs-remote-e-signature"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Specific container image names, registry accounts, ports, or hostnames.",
+        "Pricing figures."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 639,
+      "last_reviewed": "2026-07-31",
+      "sha256": "386748ab2ffe978dbe88dceae6415789137ad179547f30454391456048e68157"
+    },
+    {
+      "id": "06-02-prerequisites-at-evaluation-level",
+      "path": "chunks/06-02-prerequisites-at-evaluation-level.md",
+      "title": "What do we need in place to run PadSign?",
+      "summary": "A host with a container runtime, roughly 4 CPUs and 6-8 GB RAM, a hostname you control, a TLS certificate for it, disk space that grows with your document volume, and outbound access to whichever external services your signature level needs. Plus a touchscreen device with a browser.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "prerequisites",
+        "requirements",
+        "what do we need",
+        "system requirements",
+        "hardware",
+        "ram",
+        "cpu",
+        "disk",
+        "certificate",
+        "dns",
+        "hostname",
+        "firewall",
+        "network"
+      ],
+      "questions": [
+        "What are the prerequisites for PadSign?",
+        "What do we need to provide?",
+        "What are the system requirements?",
+        "How much RAM and CPU does it need?",
+        "Do we need our own domain name?",
+        "Do we need an SSL certificate?",
+        "What network access does it need?"
+      ],
+      "images": [],
+      "related": [
+        "06-01-hosting-and-deployment-model",
+        "06-03-installation-at-a-glance",
+        "09-01-devices-and-input"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Specific port numbers or which services listen on them.",
+        "Anything about the default exposure of individual services, firewalling specifics, or how the entry point could be bypassed.",
+        "Specific external service addresses or hostnames.",
+        "A disk-space figure, since none is published and it depends on volume and retention."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 725,
+      "last_reviewed": "2026-07-31",
+      "sha256": "f0d49946484e718bb976a8ee733805c80f5fe60edbcb2a068af2842ccffb9c2e"
+    },
+    {
+      "id": "06-03-installation-at-a-glance",
+      "path": "chunks/06-03-installation-at-a-glance.md",
+      "title": "What does installing PadSign involve?",
+      "summary": "A guided process, either scripted or through a browser wizard: name the host and organisation, upload the TLS certificate, choose which optional features to enable, review, deploy, verify.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "installation",
+        "install",
+        "setup",
+        "how long to install",
+        "wizard",
+        "deployment process",
+        "getting started",
+        "bootstrap",
+        "feature toggles"
+      ],
+      "questions": [
+        "What does installing PadSign involve?",
+        "How long does installation take?",
+        "Is there an installer?",
+        "Do we need to write scripts to deploy it?",
+        "What decisions do we make during installation?",
+        "Which features are optional?"
+      ],
+      "images": [],
+      "related": [
+        "06-02-prerequisites-at-evaluation-level",
+        "06-06-updates-and-changing-settings-later",
+        "06-04-demo-mode"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "An installation duration, since none is published.",
+        "Script names, command lines, file paths, credentials, or default usernames.",
+        "Details of how the wizard authenticates or what privileges it holds."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 672,
+      "last_reviewed": "2026-07-31",
+      "sha256": "1c9f7ca09129ec6f40bda487ea70787069d086b04d3f1e97c5e8940cc0c01b00"
+    },
+    {
+      "id": "06-04-demo-mode",
+      "path": "chunks/06-04-demo-mode.md",
+      "title": "What is demo mode?",
+      "summary": "An evaluation setting that lets you pick any PDF from the device, sign it, and download the result — without connecting PadSign to your other systems first. It adds buttons that must not be present in production.",
+      "section": "deployment",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "demo mode",
+        "demo",
+        "trial",
+        "pilot",
+        "poc",
+        "proof of concept",
+        "evaluate",
+        "load demo pdf",
+        "download signed pdf",
+        "test",
+        "try it",
+        "proof of concept"
+      ],
+      "questions": [
+        "What is demo mode?",
+        "How can we try PadSign without integrating it?",
+        "Is there a free trial or pilot version to test?",
+        "What does the \"Load DEMO PDF\" button do?",
+        "How do I download the signed PDF?",
+        "Can we use demo mode in production?",
+        "Why does the tablet have upload buttons?",
+        "What is the maximum PDF size in demo mode?"
+      ],
+      "images": [
+        "screen-demo-controls",
+        "screen-download-signed"
+      ],
+      "related": [
+        "06-03-installation-at-a-glance",
+        "02-01-signing-journey-overview",
+        "03-03-on-screen-message-catalogue"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "The configuration setting name or value that enables demo mode.",
+        "That demo mode is appropriate for production use."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 674,
+      "last_reviewed": "2026-07-31",
+      "sha256": "eb6ae561dd41ddf004f15320d06885540d7125ad14dd6662f73a4c3d104d9350"
+    },
+    {
+      "id": "06-05-volume-concurrency-and-resilience",
+      "path": "chunks/06-05-volume-concurrency-and-resilience.md",
+      "title": "How does PadSign cope with volume and with things going wrong?",
+      "summary": "Simultaneous documents are queued rather than dropped, overload produces a clear refusal instead of corruption, duplicate submissions are blocked, and an unreachable sealing service can be configured to let the flow continue rather than blocking the counter.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "concurrency",
+        "volume",
+        "scale",
+        "many at once",
+        "load",
+        "resilience",
+        "what if it fails",
+        "queue",
+        "duplicate",
+        "double signing",
+        "outage"
+      ],
+      "questions": [
+        "What happens if many documents are signed at the same time?",
+        "How does PadSign scale?",
+        "What happens if the server goes down mid-signing?",
+        "Can the same document be signed twice by accident?",
+        "What if the sealing service is unavailable?",
+        "Is there a risk of corrupted documents?"
+      ],
+      "images": [],
+      "related": [
+        "05-03-the-application-server",
+        "10-04-signing-failed-message",
+        "05-05-document-and-signature-services"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Specific throughput numbers, concurrency limits, or timeout values.",
+        "Any SLA or availability guarantee."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 741,
+      "last_reviewed": "2026-07-31",
+      "sha256": "75d16eab03dcf2cddd868ddf90f9126bc4305ee6898eeafc213f411ee16dc728"
+    },
+    {
+      "id": "06-06-updates-and-changing-settings-later",
+      "path": "chunks/06-06-updates-and-changing-settings-later.md",
+      "title": "Can settings be changed after go-live, and how do updates work?",
+      "summary": "Yes. Changing the hostname, renewing the certificate, turning features on or off and switching sealing modes are all supported post-go-live operations. Updates mean new container versions; configuration lives in files that survive version changes.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "updates",
+        "upgrade",
+        "new version",
+        "change settings",
+        "certificate renewal",
+        "change hostname",
+        "after go live",
+        "maintenance",
+        "downtime"
+      ],
+      "questions": [
+        "Can we change settings after installation?",
+        "How do updates work?",
+        "What happens when the certificate expires?",
+        "Can we change the hostname later?",
+        "Do updates lose our configuration?",
+        "Is there downtime for an upgrade?"
+      ],
+      "images": [],
+      "related": [
+        "06-03-installation-at-a-glance",
+        "01-03-branding-and-what-can-be-configured",
+        "05-06-sealing-in-the-cloud-or-on-your-own-servers"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Script names, command lines, version numbers, or container image names.",
+        "A downtime figure or maintenance window duration, since none is published.",
+        "Any support or maintenance commitment."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 656,
+      "last_reviewed": "2026-07-31",
+      "sha256": "54f6f5b2083687081ecad6c405681e0fbfc5953fcfc618bdde8b590a17cb9f32"
+    },
+    {
+      "id": "06-07-commercial-model-trials-and-rollout",
+      "path": "chunks/06-07-commercial-model-trials-and-rollout.md",
+      "title": "What does PadSign cost, and how do trials and rollout work?",
+      "summary": "Pricing is a volume subscription calculated from monthly transaction counts; specific figures are not published and come from a quote. Evaluation happens through demo mode on your own deployment. Rolling out to many locations is mostly a device-counting exercise because nothing is installed on the tablets.",
+      "section": "deployment",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "licence",
+        "license",
+        "subscription",
+        "fee",
+        "budget",
+        "quote",
+        "trial",
+        "pilot",
+        "poc",
+        "proof of concept",
+        "free",
+        "rollout",
+        "many branches",
+        "training"
+      ],
+      "questions": [
+        "How much does PadSign cost?",
+        "What is the pricing model?",
+        "Is there a per-user or per-document price?",
+        "Can we run a trial or pilot first?",
+        "How do we roll PadSign out to many branches?",
+        "Is training provided for our staff?",
+        "What does it cost to run the infrastructure?"
+      ],
+      "images": [],
+      "related": [
+        "06-01-hosting-and-deployment-model",
+        "06-04-demo-mode",
+        "11-03-questions-this-knowledge-base-cannot-answer"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any specific price, fee, discount, or cost figure for PadSign - none is published.",
+        "Pricing figures from other TrustLynx products (such as the standalone e-Sealing service tiers), which do not apply to PadSign.",
+        "That a free trial, pilot programme, or training package formally exists, beyond what is described here."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 713,
+      "last_reviewed": "2026-07-31",
+      "sha256": "9b572882797e753c432ee26e0fa317ea9f00bc3d232c50fb8d3c69084ff52171"
+    },
+    {
+      "id": "07-01-what-happens-to-the-document-after-signing",
+      "path": "chunks/07-01-what-happens-to-the-document-after-signing.md",
+      "title": "What happens to the document after I sign it?",
+      "summary": "It is stored as a completed version, sealed if your organisation uses sealing, and handed onward automatically. Then the pad clears itself. Nothing is lost when the screen resets, and the signer does not have to save or send anything.",
+      "section": "delivery",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "after signing",
+        "what happens next",
+        "is it saved",
+        "do i need to save",
+        "automatically saved",
+        "where does it go",
+        "screen reset",
+        "copy"
+      ],
+      "questions": [
+        "What happens to the document after I sign?",
+        "Is it saved automatically?",
+        "Do I need to do anything after signing?",
+        "The screen reset, did my document get saved?",
+        "Will I get a copy?"
+      ],
+      "images": [
+        "screen-progress-success"
+      ],
+      "related": [
+        "07-02-delivery-options-folder-and-webhook",
+        "10-06-where-is-my-signed-pdf",
+        "03-02-screen-signing-progress-and-outcome"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That the signer automatically receives a copy — that depends on the organisation's process.",
+        "Any retention period for the stored document."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 555,
+      "last_reviewed": "2026-07-31",
+      "sha256": "d30b30182cd71388be2f11cb6b9158a61959a8cb376ce25dd92f14a6ae8e71e2"
+    },
+    {
+      "id": "07-02-delivery-options-folder-and-webhook",
+      "path": "chunks/07-02-delivery-options-folder-and-webhook.md",
+      "title": "Where do signed documents get delivered?",
+      "summary": "Two configurable destinations, usable together: written into a folder your systems watch, with a folder and filename pattern you choose; and/or a notification posted to your system when signing completes, with automatic retries.",
+      "section": "delivery",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "delivery",
+        "routing",
+        "where do documents go",
+        "folder",
+        "file share",
+        "webhook",
+        "notification",
+        "callback",
+        "filename",
+        "integration",
+        "retries"
+      ],
+      "questions": [
+        "Where do signed documents go?",
+        "Can signed documents be saved to a folder?",
+        "Does PadSign notify our system when a document is signed?",
+        "Can we control the filename of signed documents?",
+        "What happens if our system is down when a document is signed?",
+        "Can documents be organised per department?"
+      ],
+      "images": [],
+      "related": [
+        "07-03-getting-the-signed-pdf-back-to-the-sending-computer",
+        "08-03-connecting-padsign-to-another-system",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Configuration field names, JSON payload shapes, endpoint paths, or authentication schemes.",
+        "Real folder paths or customer names from example configurations."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 684,
+      "last_reviewed": "2026-07-31",
+      "sha256": "0d67907c0af315fc6d05bbbfb69c1b9f3b7e163a9d419722207f036217a02cb2"
+    },
+    {
+      "id": "07-03-getting-the-signed-pdf-back-to-the-sending-computer",
+      "path": "chunks/07-03-getting-the-signed-pdf-back-to-the-sending-computer.md",
+      "title": "Getting the signed PDF back to the computer that sent it",
+      "summary": "A document sent from a Windows desktop can have the signed version returned to that same desktop automatically. It waits until collected, so a PC that is switched off or offline loses nothing.",
+      "section": "delivery",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "back to my computer",
+        "return",
+        "signed copy",
+        "desktop",
+        "receive back",
+        "collect",
+        "offline pc",
+        "virtual printer",
+        "where did it go"
+      ],
+      "questions": [
+        "Does the signed document come back to my computer?",
+        "What if my PC was switched off when the document was signed?",
+        "How do I get the signed file after the customer signs?",
+        "Where does the signed PDF appear on my computer?",
+        "Can the signed document be returned automatically?"
+      ],
+      "images": [],
+      "related": [
+        "08-02-virtual-printer-user-journey",
+        "07-02-delivery-options-folder-and-webhook",
+        "10-06-where-is-my-signed-pdf"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Endpoint names, configuration paths, or local file paths on any customer machine.",
+        "A retention or expiry period for buffered documents."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 560,
+      "last_reviewed": "2026-07-31",
+      "sha256": "39f9149a04bb2ac3e963d4c73d6d82d0cfaa535952115d60a5a213bdbcf43573"
+    },
+    {
+      "id": "07-04-the-final-document-format",
+      "path": "chunks/07-04-the-final-document-format.md",
+      "title": "What does the finished signed document look like?",
+      "summary": "An ordinary PDF. It opens in any reader, shows the drawn signature on the page, and where sealing is used the reader's signature panel reports who sealed it and whether the file has been altered. ASiC-E is also available as an output format.",
+      "section": "delivery",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "output format",
+        "file format",
+        "pdf",
+        "asic-e",
+        "what does the file look like",
+        "can i open it",
+        "special software",
+        "proprietary"
+      ],
+      "questions": [
+        "What format is the signed document?",
+        "Do I need special software to open it?",
+        "Is the output a normal PDF?",
+        "What is ASiC-E?",
+        "Can I open the signed document in years to come?",
+        "Will the signature be visible in the document?"
+      ],
+      "images": [],
+      "related": [
+        "04-06-checking-a-signed-pdf-yourself",
+        "04-01-two-things-that-happen-when-you-sign",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That every deployment produces the same signature level or the same output format.",
+        "That a PDF reader's verdict establishes legal validity."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 598,
+      "last_reviewed": "2026-07-31",
+      "sha256": "bb1ce4708cb8f70f3ea76b7e9802a11cc8641a08e60e38a78ca7a8bb7c832d81"
+    },
+    {
+      "id": "08-01-virtual-printer-overview",
+      "path": "chunks/08-01-virtual-printer-overview.md",
+      "title": "The Windows companion app — signing by \"printing\"",
+      "summary": "A Windows application that installs a printer called \"Padsign\". Printing to it from any Windows program sends the document to a pad for signature. It works with software you cannot modify, without building an integration.",
+      "section": "companions",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "virtual printer",
+        "windows app",
+        "print to sign",
+        "companion app",
+        "legacy system",
+        "no integration",
+        "any application",
+        "desktop"
+      ],
+      "questions": [
+        "What is the PadSign virtual printer?",
+        "Can we use PadSign without integrating our software?",
+        "How do we send a document from an application that has no API?",
+        "Does PadSign work with legacy software?",
+        "What is the Windows companion app?"
+      ],
+      "images": [],
+      "related": [
+        "08-02-virtual-printer-user-journey",
+        "08-03-connecting-padsign-to-another-system",
+        "07-03-getting-the-signed-pdf-back-to-the-sending-computer"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "A download location, installer name, version number, or supported Windows versions.",
+        "Configuration field names, API keys, or local file paths."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 604,
+      "last_reviewed": "2026-07-31",
+      "sha256": "6215868b53138f949408e9448e1e84bc7de0fc057332f80003e074ff8ca4229a"
+    },
+    {
+      "id": "08-02-virtual-printer-user-journey",
+      "path": "chunks/08-02-virtual-printer-user-journey.md",
+      "title": "Using the virtual printer at your desk, step by step",
+      "summary": "Open the document, print it to the \"Padsign\" printer, the customer signs on the pad, and the signed PDF appears back in a folder on your computer. Four steps, no new application to learn.",
+      "section": "companions",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "how to send a document",
+        "print to padsign",
+        "print for signature",
+        "send to tablet",
+        "my workflow",
+        "desk",
+        "staff instructions"
+      ],
+      "questions": [
+        "How do I send a document to the tablet for signing?",
+        "How do I use the Padsign printer?",
+        "What do I do at my desk to get something signed?",
+        "Where does the signed document end up?",
+        "Do I need to open a special program?",
+        "I printed to Padsign and nothing appeared on the pad - why?",
+        "What do the status indicators in the Padsign app mean?"
+      ],
+      "images": [],
+      "related": [
+        "08-01-virtual-printer-overview",
+        "07-03-getting-the-signed-pdf-back-to-the-sending-computer",
+        "10-01-nothing-appears-on-the-pad"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "A specific local folder path, since that is configured per installation.",
+        "Installation or configuration instructions, which are for whoever set the machine up."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 892,
+      "last_reviewed": "2026-07-31",
+      "sha256": "3c538e302b698c4abcfb87b9bd1edbe21e97b5440396a512c1ae8967b7060705"
+    },
+    {
+      "id": "08-03-connecting-padsign-to-another-system",
+      "path": "chunks/08-03-connecting-padsign-to-another-system.md",
+      "title": "Can PadSign connect to our existing systems?",
+      "summary": "Yes. Another system can send documents in and be told when they are signed. TrustLynx names CRM, medical and healthcare information management, service management and document management systems, and also offers connectors and an API platform.",
+      "section": "companions",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "integration",
+        "api",
+        "crm",
+        "dms",
+        "connectors",
+        "erp",
+        "our systems",
+        "can it connect",
+        "automate",
+        "templates"
+      ],
+      "questions": [
+        "Can PadSign integrate with our CRM?",
+        "Does PadSign have an API?",
+        "Can our system send documents to PadSign automatically?",
+        "How does PadSign fit into our existing process?",
+        "Can it use our own document templates?",
+        "What integration options are there?"
+      ],
+      "images": [],
+      "related": [
+        "08-01-virtual-printer-overview",
+        "07-02-delivery-options-folder-and-webhook",
+        "00-03-who-it-is-for-and-typical-use-cases"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Endpoint paths, request or response shapes, authentication schemes, or API keys.",
+        "That any specific named product has a ready-made connector, without confirming with TrustLynx."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 698,
+      "last_reviewed": "2026-07-31",
+      "sha256": "a217aef20e5712bb4ddf902a670a0d7d101dd42e50a2e7dd811119a3df33039e"
+    },
+    {
+      "id": "09-01-devices-and-input",
+      "path": "chunks/09-01-devices-and-input.md",
+      "title": "What devices can be used, and how do people sign on them?",
+      "summary": "Any tablet, phone or touchscreen PC with a modern browser. Nothing is installed on the device. Signing is with a finger or a stylus, and the interface follows the device's light or dark appearance setting.",
+      "section": "devices",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "devices",
+        "tablet",
+        "ipad",
+        "android",
+        "phone",
+        "touchscreen",
+        "stylus",
+        "finger",
+        "hardware",
+        "what tablet",
+        "wacom",
+        "existing signature pad hardware",
+        "dark mode",
+        "browser"
+      ],
+      "questions": [
+        "What devices does PadSign work on?",
+        "Do we need special signature pad hardware?",
+        "Can people sign with a stylus?",
+        "Does it work on an iPad?",
+        "Do we need to install an app on the tablet?",
+        "Does it support dark mode?"
+      ],
+      "images": [
+        "screen-idle-waiting-dark",
+        "screen-document-view-dark",
+        "screen-progress-success-dark"
+      ],
+      "related": [
+        "05-02-the-portal-and-pdf-viewer",
+        "06-02-prerequisites-at-evaluation-level",
+        "02-05-drawing-and-submitting-your-signature"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any minimum browser version, operating system version, or screen size, since none is published.",
+        "Any accessibility conformance level for the signing interface.",
+        "That specific tablet models are supported or certified."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 758,
+      "last_reviewed": "2026-07-31",
+      "sha256": "875bcbaee2d6bb1bba3250058fab83f5d793992ffaee087a0a7c17a7b18cc8fb"
+    },
+    {
+      "id": "09-02-where-your-data-goes",
+      "path": "chunks/09-02-where-your-data-goes.md",
+      "title": "What data is involved, and where does it go?",
+      "summary": "The document, whatever the signer typed, the drawn signature image, and an account and organisation identifier. It all lives in the deployment's own environment. The one thing that may leave is the document itself, if cloud sealing is used.",
+      "section": "devices",
+      "audience": [
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "privacy",
+        "private",
+        "confidential",
+        "data",
+        "gdpr",
+        "where does data go",
+        "third party",
+        "personal data",
+        "what is stored",
+        "data protection",
+        "data residency",
+        "leaves our network",
+        "biometric",
+        "retention"
+      ],
+      "questions": [
+        "What data does PadSign hold?",
+        "Is my data private?",
+        "Is my information kept confidential?",
+        "Does our data go to a third party?",
+        "Is PadSign GDPR compliant?",
+        "Does it store personal data?",
+        "Does the document leave our network?",
+        "Is biometric signature data captured?",
+        "Will my signature image be reused for anything else?",
+        "What are my rights over my data as a signer?",
+        "How long is my data kept?"
+      ],
+      "images": [],
+      "related": [
+        "05-06-sealing-in-the-cloud-or-on-your-own-servers",
+        "06-01-hosting-and-deployment-model",
+        "05-05-document-and-signature-services"
+      ],
+      "disclaimer": "This describes where data sits architecturally. It is not a data-protection assessment. Retention periods, lawful basis, and any data-processing agreement are matters for the operating organisation and for TrustLynx to confirm.",
+      "do_not_state": [
+        "Any retention period, or that PadSign deletes data after a given time.",
+        "That PadSign or TrustLynx is \"GDPR compliant\", or that a data-processing agreement is available.",
+        "Whether TrustLynx retains copies of documents sent for cloud sealing.",
+        "That biometric stroke data is or is not captured — only that the drawn shape is what is placed in the document."
+      ],
+      "has_disclaimer": true,
+      "confidence": "verified",
+      "token_estimate": 761,
+      "last_reviewed": "2026-07-31",
+      "sha256": "bfca8e4fe63dcf66fd621171a4aa038f09db0ddc5f071da19cf0a03a00d74bd0"
+    },
+    {
+      "id": "09-03-accessibility-and-signing-difficulty",
+      "path": "chunks/09-03-accessibility-and-signing-difficulty.md",
+      "title": "Accessibility, and what to do if signing is physically difficult",
+      "summary": "What exists today: dark mode, an enlargeable-button option, stylus support, and unlimited retries on the signature. No accessibility conformance level is published for the signing screen. If drawing or reading on the device is difficult, the staff member at the desk is the right person to ask — paper remains their fallback.",
+      "section": "devices",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "accessibility",
+        "screen reader",
+        "blind",
+        "low vision",
+        "poor eyesight",
+        "large text",
+        "high contrast",
+        "tremor",
+        "shaky hands",
+        "parkinsons",
+        "left-handed",
+        "disability",
+        "wcag",
+        "assistance",
+        "cannot sign"
+      ],
+      "questions": [
+        "I am blind or partially sighted - can I use a screen reader with PadSign?",
+        "Is there a large-text or high-contrast mode?",
+        "I have a tremor and cannot sign steadily - what do I do?",
+        "I am left-handed and the layout is awkward - can it be changed?",
+        "Can someone help me sign if I find the tablet difficult?",
+        "Does PadSign meet accessibility standards like WCAG?",
+        "The screen is hard to read in bright light - what can I do?"
+      ],
+      "images": [],
+      "related": [
+        "02-05-drawing-and-submitting-your-signature",
+        "09-01-devices-and-input",
+        "02-06-changing-your-mind-and-mistakes"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any WCAG or other accessibility conformance level, since none is published for the signing screen.",
+        "That a screen reader is or is not supported, since neither is documented.",
+        "That accessibility features exist beyond the ones named here."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 683,
+      "last_reviewed": "2026-07-31",
+      "sha256": "3d4806f0bcc51a67efdef4eb7435342a7625dd7ed4bfa009e2d657fac9c08f0f"
+    },
+    {
+      "id": "10-01-nothing-appears-on-the-pad",
+      "path": "chunks/10-01-nothing-appears-on-the-pad.md",
+      "title": "Nothing appears on the pad",
+      "summary": "The pad shows only a logo. Usually the document has not been sent yet, or a previous document is still occupying the pad, or the connection needs checking. Wait a few seconds, then ask staff to send it again.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "nothing appears",
+        "blank",
+        "empty screen",
+        "just a logo",
+        "not working",
+        "stuck",
+        "no document",
+        "waiting",
+        "broken"
+      ],
+      "questions": [
+        "Nothing is appearing on the tablet, what do I do?",
+        "The screen just shows a logo, is it broken?",
+        "The document was sent but has not arrived.",
+        "How long should I wait for the document?",
+        "The pad seems stuck."
+      ],
+      "images": [
+        "screen-idle-waiting"
+      ],
+      "related": [
+        "02-02-a-document-arrives-on-the-pad",
+        "10-02-the-document-disappeared-before-i-signed",
+        "10-05-cannot-get-into-the-portal"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That the signer can fix a connection or server problem themselves.",
+        "A guaranteed arrival time."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 563,
+      "last_reviewed": "2026-07-31",
+      "sha256": "37de6e6ad2f6e98be91c68dc09322c6b37d29d56abd6233047c9333a95cf97ce"
+    },
+    {
+      "id": "10-02-the-document-disappeared-before-i-signed",
+      "path": "chunks/10-02-the-document-disappeared-before-i-signed.md",
+      "title": "The document disappeared before I signed it",
+      "summary": "A document that arrives and is not signed clears itself off the pad after about ten minutes. It was not signed and nothing was filed. It simply needs sending again.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "disappeared",
+        "vanished",
+        "gone",
+        "timed out",
+        "timeout",
+        "reset",
+        "back to logo",
+        "lost my document",
+        "ten minutes"
+      ],
+      "questions": [
+        "The document disappeared before I signed it, what happened?",
+        "Why did the tablet reset itself?",
+        "Did my document get signed when the screen cleared?",
+        "How long does a document stay on the pad?",
+        "I lost the document I was reading."
+      ],
+      "images": [],
+      "related": [
+        "10-01-nothing-appears-on-the-pad",
+        "02-02-a-document-arrives-on-the-pad",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That a document which timed out was partially signed or partially saved.",
+        "An exact timeout value as fixed, since it is configurable."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 611,
+      "last_reviewed": "2026-07-31",
+      "sha256": "5c860ca17919a8450fadcf1920fd09f108bdbf7bb33fedbd49c19bebb280fcef"
+    },
+    {
+      "id": "10-03-the-sign-button-will-not-submit",
+      "path": "chunks/10-03-the-sign-button-will-not-submit.md",
+      "title": "The Sign button will not submit",
+      "summary": "Three causes: a required field is still empty, the signature box is empty, or a submission is already running so the button has deliberately stopped responding.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "step-by-step",
+      "keywords": [
+        "sign button",
+        "not working",
+        "nothing happens",
+        "greyed out",
+        "disabled",
+        "cannot submit",
+        "will not sign",
+        "mandatory fields",
+        "stuck"
+      ],
+      "questions": [
+        "The Sign button is not doing anything, why?",
+        "Why is the Sign button greyed out?",
+        "It says not all mandatory fields are filled in, which ones?",
+        "I tapped Sign and nothing happened.",
+        "Why can I not submit the document?"
+      ],
+      "images": [],
+      "related": [
+        "02-04-reading-and-filling-in-the-document",
+        "02-05-drawing-and-submitting-your-signature",
+        "10-04-signing-failed-message"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Specific field names, since those come from each organisation's own document."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 586,
+      "last_reviewed": "2026-07-31",
+      "sha256": "01eb7f71dc7fcd02050f87b213a0142a2b72f98aa2d979b07eb2c0029ca79856"
+    },
+    {
+      "id": "10-04-signing-failed-message",
+      "path": "chunks/10-04-signing-failed-message.md",
+      "title": "It says signing failed — what does that mean?",
+      "summary": "The document was not signed. A failure stops the process rather than producing a half-signed document, so nothing incomplete has been filed. Tap Close, tell staff what the message said, and signing again is safe.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "signing failed",
+        "error",
+        "failed",
+        "visual signature error",
+        "stamping service",
+        "http error",
+        "try again",
+        "did it sign",
+        "partially signed"
+      ],
+      "questions": [
+        "It says the signing workflow failed, what does that mean?",
+        "Was my document signed if I got an error?",
+        "What does \"Error in stamping service response\" mean?",
+        "What does \"Error in visual signature\" mean?",
+        "Is it safe to try signing again?",
+        "Could the document be half-signed?"
+      ],
+      "images": [
+        "screen-progress-failed"
+      ],
+      "related": [
+        "03-02-screen-signing-progress-and-outcome",
+        "03-03-on-screen-message-catalogue",
+        "06-05-volume-concurrency-and-resilience"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That the document may have been partially signed or partially filed.",
+        "That the signer should investigate or resolve the underlying fault."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 606,
+      "last_reviewed": "2026-07-31",
+      "sha256": "e0e0a7e613b5427048b3877a3294fcb84b175802a9ce1b94f89d04e69ee1ab22"
+    },
+    {
+      "id": "10-05-cannot-get-into-the-portal",
+      "path": "chunks/10-05-cannot-get-into-the-portal.md",
+      "title": "\"Application server is not available\" and other access problems",
+      "summary": "A full-screen message meaning the pad cannot reach the system behind it. It retries every ten seconds by itself and has a Retry Now button. Not something a signer can fix, and no signed document is at risk.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "application server is not available",
+        "server not available",
+        "cannot connect",
+        "offline",
+        "retry now",
+        "backend",
+        "login screen",
+        "access problem",
+        "down"
+      ],
+      "questions": [
+        "It says \"Application server is not available\", what do I do?",
+        "The pad cannot connect, how do I fix it?",
+        "What does the Retry Now button do?",
+        "Why is the tablet showing a login screen?",
+        "Why did the pad suddenly ask to log in again?",
+        "Is my signed document lost if the server is down?"
+      ],
+      "images": [
+        "screen-server-offline"
+      ],
+      "related": [
+        "10-01-nothing-appears-on-the-pad",
+        "02-03-signing-in-on-the-pad",
+        "06-05-volume-concurrency-and-resilience"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any instruction to change network, server, or device configuration.",
+        "That a signer should attempt to log in."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 681,
+      "last_reviewed": "2026-07-31",
+      "sha256": "06bc4fdd51dd1cd8bacf51e40ea854f585fd7381f4a5753a7a1814ae85522484"
+    },
+    {
+      "id": "10-06-where-is-my-signed-pdf",
+      "path": "chunks/10-06-where-is-my-signed-pdf.md",
+      "title": "Where is my signed PDF?",
+      "summary": "It goes wherever the deployment is configured to send it — a folder systems watch, back to the computer that sent it, or announced to another system. Signers do not get an automatic copy; that is the organisation's process.",
+      "section": "troubleshooting",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "where is my signed pdf",
+        "find signed document",
+        "copy of document",
+        "did not receive",
+        "download",
+        "where did it go",
+        "missing file",
+        "my copy"
+      ],
+      "questions": [
+        "Where is my signed PDF?",
+        "How do I get a copy of what I signed?",
+        "The signed document has not arrived, where is it?",
+        "Will I be emailed the signed document?",
+        "Where does the signed file get saved?",
+        "Can I have my copy printed?",
+        "Can I take a photo of the screen before it resets?"
+      ],
+      "images": [],
+      "related": [
+        "07-02-delivery-options-folder-and-webhook",
+        "07-03-getting-the-signed-pdf-back-to-the-sending-computer",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That signers automatically receive a copy of what they signed.",
+        "Specific folder paths, which are configured per deployment."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 702,
+      "last_reviewed": "2026-07-31",
+      "sha256": "435d6e47fd18820c9a5007566d98028f8eef78ffbca5429354e1fb0989c522bd"
+    },
+    {
+      "id": "11-01-known-limits-and-what-padsign-does-not-do",
+      "path": "chunks/11-01-known-limits-and-what-padsign-does-not-do.md",
+      "title": "Limits, and what PadSign does not do",
+      "summary": "Browser-based with no native tablet app, built for a signer who is physically present, one signer per session in the standard flow, and not an identity-verification service, document management system or remote signing portal.",
+      "section": "boundaries",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "direct",
+      "keywords": [
+        "limits",
+        "limitations",
+        "cannot",
+        "does not",
+        "not supported",
+        "multiple signers",
+        "offline",
+        "remote",
+        "identity verification",
+        "restrictions"
+      ],
+      "questions": [
+        "What are PadSign's limitations?",
+        "What can PadSign not do?",
+        "Can two people sign the same document?",
+        "Can both parties countersign one contract on the pad?",
+        "Can I sign several documents one after another?",
+        "Does PadSign work offline?",
+        "Can PadSign verify someone's identity?",
+        "Is there a native tablet app?"
+      ],
+      "images": [],
+      "related": [
+        "01-01-in-person-signing-vs-remote-e-signature",
+        "04-05-what-padsign-can-and-cannot-claim",
+        "11-02-getting-help",
+        "11-03-questions-this-knowledge-base-cannot-answer"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "That multi-signer support definitively does not exist — it is not documented, which is not the same as impossible.",
+        "Maximum file sizes for the production flow, or supported browser versions."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 886,
+      "last_reviewed": "2026-07-31",
+      "sha256": "d088a9992aaf6803d3d5ae92a8ae11d0245ee643f4ce0193bdf7f0a3fc707174"
+    },
+    {
+      "id": "11-02-getting-help",
+      "path": "chunks/11-02-getting-help.md",
+      "title": "Getting help",
+      "summary": "If you are signing something, ask the member of staff at the desk — they own the document and the deployment. If you are evaluating or running PadSign, contact TrustLynx sales, whose public contact details are on their website.",
+      "section": "boundaries",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "escalate",
+      "keywords": [
+        "help",
+        "support",
+        "contact",
+        "who do i ask",
+        "escalate",
+        "problem",
+        "talk to someone",
+        "sales",
+        "trustlynx contact"
+      ],
+      "questions": [
+        "Who do I contact for help?",
+        "How do I get support for PadSign?",
+        "Who do I ask about a document I signed?",
+        "How do I contact TrustLynx?",
+        "Where can I get a demo or a quote?",
+        "Where can I read the PadSign manual or official documentation?"
+      ],
+      "images": [],
+      "related": [
+        "11-01-known-limits-and-what-padsign-does-not-do",
+        "10-06-where-is-my-signed-pdf"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any support hours, response times, or service level, since none are published.",
+        "That TrustLynx provides direct support to the end users of a customer's deployment."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 657,
+      "last_reviewed": "2026-07-31",
+      "sha256": "f472870b01e2e1d00a65aa7ef3987a6a663f245101d2fe160733d9f574f8f188"
+    },
+    {
+      "id": "11-03-questions-this-knowledge-base-cannot-answer",
+      "path": "chunks/11-03-questions-this-knowledge-base-cannot-answer.md",
+      "title": "Questions this knowledge base cannot answer",
+      "summary": "Some facts about PadSign are simply not published: price figures, SLAs, compliance certifications, supported browser versions, data-retention periods, roadmap, and what happens if power or network fails mid-signature. For all of them the honest answer is \"ask TrustLynx\" - not a guess.",
+      "section": "boundaries",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "answer_style": "escalate",
+      "keywords": [
+        "price",
+        "cost",
+        "how much",
+        "licence fee",
+        "sla",
+        "uptime",
+        "support hours",
+        "iso 27001",
+        "soc 2",
+        "certification",
+        "roadmap",
+        "partner programme",
+        "reseller",
+        "open source",
+        "source code",
+        "wifi drops",
+        "battery dies",
+        "power cut",
+        "browser version",
+        "retention period",
+        "how long is data kept"
+      ],
+      "questions": [
+        "How much does PadSign cost exactly?",
+        "What is your uptime SLA?",
+        "Do you have ISO 27001 or SOC 2 certification?",
+        "What is on the PadSign roadmap?",
+        "Is there a partner or reseller programme?",
+        "Is PadSign open source? Who owns the IP?",
+        "What happens if the WiFi drops in the middle of signing?",
+        "What happens if the tablet battery dies mid-signature?",
+        "Which browser versions are officially supported?",
+        "How long is signed-document data retained?"
+      ],
+      "images": [],
+      "related": [
+        "11-02-getting-help",
+        "06-07-commercial-model-trials-and-rollout",
+        "09-02-where-your-data-goes"
+      ],
+      "disclaimer": null,
+      "do_not_state": [
+        "Any invented answer to the topics listed here - the entire point of this entry is that no verified public answer exists."
+      ],
+      "has_disclaimer": false,
+      "confidence": "verified",
+      "token_estimate": 593,
+      "last_reviewed": "2026-07-31",
+      "sha256": "bb271aef08551092e0ea8657b847e1fe83a6c86f8187cc509dc51f91d9ca440f"
+    }
+  ],
+  "images": [
+    {
+      "id": "screen-demo-controls",
+      "file": "images/screen-demo-controls.png",
+      "caption_path": "images/screen-demo-controls.md",
+      "alt": "The demo control cluster with a Load DEMO PDF button and the signed-in account shown beneath it.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "load demo pdf",
+        "demo button",
+        "demo mode",
+        "upload",
+        "evaluation",
+        "account shown",
+        "top right"
+      ],
+      "questions": [
+        "What is the Load DEMO PDF button in the corner?",
+        "Whose email is shown in the top right corner?"
+      ],
+      "used_by": [
+        "06-04-demo-mode"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, placeholder account. Cropped to the control cluster. No customer data.",
+      "sha256": "5847d2c2763ade35b53efd40aa5552a0ca704224b2b5726b205cf557e1efe550"
+    },
+    {
+      "id": "screen-document-loading",
+      "file": "images/screen-document-loading.png",
+      "caption_path": "images/screen-document-loading.md",
+      "alt": "A spinner card reading \"Loading document...\" over a dimmed document.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "loading",
+        "spinner",
+        "please wait",
+        "preparing pdf",
+        "slow",
+        "stuck loading"
+      ],
+      "questions": [
+        "What does the loading screen look like?",
+        "Why is everything greyed out with a spinner?",
+        "What does Loading document mean?"
+      ],
+      "used_by": [
+        "03-03-on-screen-message-catalogue"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, neutral logo, generated sample PDF. No customer data.",
+      "sha256": "956f1ac578d4ae50c4dc9f4c78e9101521a9417ce6caa5f55bfe285026654b61"
+    },
+    {
+      "id": "screen-document-view-dark",
+      "file": "images/screen-document-view-dark.png",
+      "caption_path": "images/screen-document-view-dark.md",
+      "alt": "A document open on the signing screen in dark mode, with the document itself still on a light background.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "dark mode",
+        "document",
+        "contrast",
+        "appearance",
+        "why is the document still white"
+      ],
+      "questions": [
+        "Why is the document still white in dark mode?",
+        "What does a document look like in dark mode?"
+      ],
+      "used_by": [
+        "09-01-devices-and-input"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, neutral logo, generated sample PDF, dark colour scheme. No customer data.",
+      "sha256": "2107eca957c88fef00f3e0551f6140c72b889f04ee4a657c32111c31e752e7bf"
+    },
+    {
+      "id": "screen-document-view",
+      "file": "images/screen-document-view.png",
+      "caption_path": "images/screen-document-view.md",
+      "alt": "A document open on the signing screen with a signature box and Clear and Sign buttons below it.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "document open",
+        "signing screen",
+        "main screen",
+        "what it looks like",
+        "layout",
+        "clear",
+        "sign",
+        "signature box"
+      ],
+      "questions": [
+        "What does the signing screen look like?",
+        "Where is the signature box on the screen?",
+        "What is the layout of the document screen?"
+      ],
+      "used_by": [
+        "00-01-what-is-padsign",
+        "02-01-signing-journey-overview",
+        "05-02-the-portal-and-pdf-viewer"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, neutral logo, generated sample PDF, placeholder account. No customer data.",
+      "sha256": "84102ac7d172be5b375cab1ea58386b7af42a86ce6cddb8a0d62c30b1ab2f6d6"
+    },
+    {
+      "id": "screen-download-signed",
+      "file": "images/screen-download-signed.png",
+      "caption_path": "images/screen-download-signed.md",
+      "alt": "The demo controls after signing, showing both Load DEMO PDF and Download signed PDF buttons.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "download signed pdf",
+        "save signed document",
+        "after signing",
+        "demo mode",
+        "two buttons",
+        "get the file"
+      ],
+      "questions": [
+        "Where is the Download signed PDF button?",
+        "How do I save the signed file in demo mode?"
+      ],
+      "used_by": [
+        "06-04-demo-mode"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode with a signed demo document present, placeholder account. Cropped to the control cluster.",
+      "sha256": "9fe70fdfc4a2dc0ce688d55008da940dc8307bbf81fb5cd974696579b64bd3b2"
+    },
+    {
+      "id": "screen-form-field-focus",
+      "file": "images/screen-form-field-focus.png",
+      "caption_path": "images/screen-form-field-focus.md",
+      "alt": "A close-up of the document showing highlighted fillable fields, with a name and email typed in.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "form fields",
+        "fillable",
+        "highlighted",
+        "typing",
+        "fill in",
+        "where do i type",
+        "blue boxes"
+      ],
+      "questions": [
+        "What do the fillable fields look like?",
+        "Why are some boxes in the document highlighted?",
+        "Where do I type my details in the document?"
+      ],
+      "used_by": [
+        "02-04-reading-and-filling-in-the-document"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, generated sample PDF with placeholder values typed in. No customer data.",
+      "sha256": "a6cea67db861d2266e9e0979258e61cce5bfddfe34198fc633a8b1fe0b52b23e"
+    },
+    {
+      "id": "screen-idle-waiting-dark",
+      "file": "images/screen-idle-waiting-dark.png",
+      "caption_path": "images/screen-idle-waiting-dark.md",
+      "alt": "The resting screen in dark mode, showing the logo on a dark background.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "dark mode",
+        "dark theme",
+        "night mode",
+        "appearance",
+        "resting screen"
+      ],
+      "questions": [
+        "What does the pad look like in dark mode?",
+        "Why is the screen dark with just a logo?"
+      ],
+      "used_by": [
+        "09-01-devices-and-input"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, neutral logo, placeholder account, dark colour scheme. No customer data.",
+      "sha256": "682b91f1e941b2342f78301f57c96997b749bb1f2e4f8c48782a2c0a52fcf9a9"
+    },
+    {
+      "id": "screen-idle-waiting",
+      "file": "images/screen-idle-waiting.png",
+      "caption_path": "images/screen-idle-waiting.md",
+      "alt": "The resting screen, showing only a centred logo and a footer.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "idle screen",
+        "resting screen",
+        "waiting",
+        "blank",
+        "just a logo",
+        "nothing on screen",
+        "empty"
+      ],
+      "questions": [
+        "What does the waiting screen look like?",
+        "Why does the tablet only show a logo?",
+        "What should the pad show when nothing is happening?"
+      ],
+      "used_by": [
+        "02-02-a-document-arrives-on-the-pad",
+        "10-01-nothing-appears-on-the-pad"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, neutral logo, placeholder account. No customer data.",
+      "sha256": "81170cb759fe3fe6c55d98d75b5c9b09c232fefc5bdf3e413d81f13ef5ec8903"
+    },
+    {
+      "id": "screen-progress-failed",
+      "file": "images/screen-progress-failed.png",
+      "caption_path": "images/screen-progress-failed.md",
+      "alt": "The progress panel with the digital stamp step marked failed and a Close button.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "failed",
+        "error",
+        "signing workflow failed",
+        "stamping service",
+        "http 502",
+        "close button",
+        "red cross",
+        "not signed"
+      ],
+      "questions": [
+        "What does the failure screen look like?",
+        "What does the red cross on a signing step mean?",
+        "Why is there a Close button after signing failed?"
+      ],
+      "used_by": [
+        "03-02-screen-signing-progress-and-outcome",
+        "10-04-signing-failed-message"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode. The sealing step was deliberately made to fail to capture this state.",
+      "sha256": "309dc4beb17436f415330fd92d2e6a3ca4afb95a1bfe7516a0f0eeeff277dc3a"
+    },
+    {
+      "id": "screen-progress-steps",
+      "file": "images/screen-progress-steps.png",
+      "caption_path": "images/screen-progress-steps.md",
+      "alt": "A progress panel showing four signing steps, with the digital stamp step in progress at 63 per cent.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "progress",
+        "steps",
+        "percentage",
+        "in progress",
+        "preparing document",
+        "visual signature",
+        "digital stamp",
+        "finalizing",
+        "waiting"
+      ],
+      "questions": [
+        "What are the four steps shown after I tap Sign?",
+        "What does the percentage on the progress panel mean?",
+        "What do the circles above the step names mean?"
+      ],
+      "used_by": [
+        "00-04-capabilities-at-a-glance",
+        "03-02-screen-signing-progress-and-outcome",
+        "04-01-two-things-that-happen-when-you-sign"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode. Captured mid-flow with the sealing step deliberately held open.",
+      "sha256": "57d90f53c5478076bbd06afc7d05936a21431e87df2892f7833cb8cdfd94d395"
+    },
+    {
+      "id": "screen-progress-success-dark",
+      "file": "images/screen-progress-success-dark.png",
+      "caption_path": "images/screen-progress-success-dark.md",
+      "alt": "The signing success panel in dark mode, with all four steps complete.",
+      "audience": [
+        "end-user",
+        "prospect"
+      ],
+      "keywords": [
+        "dark mode",
+        "success panel",
+        "signed successfully",
+        "dark theme",
+        "appearance"
+      ],
+      "questions": [
+        "What does the success panel look like in dark mode?"
+      ],
+      "used_by": [
+        "09-01-devices-and-input"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, all steps mocked to succeed, dark colour scheme. No customer data.",
+      "sha256": "3a27ecf9302cd2fb628603181e11e3d83f2ca4eddb89c2c362a6df3df2da4ce2"
+    },
+    {
+      "id": "screen-progress-success",
+      "file": "images/screen-progress-success.png",
+      "caption_path": "images/screen-progress-success.md",
+      "alt": "The progress panel with all four steps complete and a message that the document was signed successfully.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "success",
+        "signed successfully",
+        "all steps complete",
+        "100 per cent",
+        "page will refresh",
+        "countdown",
+        "done"
+      ],
+      "questions": [
+        "What does the success screen look like?",
+        "Why is the page counting down after signing?",
+        "How do I know the document was signed successfully?"
+      ],
+      "used_by": [
+        "03-02-screen-signing-progress-and-outcome",
+        "07-01-what-happens-to-the-document-after-signing"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, generated sample PDF, all steps mocked to succeed. No customer data.",
+      "sha256": "82e6556fb8ac5070c1a29cf1ffb63113b6fe31f0896de6a526889ce6bd2432a8"
+    },
+    {
+      "id": "screen-server-offline",
+      "file": "images/screen-server-offline.png",
+      "caption_path": "images/screen-server-offline.md",
+      "alt": "A full-screen message reading Application server is not available, with a Retry Now button.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "application server is not available",
+        "offline",
+        "cannot connect",
+        "retry now",
+        "backend",
+        "red message",
+        "down"
+      ],
+      "questions": [
+        "What does the connection error screen look like?",
+        "What does Application server is not available look like?",
+        "What is the Retry Now button?"
+      ],
+      "used_by": [
+        "10-05-cannot-get-into-the-portal"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode with the health check deliberately failing. No customer data.",
+      "sha256": "ad7eea84d8589285ed6b8ca98b0ed862c10d08b7566162c3fde119f612fe8b13"
+    },
+    {
+      "id": "screen-signature-pad-signed",
+      "file": "images/screen-signature-pad-signed.png",
+      "caption_path": "images/screen-signature-pad-signed.md",
+      "alt": "The same signature box with a handwritten signature drawn in it.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "signature drawn",
+        "signed",
+        "blue ink",
+        "ready to submit",
+        "what it looks like when signed"
+      ],
+      "questions": [
+        "What does a drawn signature look like on screen?",
+        "How do I know my signature registered?"
+      ],
+      "used_by": [
+        "02-05-drawing-and-submitting-your-signature"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, generated sample PDF. Signature is a synthetic stroke, not a real person's signature.",
+      "sha256": "9b5d4f1be12d054b7c0114db5ca99ad1278eedffc4117430a9bea3b2fc77daeb"
+    },
+    {
+      "id": "screen-signature-pad",
+      "file": "images/screen-signature-pad.png",
+      "caption_path": "images/screen-signature-pad.md",
+      "alt": "The empty signature box with Clear and Sign buttons underneath.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "signature box",
+        "clear button",
+        "sign button",
+        "empty signature",
+        "where do I sign",
+        "two buttons"
+      ],
+      "questions": [
+        "What are the two buttons under the signature box?",
+        "What does the signature box look like?",
+        "Where do I draw my signature?"
+      ],
+      "used_by": [
+        "02-05-drawing-and-submitting-your-signature",
+        "03-01-screen-signature-pad"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, generated sample PDF. Signature box empty. No customer data.",
+      "sha256": "a3fcadfd4e68168530671772fe1f706e13ebccab6422b225aeedb1130cd91801"
+    },
+    {
+      "id": "screen-signer-name-label",
+      "file": "images/screen-signer-name-label.png",
+      "caption_path": "images/screen-signer-name-label.md",
+      "alt": "The signature box with a Signer name label displayed above it.",
+      "audience": [
+        "end-user"
+      ],
+      "keywords": [
+        "signer name",
+        "whose name",
+        "name above signature",
+        "is this for me",
+        "wrong name",
+        "check identity"
+      ],
+      "questions": [
+        "Whose name is above the signature box?",
+        "What does the Signer line above the box mean?",
+        "Why is a name shown before I sign?"
+      ],
+      "used_by": [
+        "02-05-drawing-and-submitting-your-signature",
+        "03-01-screen-signature-pad"
+      ],
+      "sanitised": true,
+      "capture_note": "Demo mode, generated sample PDF, fictional signer name. Signature is a synthetic stroke.",
+      "sha256": "dbca2a543bfb9216af649d5c4713a9b0ee58d3ed9652437e48e24436f2c89493"
+    }
+  ]
+}

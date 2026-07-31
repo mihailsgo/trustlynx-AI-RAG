@@ -1,0 +1,311 @@
+{
+  "_comment": "INTERNAL ONLY. Maps chunk id -> source material each claim was verified against. Never ingest this file into the RAG corpus and never expose its contents to end users.",
+  "generated": "2026-07-31",
+  "chunks": {
+    "00-01-what-is-padsign": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\08-01-how-this-solution-works.md"
+    ],
+    "00-02-problem-and-business-value": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\08-01-how-this-solution-works.md"
+    ],
+    "00-03-who-it-is-for-and-typical-use-cases": [
+      "https://trustlynx.com/product/padsign",
+      "https://trustlynx.com/esealing-service",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-04-what-software-is-needed-on-the-tablet.md"
+    ],
+    "00-04-capabilities-at-a-glance": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md"
+    ],
+    "00-05-plain-language-glossary": [
+      "https://trustlynx.com/about-e-signature",
+      "https://trustlynx.com/esealing-service",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-01-concepts-and-glossary.md"
+    ],
+    "01-01-in-person-signing-vs-remote-e-signature": [
+      "https://trustlynx.com/product/padsign",
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\07-architecture.md"
+    ],
+    "01-02-languages-and-localisation": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\CONFIGURATION_CONSTANTS.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\Utilities.js"
+    ],
+    "01-03-branding-and-what-can-be-configured": [
+      "C:\\Repos\\psapp\\CONFIGURATION_CONSTANTS.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\HeaderComponent.jsx",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\37-04-toggling-features-after-go-live.md"
+    ],
+    "02-01-signing-journey-overview": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md"
+    ],
+    "02-02-a-document-arrives-on-the-pad": [
+      "C:\\Repos\\psapp\\client\\src\\components\\PollingComponent.jsx",
+      "C:\\Repos\\psapp\\client\\src\\components\\HeaderComponent.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md"
+    ],
+    "02-03-signing-in-on-the-pad": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\08-01-how-this-solution-works.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\23-data-flow.md"
+    ],
+    "02-04-reading-and-filling-in-the-document": [
+      "C:\\Repos\\psapp\\client\\src\\components\\PdfRenderComponent.jsx",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "02-05-drawing-and-submitting-your-signature": [
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "03-01-screen-signature-pad": [
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx"
+    ],
+    "03-02-screen-signing-progress-and-outcome": [
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\config\\constants.json"
+    ],
+    "03-03-on-screen-message-catalogue": [
+      "C:\\Repos\\psapp\\config\\constants.json",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\client\\src\\App.jsx"
+    ],
+    "04-01-two-things-that-happen-when-you-sign": [
+      "https://trustlynx.com/about-e-signature",
+      "https://trustlynx.com/esealing-service",
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx"
+    ],
+    "04-02-what-your-signature-legally-is": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-01-concepts-and-glossary.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-06-production-setup-deploying-with-your-own-key-and-certificate.md"
+    ],
+    "04-03-eidas-levels-simple-advanced-qualified": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-01-concepts-and-glossary.md"
+    ],
+    "04-04-pades-levels-and-long-term-validity": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-01-concepts-and-glossary.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-08-wiring-tsa-and-ocsp-for-lt-and-lta-signature-profiles.md"
+    ],
+    "04-05-what-padsign-can-and-cannot-claim": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-01-concepts-and-glossary.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-06-production-setup-deploying-with-your-own-key-and-certificate.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-08-wiring-tsa-and-ocsp-for-lt-and-lta-signature-profiles.md"
+    ],
+    "04-06-checking-a-signed-pdf-yourself": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-10-verifying-signatures-end-to-end-beyond-the-stack.md",
+      "https://trustlynx.com/about-e-signature"
+    ],
+    "04-07-who-is-named-as-the-signer": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-06-production-setup-deploying-with-your-own-key-and-certificate.md",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "05-01-components-overview": [
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\07-architecture.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\34-03-very-high-level-component-view.md"
+    ],
+    "05-02-the-portal-and-pdf-viewer": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\PdfRenderComponent.jsx",
+      "C:\\Repos\\psapp\\client\\src\\components\\ConfigProvider.jsx",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-04-what-software-is-needed-on-the-tablet.md"
+    ],
+    "05-03-the-application-server": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-03-repeated-and-parallel-signing.md"
+    ],
+    "05-04-login-and-identity": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\08-01-how-this-solution-works.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\23-data-flow.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\22-security-and-route-protection.md"
+    ],
+    "05-05-document-and-signature-services": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\07-architecture.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\34-01-deployment-and-integration-architecture.md",
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md"
+    ],
+    "05-06-sealing-in-the-cloud-or-on-your-own-servers": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-enabling-local-e-sealing.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-06-production-setup-deploying-with-your-own-key-and-certificate.md"
+    ],
+    "06-01-hosting-and-deployment-model": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\07-architecture.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\02-overview.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\36-01-concepts-and-access-model.md"
+    ],
+    "06-02-prerequisites-at-evaluation-level": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\09-prerequisites.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\10-prerequisites-quick-checklist.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\11-01-tls-prerequisites-for-installation-scripts.md",
+      "https://trustlynx.com/product/padsign"
+    ],
+    "06-03-installation-at-a-glance": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\36-deployment-wizard.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\36-08-visual-walkthrough.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\03-quick-start-new-deployment.md"
+    ],
+    "06-04-demo-mode": [
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\HeaderComponent.jsx",
+      "C:\\Repos\\psapp\\CONFIGURATION_CONSTANTS.md"
+    ],
+    "06-05-volume-concurrency-and-resilience": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-01-concurrency.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-02-error-handling-when-ps-server-is-down.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-03-repeated-and-parallel-signing.md",
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\psapp\\CLAUDE.md"
+    ],
+    "06-06-updates-and-changing-settings-later": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\37-settings-post-go-live-changes.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\37-02-changing-the-hostname.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\37-03-certificate-renewal.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\37-04-toggling-features-after-go-live.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\05-upgrading-an-existing-deployment.md"
+    ],
+    "07-01-what-happens-to-the-document-after-signing": [
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md",
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx"
+    ],
+    "07-02-delivery-options-folder-and-webhook": [
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-05-third-party-integration-flow.md"
+    ],
+    "07-03-getting-the-signed-pdf-back-to-the-sending-computer": [
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md"
+    ],
+    "07-04-the-final-document-format": [
+      "https://trustlynx.com/about-e-signature",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-06-final-document-format.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\04-10-verifying-signatures-end-to-end-beyond-the-stack.md"
+    ],
+    "08-01-virtual-printer-overview": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "08-02-virtual-printer-user-journey": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "08-03-connecting-padsign-to-another-system": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-05-third-party-integration-flow.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\08-01-how-this-solution-works.md",
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md"
+    ],
+    "09-01-devices-and-input": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-04-what-software-is-needed-on-the-tablet.md",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx"
+    ],
+    "09-02-where-your-data-goes": [
+      "https://trustlynx.com/product/padsign",
+      "C:\\Repos\\psapp\\docs\\PSAPP_ARCHITECTURE_2026.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\34-01-deployment-and-integration-architecture.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "10-01-nothing-appears-on-the-pad": [
+      "C:\\Repos\\psapp\\client\\src\\components\\PollingComponent.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-02-error-handling-when-ps-server-is-down.md"
+    ],
+    "10-02-the-document-disappeared-before-i-signed": [
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "10-03-the-sign-button-will-not-submit": [
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\client\\src\\components\\Utilities.js",
+      "C:\\Repos\\psapp\\README.md"
+    ],
+    "10-04-signing-failed-message": [
+      "C:\\Repos\\psapp\\client\\src\\components\\SignaturePad.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md"
+    ],
+    "10-05-cannot-get-into-the-portal": [
+      "C:\\Repos\\psapp\\client\\src\\App.jsx",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-02-error-handling-when-ps-server-is-down.md"
+    ],
+    "10-06-where-is-my-signed-pdf": [
+      "C:\\Repos\\psapp\\docs\\document-routing-spec.md",
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-05-third-party-integration-flow.md"
+    ],
+    "11-01-known-limits-and-what-padsign-does-not-do": [
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-04-what-software-is-needed-on-the-tablet.md",
+      "C:\\Repos\\ps-app-cloud-deployment\\documentation\\30-03-repeated-and-parallel-signing.md",
+      "C:\\Repos\\psapp\\README.md",
+      "C:\\Repos\\psapp\\CLAUDE.md",
+      "https://trustlynx.com/about-e-signature"
+    ],
+    "11-02-getting-help": [
+      "https://trustlynx.com/product/padsign",
+      "https://trustlynx.com"
+    ],
+    "09-03-accessibility-and-signing-difficulty": [
+      "C:/Repos/psapp/CONFIGURATION_CONSTANTS.md (button font size, dark mode)",
+      "C:/Repos/ps-app-cloud-deployment/documentation/36-01-concepts-and-access-model.md (absence of signer-facing WCAG claim)",
+      "C:/Repos/psapp/client/src/components/SignaturePad.jsx"
+    ],
+    "02-06-changing-your-mind-and-mistakes": [
+      "C:/Repos/psapp/client/src/components/SignaturePad.jsx (nothing submitted before Sign)",
+      "C:/Repos/psapp/CLAUDE.md (pad arrival timeout, seal immutability)",
+      "https://trustlynx.com/about-e-signature (seal integrity framing)"
+    ],
+    "11-03-questions-this-knowledge-base-cannot-answer": [
+      "MAINTAINERS.md deliberate-omission register",
+      "https://trustlynx.com/product/padsign (pricing model, quote form)"
+    ],
+    "00-06-about-trustlynx": [
+      "https://trustlynx.com/about-us (captured 2026-07-31)",
+      "https://developer.trustlynx.com (portal existence, manuals)",
+      "https://trustlynx.com/product/padsign (testimonial, contacts)"
+    ],
+    "06-07-commercial-model-trials-and-rollout": [
+      "https://trustlynx.com/product/padsign (Delivery & Pricing block)",
+      "https://trustlynx.com/about-us (same block)",
+      "C:/Repos/ps-app-cloud-deployment/documentation/09-prerequisites.md (resource level)",
+      "C:/Repos/psapp/README.md section 3 (demo mode)"
+    ],
+    "01-04-identity-eid-and-who-signs": [
+      "https://trustlynx.com/about-e-signature (QES identity validation statement)",
+      "https://trustlynx.com/product/authentication-service (captured 2026-07-31)",
+      "C:/Repos/psapp/CLAUDE.md (no identity verification in PadSign)"
+    ],
+    "01-05-padsign-and-the-trustlynx-product-family": [
+      "https://trustlynx.com/product/signbox (captured 2026-07-31)",
+      "https://trustlynx.com/product/api-platform (captured 2026-07-31)",
+      "https://trustlynx.com/product/connectors (captured 2026-07-31)",
+      "https://trustlynx.com/product/authentication-service (captured 2026-07-31)",
+      "https://trustlynx.com/esealing-service (captured 2026-07-27)"
+    ]
+  }
+}
