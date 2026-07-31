@@ -20,6 +20,7 @@ support agent. Everything in it is either corpus (ingest it) or tooling/meta
 | `build-index.mjs` | Regenerates and validates `index.json`. Fails the build on any leak or broken link. | No |
 | `retrieval-smoke.mjs` | 39-question retrieval regression test. | No |
 | `package.json` | Declares the one dev dependency (`js-yaml`) the build script needs. | No |
+| `integrations/<target>/` | Per-consumer adapters: a script that converts this corpus into a specific RAG application's document format, plus prompts and eval sets for it. `integrations/trustlynx-ai/` targets the TrustLynx AI assistant. Generated output under `export/` is committed so a consuming machine needs no toolchain. | No — it is derived output |
 
 ## How pictures connect to their descriptions
 

@@ -1,0 +1,22 @@
+# Purpose: Canonical "I don't know" message for the PUBLIC (customer-facing)
+# profile. Drop into the consuming app as
+# config/prompts/doc_qa_no_answer_public.txt and reference it from
+# config/profiles/public.yaml (prompts.no_answer).
+#
+# Used verbatim — do not paraphrase at runtime. The first line is kept
+# character-identical to the internal variant so eval cases that assert on
+# "I don't have this information" continue to match.
+#
+# The difference from the internal message is who it points at: a member of the
+# public cannot "add the source document to the corpus and re-run ingestion",
+# so it routes to the two people who can actually help — the organisation
+# running the device, and TrustLynx.
+
+I don't have this information in my knowledge base.
+
+If you are signing a document right now, the person at the desk can help — the
+document and the process belong to their organisation.
+
+For questions about PadSign itself, including anything commercial, contact
+TrustLynx at sales@trustlynx.com. Their public documentation is at
+trustlynx.com and developer.trustlynx.com.

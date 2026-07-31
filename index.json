@@ -3397,7 +3397,7 @@
       ],
       "sanitised": true,
       "capture_note": "Demo mode, generated sample PDF. Signature is a synthetic stroke, not a real person's signature.",
-      "sha256": "9b5d4f1be12d054b7c0114db5ca99ad1278eedffc4117430a9bea3b2fc77daeb"
+      "sha256": "e7235dc69ef7beeea382648a9b5ec956d62572fc8ae2eb177a19864826b3d36a"
     },
     {
       "id": "screen-signature-pad",

@@ -1,0 +1,9 @@
+# index.json records a sha256 for every chunk, caption and image. Those hashes
+# are computed from the bytes on disk, so a checkout that rewrote text files to
+# CRLF would invalidate all of them and leave index.json permanently dirty.
+# Pin the working tree to LF so hashes are stable on every platform.
+* text=auto eol=lf
+
+# Screenshots are binary and must never be line-ending converted.
+*.png binary
+*.pdf binary
