@@ -1,8 +1,25 @@
 # Integration: the TrustLynx AI assistant
 
-Everything needed to load this knowledge package into the TrustLynx AI assistant
-(the Streamlit + Ollama + Chroma application) as a **public, customer-facing**
-corpus.
+Everything needed to load this knowledge package into the **TrustLynx AI
+assistant** as a **public, customer-facing** corpus.
+
+**Target application:** `github.com/mihailsgo/trustlynx-AI` — a local-first
+Streamlit + Ollama + Chroma RAG assistant. Layered UI → capabilities → RAG →
+core, with a documented ingest pipeline (`knowledge/raw/` → `knowledge/processed/`
+→ Chroma), audience-filtered retrieval, and its own eval harness. Referred to
+below as `<assistant>`; substitute your checkout path.
+
+**Its prerequisites are its own** — see its README. In short: Windows 11, an
+RTX-class GPU with at least 24 GB VRAM, Ollama on `localhost:11434` with
+`gpt-oss:20b` and `qwen3-embedding:8b` pulled, and Python 3.12 via `uv`. None of
+that is needed to *read* or *regenerate* this integration; only to ingest and
+run.
+
+**If you are an agent picking this up cold:** everything you need is in this
+file. Read it start to finish, then follow *Quick start*. Do not modify the
+assistant's own code to make the corpus fit — the adapter exists so that is
+unnecessary. The two findings at the end are suggestions for its maintainers,
+not prerequisites.
 
 | File | Goes where | What it is |
 |---|---|---|
@@ -10,6 +27,7 @@ corpus.
 | `export/padsign/` | → `knowledge/raw/padsign/` | Generated output: 59 chunk docs + 16 screenshot-caption docs + 16 images |
 | `doc_qa_system_public.txt` | → `config/prompts/` | Public system prompt (the profile template lists this as TODO) |
 | `doc_qa_no_answer_public.txt` | → `config/prompts/` | Public no-answer message |
+| `public.yaml` | → `config/profiles/` | Corrected public profile — **do not use the app's own `public.yaml.example`**, see finding 3 |
 | `eval-questions-padsign.yaml` | → append to `eval/questions.yaml` | 63 eval cases |
 
 ## Quick start on the GPU machine
@@ -21,18 +39,32 @@ node integrations/trustlynx-ai/export-to-trustlynx-ai.mjs
 # 2. Copy it in (adjust paths to your checkout)
 cp -r integrations/trustlynx-ai/export/padsign <assistant>/knowledge/raw/
 
-# 3. Copy the prompts
+# 3. Copy the prompts and the corrected public profile
 cp integrations/trustlynx-ai/doc_qa_system_public.txt    <assistant>/config/prompts/
 cp integrations/trustlynx-ai/doc_qa_no_answer_public.txt <assistant>/config/prompts/
+cp integrations/trustlynx-ai/public.yaml                 <assistant>/config/profiles/
 
-# 4. Activate the public profile: copy config/profiles/public.yaml.example to
-#    public.yaml and set prompts.system / prompts.no_answer to the two files
-#    above (they are marked TODO in the template).
+# 4. Activate the public profile (either form works)
+#    Windows:  set TRUSTLYNX_PROFILE=public
+#    or edit config/settings.yaml:  active_profile: public
 
 # 5. Ingest, then check
 uv run python -m src.cli.ingest scan
 uv run python -m src.cli.ingest stats
 ```
+
+Use the `public.yaml` shipped here, **not** the app's `public.yaml.example` — the
+template's prompt keys do not match its own config model and are silently
+discarded, which would leave a public deployment running the internal prompt.
+Finding 3 below has the detail.
+
+### Testing before switching profiles
+
+You do not have to activate the public profile to try the corpus. The default
+local user is created with `audience=['internal', 'public']`, so documents
+tagged `public` are already visible under the existing internal profile — ingest
+and ask away. Switching to the public profile is what swaps in the
+customer-facing prompt and narrows retrieval to public-only.
 
 Step 2 puts the images at `knowledge/raw/padsign/images/`, which is exactly the
 path the exported markdown references. If you place them anywhere else, re-run
@@ -157,6 +189,40 @@ fixable error into a silent misclassification, and because `audience` then
 defaults to `internal`, the failure mode is a security-relevant one. Logging a
 warning there — or failing the file outright — would make the class of problem
 visible rather than latent.
+
+**3. Profile prompt selection is silently ignored.** Both `config/profiles/`
+YAMLs write:
+
+```yaml
+prompts:
+  system: doc_qa_system_public
+  no_answer: doc_qa_no_answer_public
+```
+
+but `PromptsConfig` declares `doc_qa_system`, `doc_qa_no_answer`,
+`citation_format`, `warmup`. Pydantic's default `extra='ignore'` drops the two
+unknown keys, so the defaults survive. Verified by validating the template's
+exact keys against the real model: `doc_qa_system` comes back as
+`doc_qa_system`, not `doc_qa_system_public`.
+
+`internal.yaml` has the same mismatch but specifies the default values, so it is
+invisible there. For the public profile the consequence is severe: the
+deployment reports `profile_name: public`, correctly narrows `audience_filter`
+to public — and still uses the internal system prompt, meaning a customer-facing
+assistant runs with employee-facing wording and none of the claim boundaries.
+
+Fix is one word per line, in both profile files:
+
+```yaml
+prompts:
+  doc_qa_system: doc_qa_system_public
+  doc_qa_no_answer: doc_qa_no_answer_public
+```
+
+The `public.yaml` shipped in this folder already has it. Setting
+`model_config = ConfigDict(extra='forbid')` on the config models would have
+turned this into a startup error instead of a silent downgrade, and is worth
+considering for every model in `config.py`.
 
 **Also worth considering:** the eval schema has no `expected_answer_excludes`.
 The claim boundaries in the public prompt are prohibitions ("never say PadSign

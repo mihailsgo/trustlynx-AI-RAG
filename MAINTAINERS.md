@@ -29,8 +29,18 @@ the engineering repositories where it belongs.
 ├── build-index.mjs  manifest generator + package validator
 ├── retrieval-smoke.mjs  lexical retrieval regression test
 ├── chunks/          one self-contained answer per file
-└── images/          <slug>.png plus a paired <slug>.md caption
+├── images/          <slug>.png plus a paired <slug>.md caption
+└── integrations/    per-application adapters — not indexed, see below
 ```
+
+**Integrations carry generated output that can drift.** Each folder under
+`integrations/` converts this corpus into one target application's document
+format, and its `export/` directory is **committed** so a deployment machine
+needs no toolchain. That means the export is a copy of the corpus in another
+shape: **after changing any chunk, caption or screenshot, re-run each
+integration's export script and commit the result.** Its README says how.
+Nothing enforces this automatically — the export is deterministic, so a stale
+one shows up as an unexpected diff the next time somebody regenerates.
 
 **Two-repo layout.** This package lives in its own repository. The screenshot
 harness that produces `images/*.png` lives in the PadSign client repository and

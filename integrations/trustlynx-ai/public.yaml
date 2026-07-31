@@ -1,0 +1,59 @@
+# TrustLynx AI — PUBLIC (customer-facing) deployment profile.
+#
+# Drop into the assistant as config/profiles/public.yaml, then activate with
+# either:
+#     set TRUSTLYNX_PROFILE=public        (env var, per-run)
+# or  active_profile: public              (in config/settings.yaml)
+#
+# THIS IS A CORRECTED COPY of the assistant's own public.yaml.example. One
+# difference, and it is not cosmetic:
+#
+#   The template writes
+#       prompts:
+#         system: doc_qa_system_public
+#         no_answer: doc_qa_no_answer_public
+#
+#   but the config model's field names are `doc_qa_system` and
+#   `doc_qa_no_answer`. Pydantic ignores unknown keys by default, so those two
+#   lines are silently discarded and the deployment keeps using the INTERNAL
+#   prompt — with a public corpus and public users, and none of the
+#   claim-boundary rules loaded. Verified against the model directly.
+#
+#   internal.yaml has the same key names, but happens to specify the default
+#   values, which is why nothing has surfaced this yet.
+#
+# The keys below use the real field names.
+
+profile_name: public
+
+# Audience filter applied to retrieval. Enforced as a Chroma `where` clause
+# before retrieval, not as a post-filter, so documents not tagged for public
+# consumption are never returned.
+audience_filter:
+  - public
+
+# Prompt selection — real field names, see the note above.
+prompts:
+  doc_qa_system: doc_qa_system_public
+  doc_qa_no_answer: doc_qa_no_answer_public
+
+# v1.0 supports mode=none only. Customer authentication is a later concern; a
+# public assistant may legitimately be anonymous, but decide that deliberately
+# rather than by default.
+auth:
+  mode: none
+
+# Customer-facing wording. Adjust freely — these are presentation choices, not
+# claims, with one exception flagged below.
+ui:
+  title: "PadSign Assistant"
+  assistant_name: "Lynxie"
+  tagline: "PadSign help"
+  eyebrow: "PadSign support"
+  heading: "Hi, I'm Lynxie."
+  heading_accent: "What would you like to know about PadSign?"
+  subtitle: "Answers come from published PadSign documentation, with sources."
+  knowledge_label: "PadSign knowledge"
+  # This one IS a claim about where the deployment runs. Keep it only if it is
+  # true of the machine serving public users, and change it if not.
+  rail_note: "Runs inside your controlled environment."

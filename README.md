@@ -4,6 +4,12 @@ A self-contained retrieval corpus about **PadSign**, TrustLynx's e-signing
 solution for touchscreen devices. Built to be loaded into a local RAG stack so an
 AI support agent can answer public questions about the product.
 
+> **Deploying this into the TrustLynx AI assistant?** Go straight to
+> [`integrations/trustlynx-ai/README.md`](integrations/trustlynx-ai/README.md).
+> It has step-by-step instructions, a pre-generated export you can copy in as-is,
+> the public system prompts, and an eval set. You do not need to read this file
+> first — it explains the corpus itself, not how to load it into that app.
+
 Everything in the corpus is public-safe: no credentials, no customer identities,
 no internal hostnames or paths, no technology-stack detail, no security-posture
 detail. Every name, email address and identity visible in the screenshots is a
@@ -27,6 +33,7 @@ operate it".
 index.json       machine-readable manifest — a manifest-only loader needs nothing else
 chunks/          one self-contained answer per file, with YAML frontmatter
 images/          screenshots, each with a paired .md caption
+integrations/    per-application adapters, prompts and eval sets — NOT corpus
 CLAUDE.md        orientation for an AI agent working in this repo — NOT corpus
 MAINTAINERS.md   editing guide — NOT corpus
 provenance.json  chunk id -> source material (internal audit trail) — NOT corpus
@@ -98,10 +105,28 @@ Instead, one refusal chunk — `11-03-questions-this-knowledge-base-cannot-answe
 route to TrustLynx. That is the intended answer; do not fill the gap from general
 knowledge.
 
+## Loading it into a specific application
+
+Generic ingestion is described above, but most RAG applications have their own
+document schema. `integrations/` holds one folder per target application with an
+adapter, any prompts that application needs, and an eval set:
+
+| Target | Folder |
+|---|---|
+| TrustLynx AI assistant (Streamlit + Ollama + Chroma) | [`integrations/trustlynx-ai/`](integrations/trustlynx-ai/) |
+
+Each integration folder contains its own README with step-by-step instructions
+and a **pre-generated export committed alongside it**, so a deployment machine
+needs no toolchain from this repo — copy the folder and follow that README.
+
+If you change the corpus, re-run the integration's export script so its output
+does not drift. Its README says how.
+
 ## Regenerating
 
-The screenshots are produced by a test harness that lives in the PadSign client
-repository (this package's sibling); the manifest is generated here:
+The screenshots are produced by a Playwright harness that lives in the PadSign
+client repository, not here — a deployment machine does not need it and cannot
+run it. The manifest is generated here:
 
 ```bash
 npm install
