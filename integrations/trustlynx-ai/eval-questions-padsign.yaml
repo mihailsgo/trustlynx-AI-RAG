@@ -36,35 +36,48 @@
   type: positive
   expected_answer_contains: ["Sign", "signature"]
   expected_sources_contain: ["02_05_drawing_and_submitting"]
-  tags: [padsign, end_user, journey]
+  tags: [padsign, end_user, journey, figure]
+  expects_screenshot: true
+  expected_figures: [screen-signature-pad, screen-signature-pad-signed]
 
 - id: ps002
   question: "Where do I draw my signature?"
   type: positive
   expected_answer_contains: ["signature box", "bottom"]
   expected_sources_contain: ["02_05_drawing_and_submitting"]
-  tags: [padsign, end_user, journey]
+  tags: [padsign, end_user, journey, figure]
+  expects_screenshot: true
+  expected_figures: [screen-signature-pad]
+  wrong_figures: [screen-document-view]
 
 - id: ps003
   question: "Can I redo my signature if it looks wrong?"
   type: positive
   expected_answer_contains: ["Clear"]
   expected_sources_contain: ["02_05_drawing_and_submitting"]
-  tags: [padsign, end_user]
+  tags: [padsign, end_user, figure]
+  expects_screenshot: true
+  expected_figures: [screen-signature-pad, screen-signature-pad-signed]
 
 - id: ps004
   question: "What are the two buttons under the signature box?"
   type: positive
   expected_answer_contains: ["Clear", "Sign"]
   expected_sources_contain: ["signature_pad"]
-  tags: [padsign, end_user, screenshot]
+  tags: [padsign, end_user, screenshot, figure]
+  expects_screenshot: true
+  expected_figures: [screen-signature-pad]
+  wrong_figures: [screen-document-view]
 
 - id: ps005
   question: "How does signing work from start to finish?"
   type: positive
   expected_answer_contains: ["sign"]
   expected_sources_contain: ["02_01_signing_journey"]
-  tags: [padsign, end_user, journey]
+  tags: [padsign, end_user, journey, figure]
+  expects_screenshot: true
+  expected_figures: [screen-document-view, screen-progress-steps, screen-signature-pad]
+  max_figures: 3
 
 - id: ps006
   question: "Do I need to log in or create an account to sign?"
@@ -78,14 +91,20 @@
   type: positive
   expected_answer_contains: ["tap", "field"]
   expected_sources_contain: ["02_04_reading_and_filling"]
-  tags: [padsign, end_user]
+  tags: [padsign, end_user, figure]
+  expects_screenshot: true
+  expected_figures: [screen-form-field-focus]
+  wrong_figures: [screen-document-view]
 
 - id: ps008
   question: "Whose name is shown above the signature box?"
   type: positive
   expected_answer_contains: ["Signer"]
   expected_sources_contain: ["signer_name_label", "02_05_drawing_and_submitting"]
-  tags: [padsign, end_user, screenshot]
+  tags: [padsign, end_user, screenshot, figure]
+  expects_screenshot: true
+  expected_figures: [screen-signer-name-label]
+  wrong_figures: [screen-document-view]
 
 # --- End-user: things going wrong -------------------------------------------
 
@@ -94,7 +113,9 @@
   type: positive
   expected_answer_contains: ["logo"]
   expected_sources_contain: ["10_01_nothing_appears"]
-  tags: [padsign, end_user, troubleshooting]
+  tags: [padsign, end_user, troubleshooting, figure]
+  expects_screenshot: true
+  expected_figures: [screen-idle-waiting]
 
 - id: ps021
   question: "The document disappeared before I signed it - what happened?"
@@ -115,14 +136,19 @@
   type: positive
   expected_answer_contains: ["not signed"]
   expected_sources_contain: ["10_04_signing_failed"]
-  tags: [padsign, end_user, troubleshooting, reassurance]
+  tags: [padsign, end_user, troubleshooting, reassurance, figure]
+  expects_screenshot: true
+  expected_figures: [screen-progress-failed]
+  wrong_figures: [screen-progress-success]
 
 - id: ps024
   question: "It says Application server is not available. What do I do?"
   type: positive
   expected_answer_contains: ["staff"]
   expected_sources_contain: ["10_05_cannot_get_into_the_portal"]
-  tags: [padsign, end_user, troubleshooting]
+  tags: [padsign, end_user, troubleshooting, figure]
+  expects_screenshot: true
+  expected_figures: [screen-server-offline]
 
 - id: ps025
   question: "Where is my signed PDF? Will I get a copy?"
@@ -157,7 +183,10 @@
   type: positive
   expected_answer_contains: ["already"]
   expected_sources_contain: ["07_01_what_happens_to_the_document", "03_02_screen_signing_progress"]
-  tags: [padsign, end_user, reassurance]
+  tags: [padsign, end_user, reassurance, figure]
+  expects_screenshot: true
+  expected_figures: [screen-progress-success]
+  wrong_figures: [screen-progress-failed]
 
 # --- End-user: accessibility (previously produced confident wrong answers) ---
 
@@ -196,7 +225,9 @@
   type: positive
   expected_answer_contains: ["touchscreen", "sign"]
   expected_sources_contain: ["00_01_what_is_padsign"]
-  tags: [padsign, prospect]
+  tags: [padsign, prospect, figure]
+  expects_screenshot: true
+  expected_figures: [screen-document-view]
 
 - id: ps061
   question: "Why should we buy this? What is the business value?"
@@ -294,7 +325,9 @@
   type: positive
   expected_answer_contains: ["demo"]
   expected_sources_contain: ["06_04_demo_mode", "06_07_commercial_model"]
-  tags: [padsign, prospect]
+  tags: [padsign, prospect, figure]
+  expects_screenshot: true
+  expected_figures: [screen-demo-controls]
 
 - id: ps075
   question: "I printed to the Padsign printer and nothing appeared on the pad."
