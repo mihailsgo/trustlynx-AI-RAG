@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:37c2ae873c3f3268743bd7379c62d3a50c93959d9d495b52d0802497dd535981
+checksum: sha256:9edffaebd5f93a2dfbf6a34c78153feaa56048919294fd7ac6dbdca76c72944b
 tags:
   - padsign
   - screenshot
@@ -21,11 +21,12 @@ extra:
   used_by:
     - 03-03-on-screen-message-catalogue
   capture_note: Demo mode, neutral logo, generated sample PDF. No customer data.
+  source_checksum: sha256:37c2ae873c3f3268743bd7379c62d3a50c93959d9d495b52d0802497dd535981
 ---
 
 # Screen: A spinner card reading "Loading document..." over a dimmed document
 
-![A spinner card reading "Loading document..." over a dimmed document.](knowledge/raw/padsign/images/screen-document-loading.png)
+![A spinner card reading "Loading document..." over a dimmed document.](../images/screen-document-loading.png)
 
 
 The brief loading state, shown while the document is being fetched and rendered.

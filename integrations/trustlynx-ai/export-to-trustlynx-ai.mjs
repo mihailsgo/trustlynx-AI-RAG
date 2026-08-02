@@ -34,12 +34,25 @@
  *     the user. Those rules belong in the system prompt — see the drafted
  *     doc_qa_system_public.txt alongside this script.
  *
- * Known consequence, documented deliberately (see README): `checksum` is
- * emitted as the hash of the SOURCE chunk in this repo, not of the exported
- * file, because a file cannot contain its own hash. Their `scan` compares the
- * processed checksum against the raw file's, so exported docs are re-processed
- * on every scan instead of being skipped as unchanged. Harmless and idempotent,
- * just not free.
+ * `checksum` must be a hash of the EXPORTED document, not of the source chunk
+ * in this repo. Their `Indexer.index()` calls
+ * `is_already_indexed(doc_id, frontmatter.checksum)` and skips the document
+ * outright when that value already matches what is in Chroma. A source-chunk
+ * hash does not change when only the EXPORT changes, so any export-only fix
+ * (an image-prefix correction, a body reformat) was silently never indexed —
+ * reported as `status=indexed, chunks_added=0`, stale chunks left in place, and
+ * `scan --force` did not help because force only deletes the processed twin.
+ *
+ * Omitting the field entirely does not work either: their `converter.convert()`
+ * runs the existing block through `parse_frontmatter()`, which validates it and
+ * requires `checksum`; the resulting error is swallowed and the whole YAML block
+ * is demoted to body text, so the document then fails on the missing `product`
+ * and `department` instead.
+ *
+ * So we hash the exported frontmatter (minus this field) plus the exported body.
+ * That changes whenever anything we emit changes, which is exactly what their
+ * freshness check needs. The source-chunk hash is kept as
+ * `extra.source_checksum` for provenance.
  */
 
 import { createRequire } from 'node:module';
@@ -66,18 +79,29 @@ const opt = (name, fallback) => {
 
 const OUT_DIR = path.resolve(opt('out', path.join(__dirname, 'export', 'padsign')));
 /**
- * Where the images will live relative to the CONSUMING app's working directory.
- * Their UI resolves image paths with os.path.isfile() against the process CWD
- * (the app root), so this must be an app-root-relative path, not a path
- * relative to the markdown file.
+ * Where the images live RELATIVE TO THE MARKDOWN FILE that references them.
+ *
+ * The consuming app resolves each ref in `src/rag/citations.py`
+ * `_resolve_image_paths()` as `raw_dir / dirname(source_path) / ref`, then
+ * `.resolve()`s the result — so refs are document-relative, NOT app-root
+ * relative. Passing an app-root path such as `knowledge/raw/padsign/images`
+ * yields a doubled path (`knowledge/raw/padsign/knowledge/raw/padsign/...`),
+ * `os.path.isfile()` fails, and every screenshot is silently dropped: the app
+ * shows no figures at all and its eval reports "Screenshot recall: 0/0 (100%)".
  */
-const IMAGE_PREFIX = opt('image-prefix', 'knowledge/raw/padsign/images');
+const IMAGE_PREFIX = opt('image-prefix', 'images');
 const PRODUCT = opt('product', 'padsign_2_0');
 const DOC_PREFIX = opt('doc-prefix', 'padsign');
 
 // ------------------------------------------------------------------- helpers
 const snake = (s) => s.replace(/[^a-zA-Z0-9]+/g, '_').replace(/^_+|_+$/g, '').toLowerCase();
 const sha256 = (buf) => `sha256:${crypto.createHash('sha256').update(buf).digest('hex')}`;
+/**
+ * Stands in for `checksum` while the document is being assembled, so the field
+ * keeps its position in the block and the hash covers a stable shape. Must match
+ * their `sha256:<64hex>` pattern, since it is what gets hashed over.
+ */
+const CHECKSUM_PLACEHOLDER = `sha256:${'0'.repeat(64)}`;
 
 function parseFrontmatter(text, label) {
     if (!text.startsWith('---')) throw new Error(`${label}: no frontmatter`);
@@ -102,11 +126,23 @@ function departmentFor(audience = []) {
     return 'support';
 }
 
+/**
+ * IMAGE_PREFIX adjusted for a document sitting `depth` directories below the
+ * export root. Caption documents are emitted under `figures/`, so they need one
+ * `../` more than the top-level chunk documents to reach the same `images/`.
+ * An absolute prefix is passed through untouched.
+ */
+function prefixAtDepth(depth) {
+    if (depth === 0 || path.posix.isAbsolute(IMAGE_PREFIX)) return IMAGE_PREFIX;
+    return path.posix.normalize(`${'../'.repeat(depth)}${IMAGE_PREFIX}`);
+}
+
 /** Rewrite `../images/x.png` to a path the consuming app can resolve. */
-function rewriteImagePaths(body) {
+function rewriteImagePaths(body, depth = 0) {
+    const prefix = prefixAtDepth(depth);
     return body.replace(
         /!\[([^\]]*)\]\(\s*\.\.\/images\/([^)\s]+)\s*\)/g,
-        (_m, alt, file) => `![${alt}](${IMAGE_PREFIX}/${file})`
+        (_m, alt, file) => `![${alt}](${prefix}/${file})`
     );
 }
 
@@ -154,15 +190,24 @@ function buildFrontmatter({ docId, relPath, title, summary, audience, tags, chec
         department: departmentFor(audience),
         version,
         last_updated: lastUpdated,
-        checksum,
+        // Filled in by emit(), which hashes everything else we write. Keeping the
+        // key here fixes its position in the serialized block.
+        checksum: CHECKSUM_PLACEHOLDER,
         tags,
         summary: summary ? String(summary).trim().replace(/\s*\n\s*/g, ' ').slice(0, 500) : undefined,
-        extra
+        extra: { ...extra, source_checksum: checksum }
     };
 }
 
 function emit(outName, fmObj, body) {
     const clean = Object.fromEntries(Object.entries(fmObj).filter(([, v]) => v !== undefined));
+    // Hash everything we are about to write, with the placeholder still in place,
+    // so the value changes whenever the exported document changes. See the note at
+    // the top of this file for why a source-chunk hash is not usable here.
+    const forHashing = { ...clean, checksum: CHECKSUM_PLACEHOLDER };
+    clean.checksum = sha256(
+        yaml.dump(forHashing, { lineWidth: 100, noRefs: true, sortKeys: false }) + body
+    );
     const yamlBlock = yaml.dump(clean, { lineWidth: 100, noRefs: true, sortKeys: false });
     const out = path.join(OUT_DIR, outName);
     fs.mkdirSync(path.dirname(out), { recursive: true });
@@ -235,7 +280,10 @@ for (const img of manifest.images) {
     const relPath = `${DOC_PREFIX}/${fileName}`;
 
     const title = `Screen: ${img.alt.replace(/\.$/, '')}`;
-    const heading = `# ${title}\n\n![${img.alt}](${IMAGE_PREFIX}/${path.basename(img.file)})\n\n`;
+    // Caption documents are emitted under `figures/`, one level below the chunk
+    // documents, so their image refs need the depth-1 prefix.
+    const imgPrefix = prefixAtDepth(1);
+    const heading = `# ${title}\n\n![${img.alt}](${imgPrefix}/${path.basename(img.file)})\n\n`;
 
     let out = heading + body.trimEnd();
     out = appendRetrievalAids(out, fm);
@@ -271,5 +319,6 @@ console.log(`  ${chunkCount} chunk documents`);
 console.log(`  ${captionCount} screenshot-caption documents`);
 console.log(`  ${imageCount} images -> ${path.join(OUT_DIR, 'images')}`);
 console.log(`  audience: public   product: ${PRODUCT}   version: ${VERSION}`);
-console.log(`  image paths written as: ${IMAGE_PREFIX}/<file>.png`);
+console.log(`  image paths written as: ${prefixAtDepth(0)}/<file>.png (chunks)`);
+console.log(`                          ${prefixAtDepth(1)}/<file>.png (captions)`);
 console.log('\nCopy the export into the assistant\'s knowledge/raw/ and run its ingest scan.');

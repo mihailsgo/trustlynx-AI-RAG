@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:eaf0e9939d63824c33c5ab6ad448d47ed82129eba992f7e9b589fe3a4f1e33a2
+checksum: sha256:b4d88cccd53f346669e19e25b213a0fd7ef4bbd28dfdfceb61de4b2d59c038d4
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
     - 03-02-screen-signing-progress-and-outcome
     - 10-04-signing-failed-message
   capture_note: Demo mode. The sealing step was deliberately made to fail to capture this state.
+  source_checksum: sha256:eaf0e9939d63824c33c5ab6ad448d47ed82129eba992f7e9b589fe3a4f1e33a2
 ---
 
 # Screen: The progress panel with the digital stamp step marked failed and a Close button
 
-![The progress panel with the digital stamp step marked failed and a Close button.](knowledge/raw/padsign/images/screen-progress-failed.png)
+![The progress panel with the digital stamp step marked failed and a Close button.](../images/screen-progress-failed.png)
 
 
 The failure panel, shown when a signing step does not complete.

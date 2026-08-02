@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:b3ef8f5f742d16b9c6e2697b4bc58090346da82eee47376c6ee91eea08075328
+checksum: sha256:d696a4e47c97c11f645d64b641cc00e377f0807e1dc2eaed97daf465ae4f831e
 tags:
   - padsign
   - components
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - The name or version of the third-party PDF viewer component, or any licence key detail.
     - That the portal works without a network connection.
+  source_checksum: sha256:b3ef8f5f742d16b9c6e2697b4bc58090346da82eee47376c6ee91eea08075328
 ---
 
 
@@ -36,7 +37,7 @@ extra:
 The portal is the part the signer sees. It is a web application, so it runs in the
 device's own browser.
 
-![A document open on the signing screen with a signature box below it](knowledge/raw/padsign/images/screen-document-view.png)
+![A document open on the signing screen with a signature box below it](images/screen-document-view.png)
 
 ## Nothing is installed on the device
 

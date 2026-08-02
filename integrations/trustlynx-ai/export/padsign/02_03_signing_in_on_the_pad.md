@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:479489c8c85b75e80941ea4a79773d1cc4513f2bb4fc7df67a96285675c0b27e
+checksum: sha256:d7ba63bafc9b4d61d7150a51e2d7d4fe70de8e63b3f6a5b22e9db4fea8ae6ced
 tags:
   - padsign
   - journey
@@ -29,6 +29,7 @@ extra:
       That PadSign verifies the signer's identity against any official register or identity
       document.
     - The name of the identity software used, or any realm, client or role names.
+  source_checksum: sha256:479489c8c85b75e80941ea4a79773d1cc4513f2bb4fc7df67a96285675c0b27e
 ---
 
 

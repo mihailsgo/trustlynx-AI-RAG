@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:0d5119308ce5a6487538af59267b6eb9f3f2a54103156159b0214dc460555e5e
+checksum: sha256:c39554565f03d1b86b0be0430774f3dfee6deaa0a0d8a120495d84e3f3a3c58a
 tags:
   - padsign
   - screens
@@ -26,6 +26,7 @@ extra:
   confidence: verified
   do_not_state:
     - That the signature area appears before a document has arrived — it does not.
+  source_checksum: sha256:0d5119308ce5a6487538af59267b6eb9f3f2a54103156159b0214dc460555e5e
 ---
 
 
@@ -34,7 +35,7 @@ extra:
 The signature area appears along the bottom of the screen once a document is open.
 It is fixed in place, so it stays visible while you scroll the document above it.
 
-![The empty signature box with Clear and Sign buttons underneath](knowledge/raw/padsign/images/screen-signature-pad.png)
+![The empty signature box with Clear and Sign buttons underneath](images/screen-signature-pad.png)
 
 ## The elements
 
@@ -53,7 +54,7 @@ cannot be submitted twice, and a progress panel takes over the screen.
 **Signer: <name>** — an optional line above the box, naming the person the document
 was prepared for. It appears only in setups that have this switched on.
 
-![The signature box with a Signer name label above it](knowledge/raw/padsign/images/screen-signer-name-label.png)
+![The signature box with a Signer name label above it](images/screen-signer-name-label.png)
 
 ## When the area is not there
 

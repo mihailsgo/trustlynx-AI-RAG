@@ -12,7 +12,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:cf86593f4ba62378eb1f738b9a381f68c4be77f082059891e5080d7989b032d0
+checksum: sha256:fb019342a81b87e51ec68d93ea2d8864979f076fe67cb38d83315807b1305d2e
 tags:
   - padsign
   - screenshot
@@ -23,11 +23,12 @@ extra:
   used_by:
     - 02-04-reading-and-filling-in-the-document
   capture_note: Demo mode, generated sample PDF with placeholder values typed in. No customer data.
+  source_checksum: sha256:cf86593f4ba62378eb1f738b9a381f68c4be77f082059891e5080d7989b032d0
 ---
 
 # Screen: A close-up of the document showing highlighted fillable fields, with a name and email typed in
 
-![A close-up of the document showing highlighted fillable fields, with a name and email typed in.](knowledge/raw/padsign/images/screen-form-field-focus.png)
+![A close-up of the document showing highlighted fillable fields, with a name and email typed in.](../images/screen-form-field-focus.png)
 
 
 A close-up of part of the document, showing what fillable fields look like when the document

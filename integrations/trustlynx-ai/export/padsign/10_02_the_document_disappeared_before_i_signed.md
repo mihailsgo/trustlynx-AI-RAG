@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:5c860ca17919a8450fadcf1920fd09f108bdbf7bb33fedbd49c19bebb280fcef
+checksum: sha256:914ab4635d64497af222904cc4f2c01052a64f7b735346bf029f418b1fdcbc6a
 tags:
   - padsign
   - troubleshooting
@@ -27,6 +27,7 @@ extra:
   do_not_state:
     - That a document which timed out was partially signed or partially saved.
     - An exact timeout value as fixed, since it is configurable.
+  source_checksum: sha256:5c860ca17919a8450fadcf1920fd09f108bdbf7bb33fedbd49c19bebb280fcef
 ---
 
 

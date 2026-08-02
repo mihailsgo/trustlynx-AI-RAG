@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:f472870b01e2e1d00a65aa7ef3987a6a663f245101d2fe160733d9f574f8f188
+checksum: sha256:e527293116234c576eb3042aae15de5ec043658a88fba0200097f6eded196e75
 tags:
   - padsign
   - boundaries
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - Any support hours, response times, or service level, since none are published.
     - That TrustLynx provides direct support to the end users of a customer's deployment.
+  source_checksum: sha256:f472870b01e2e1d00a65aa7ef3987a6a663f245101d2fe160733d9f574f8f188
 ---
 
 

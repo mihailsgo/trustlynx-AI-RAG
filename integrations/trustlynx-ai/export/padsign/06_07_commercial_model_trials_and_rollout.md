@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:9b572882797e753c432ee26e0fa317ea9f00bc3d232c50fb8d3c69084ff52171
+checksum: sha256:a5bb1d406b132aa61b8666a627f774dd845b6683cdc50e3a6b2a6aca4aaa5de0
 tags:
   - padsign
   - deployment
@@ -34,6 +34,7 @@ extra:
     - >-
       That a free trial, pilot programme, or training package formally exists, beyond what is
       described here.
+  source_checksum: sha256:9b572882797e753c432ee26e0fa317ea9f00bc3d232c50fb8d3c69084ff52171
 ---
 
 

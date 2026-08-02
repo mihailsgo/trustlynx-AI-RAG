@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:54f6f5b2083687081ecad6c405681e0fbfc5953fcfc618bdde8b590a17cb9f32
+checksum: sha256:3cc0f316ebf8ca13742f07dbfe3506f43b4c400b93c3fe16dc45f92ef67671ed
 tags:
   - padsign
   - deployment
@@ -29,6 +29,7 @@ extra:
     - Script names, command lines, version numbers, or container image names.
     - A downtime figure or maintenance window duration, since none is published.
     - Any support or maintenance commitment.
+  source_checksum: sha256:54f6f5b2083687081ecad6c405681e0fbfc5953fcfc618bdde8b590a17cb9f32
 ---
 
 

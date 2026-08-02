@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:eb9aeb72faa887764208de0b5e528503c51c61de5a68c40dd20fce83f615b9ae
+checksum: sha256:34740f68d461c6a992c4de9961fd9c6ae9cb6069b405072b7c5c58d1ff2d55cc
 tags:
   - padsign
   - components
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - API endpoint names, port numbers, or configuration field names.
     - That signed documents themselves are stored in memory — they are not.
+  source_checksum: sha256:eb9aeb72faa887764208de0b5e528503c51c61de5a68c40dd20fce83f615b9ae
 ---
 
 

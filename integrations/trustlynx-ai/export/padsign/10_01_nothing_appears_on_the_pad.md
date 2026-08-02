@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:37de6e6ad2f6e98be91c68dc09322c6b37d29d56abd6233047c9333a95cf97ce
+checksum: sha256:0d7edeaa6a38020753e631e7cad6770b6a91f618ccdb0c3b1f40b01773e68bd4
 tags:
   - padsign
   - troubleshooting
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - That the signer can fix a connection or server problem themselves.
     - A guaranteed arrival time.
+  source_checksum: sha256:37de6e6ad2f6e98be91c68dc09322c6b37d29d56abd6233047c9333a95cf97ce
 ---
 
 
@@ -38,7 +39,7 @@ extra:
 The pad showing a centred logo and nothing else is not an error. It means the device is working
 and waiting for a document.
 
-![The resting screen showing only a centred logo](knowledge/raw/padsign/images/screen-idle-waiting.png)
+![The resting screen showing only a centred logo](images/screen-idle-waiting.png)
 
 ## What to do
 

@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:0643435708cded4edc017df16296e81146a009eb72f5783abf99e4ef48b4c070
+checksum: sha256:9a264c0d791a157d06e210adca1cbc95430a76acfb37b78ba811548b7b1f9c7d
 tags:
   - padsign
   - components
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Port numbers, container image names, hostnames, or internal service addresses.
     - Which routes are authenticated or unauthenticated.
+  source_checksum: sha256:0643435708cded4edc017df16296e81146a009eb72f5783abf99e4ef48b4c070
 ---
 
 

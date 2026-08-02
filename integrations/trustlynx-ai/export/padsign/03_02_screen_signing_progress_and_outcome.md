@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:c4f9f318dd4d7bc97a7d3c75045f3a1ccfb85eae5642844c6440e725342237df
+checksum: sha256:e55aa0e5ffbc29f65ba55de721388b28d0d952a925df7b9e3cf8214a6aa315a2
 tags:
   - padsign
   - screens
@@ -30,6 +30,7 @@ extra:
       That all four steps appear in every deployment — the stamp step only appears where sealing is
       enabled.
     - That a failed signing has partially signed the document.
+  source_checksum: sha256:c4f9f318dd4d7bc97a7d3c75045f3a1ccfb85eae5642844c6440e725342237df
 ---
 
 
@@ -44,7 +45,7 @@ A title reads "Signing workflow in progress", with the line "Please wait while e
 step is completed." Below that is a progress bar with a percentage, and a row of
 step markers.
 
-![A progress panel showing four steps with the digital stamp step active at 63 per cent](knowledge/raw/padsign/images/screen-progress-steps.png)
+![A progress panel showing four steps with the digital stamp step active at 63 per cent](images/screen-progress-steps.png)
 
 The steps, in order:
 
@@ -64,7 +65,7 @@ Every marker turns green with a tick, the bar reaches 100%, and the title change
 say the document was signed successfully. The subtitle then counts down — "Page will
 refresh in 5..." — and the pad resets itself to the resting screen.
 
-![The progress panel with all four steps complete and a success message](knowledge/raw/padsign/images/screen-progress-success.png)
+![The progress panel with all four steps complete and a success message](images/screen-progress-success.png)
 
 The countdown is not a deadline for you. Your document is already signed, stored and
 sent onward by the time you see this. The reset just clears the screen for the next
@@ -76,7 +77,7 @@ The title changes to "Signing workflow failed" and the subtitle names which step
 went wrong, sometimes with a code in brackets. The failed step is marked with a
 cross, and a **Close** button appears.
 
-![The progress panel with the digital stamp step marked failed and a Close button](knowledge/raw/padsign/images/screen-progress-failed.png)
+![The progress panel with the digital stamp step marked failed and a Close button](images/screen-progress-failed.png)
 
 The important thing to understand: **the document was not signed.** A failure is not
 a half-signed document — the process stopped. Nothing incomplete has been filed

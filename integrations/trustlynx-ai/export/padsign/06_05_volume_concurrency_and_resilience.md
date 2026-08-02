@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:75d16eab03dcf2cddd868ddf90f9126bc4305ee6898eeafc213f411ee16dc728
+checksum: sha256:4205eda3dfe417c2f48496c88b1d8957d325d69edd2b46ac7ed2c9aaf712bac2
 tags:
   - padsign
   - deployment
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Specific throughput numbers, concurrency limits, or timeout values.
     - Any SLA or availability guarantee.
+  source_checksum: sha256:75d16eab03dcf2cddd868ddf90f9126bc4305ee6898eeafc213f411ee16dc728
 ---
 
 

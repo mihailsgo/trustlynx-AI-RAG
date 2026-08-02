@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:6be43efa9a17272bde7372ab273bb5b369e404b1995d3cf04d4c9163c7df6ace
+checksum: sha256:8cd0b7110d67cde043846314e6bade28ebcf5b72e8d3fd0e9a33e33ae6a1a300
 tags:
   - padsign
   - journey
@@ -29,6 +29,7 @@ extra:
     - That a signature can be revoked or undone inside PadSign after signing completes.
     - Whether signing on behalf of another person is legally valid in any situation.
     - That refusing to sign has no consequences, since that depends on the context.
+  source_checksum: sha256:6be43efa9a17272bde7372ab273bb5b369e404b1995d3cf04d4c9163c7df6ace
 ---
 
 

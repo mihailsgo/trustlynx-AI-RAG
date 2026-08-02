@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:e0e0a7e613b5427048b3877a3294fcb84b175802a9ce1b94f89d04e69ee1ab22
+checksum: sha256:e17a4aad6bd2bf717129f6ac8be6be6ec0f6cf863257abfd214e776985891791
 tags:
   - padsign
   - troubleshooting
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - That the document may have been partially signed or partially filed.
     - That the signer should investigate or resolve the underlying fault.
+  source_checksum: sha256:e0e0a7e613b5427048b3877a3294fcb84b175802a9ce1b94f89d04e69ee1ab22
 ---
 
 
@@ -49,7 +50,7 @@ somebody's system.
 The progress panel turns red. The title changes to say the signing workflow failed, the step that
 went wrong is marked with a cross, and a **Close** button appears.
 
-![The progress panel with a failed step and a Close button](knowledge/raw/padsign/images/screen-progress-failed.png)
+![The progress panel with a failed step and a Close button](images/screen-progress-failed.png)
 
 The subtitle names which stage failed, sometimes with a code in brackets.
 

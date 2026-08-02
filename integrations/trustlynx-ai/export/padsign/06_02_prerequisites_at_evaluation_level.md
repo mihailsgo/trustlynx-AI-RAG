@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:f0d49946484e718bb976a8ee733805c80f5fe60edbcb2a068af2842ccffb9c2e
+checksum: sha256:0a77ad5bfb63c8162222e51010c87515043227ad0219f8f5ca02e6ff6ed0a508
 tags:
   - padsign
   - deployment
@@ -32,6 +32,7 @@ extra:
       entry point could be bypassed.
     - Specific external service addresses or hostnames.
     - A disk-space figure, since none is published and it depends on volume and retention.
+  source_checksum: sha256:f0d49946484e718bb976a8ee733805c80f5fe60edbcb2a068af2842ccffb9c2e
 ---
 
 

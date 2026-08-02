@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:e605388b60be92fc4200766830117ae3b61761e8cd36702de1bb2bfe3eeee960
+checksum: sha256:205fffb37c24cbea7fc03adb46365596249aa7466e9806ab120afe75e90f96d5
 tags:
   - padsign
   - journey
@@ -27,6 +27,7 @@ extra:
   do_not_state:
     - A guaranteed arrival time for a document.
     - That the signer can request or load a document themselves in a normal production setup.
+  source_checksum: sha256:e605388b60be92fc4200766830117ae3b61761e8cd36702de1bb2bfe3eeee960
 ---
 
 
@@ -38,7 +39,7 @@ Between visitors the pad shows a logo in the middle of an otherwise empty screen
 That is the resting state, not a fault and not a loading screen. It means the
 device is working and waiting for a document.
 
-![The resting screen showing only a centred logo](knowledge/raw/padsign/images/screen-idle-waiting.png)
+![The resting screen showing only a centred logo](images/screen-idle-waiting.png)
 
 ## How the document gets there
 

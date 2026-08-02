@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:0d67907c0af315fc6d05bbbfb69c1b9f3b7e163a9d419722207f036217a02cb2
+checksum: sha256:704ae12c6d49bd60e761c4bb615a3c9332910bbfd39828834fc6b9de58a8a424
 tags:
   - padsign
   - delivery
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Configuration field names, JSON payload shapes, endpoint paths, or authentication schemes.
     - Real folder paths or customer names from example configurations.
+  source_checksum: sha256:0d67907c0af315fc6d05bbbfb69c1b9f3b7e163a9d419722207f036217a02cb2
 ---
 
 

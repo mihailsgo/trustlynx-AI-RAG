@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:911a9ea247879ea184c0c623a00f62a1a6f0ff9f4b1c5546e9f992db0bdd8443
+checksum: sha256:b141e8180976a620448ccfbde5aa82b27e14edbd474fb0f1ffd03bd60f4d3880
 tags:
   - padsign
   - product
@@ -28,6 +28,7 @@ extra:
   confidence: verified
   do_not_state:
     - That any definition here constitutes legal advice or a legal opinion.
+  source_checksum: sha256:911a9ea247879ea184c0c623a00f62a1a6f0ff9f4b1c5546e9f992db0bdd8443
 ---
 
 

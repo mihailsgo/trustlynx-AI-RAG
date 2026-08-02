@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:d088a9992aaf6803d3d5ae92a8ae11d0245ee643f4ce0193bdf7f0a3fc707174
+checksum: sha256:804f6604275eade22598304dc38a7e7f7f13d5fd5b965c42d7ee25d62a20ecde
 tags:
   - padsign
   - boundaries
@@ -32,6 +32,7 @@ extra:
       That multi-signer support definitively does not exist — it is not documented, which is not the
       same as impossible.
     - Maximum file sizes for the production flow, or supported browser versions.
+  source_checksum: sha256:d088a9992aaf6803d3d5ae92a8ae11d0245ee643f4ce0193bdf7f0a3fc707174
 ---
 
 

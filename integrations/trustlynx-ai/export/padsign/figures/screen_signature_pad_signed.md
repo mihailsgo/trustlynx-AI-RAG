@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:35dd5dcb72e4e41e38ee70106b52fbca065278a9d276cdb89bab6d461f99906f
+checksum: sha256:adc4f75e403aa2843abdb1d155b6ae44a4e0be97f34b196c65d419bd209d7cca
 tags:
   - padsign
   - screenshot
@@ -21,11 +21,12 @@ extra:
   used_by:
     - 02-05-drawing-and-submitting-your-signature
   capture_note: Demo mode, generated sample PDF. Signature is a synthetic stroke, not a real person's signature.
+  source_checksum: sha256:35dd5dcb72e4e41e38ee70106b52fbca065278a9d276cdb89bab6d461f99906f
 ---
 
 # Screen: The same signature box with a handwritten signature drawn in it
 
-![The same signature box with a handwritten signature drawn in it.](knowledge/raw/padsign/images/screen-signature-pad-signed.png)
+![The same signature box with a handwritten signature drawn in it.](../images/screen-signature-pad-signed.png)
 
 
 The signature area with a signature drawn in it — the state immediately before tapping

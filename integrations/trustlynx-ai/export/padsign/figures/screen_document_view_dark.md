@@ -12,7 +12,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:a682c93bd478cabf2cbcd91a71897604ca52639530cf2fa72d0983da6686fb7a
+checksum: sha256:eba6a5abf19d2ce677979de287d7baf927543edbd2a78515e60e935fbfb345c4
 tags:
   - padsign
   - screenshot
@@ -26,11 +26,12 @@ extra:
   used_by:
     - 09-01-devices-and-input
   capture_note: Demo mode, neutral logo, generated sample PDF, dark colour scheme. No customer data.
+  source_checksum: sha256:a682c93bd478cabf2cbcd91a71897604ca52639530cf2fa72d0983da6686fb7a
 ---
 
 # Screen: A document open on the signing screen in dark mode, with the document itself still on a light background
 
-![A document open on the signing screen in dark mode, with the document itself still on a light background.](knowledge/raw/padsign/images/screen-document-view-dark.png)
+![A document open on the signing screen in dark mode, with the document itself still on a light background.](../images/screen-document-view-dark.png)
 
 
 The signing screen with a document open, on a device set to dark mode. The interface around

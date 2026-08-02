@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:bfca8e4fe63dcf66fd621171a4aa038f09db0ddc5f071da19cf0a03a00d74bd0
+checksum: sha256:a8f04d713a9bce9222ca03148b5d1d4f63b07bab6253940318b753b94f6e6e3d
 tags:
   - padsign
   - devices
@@ -34,6 +34,7 @@ extra:
     - >-
       That biometric stroke data is or is not captured — only that the drawn shape is what is placed
       in the document.
+  source_checksum: sha256:bfca8e4fe63dcf66fd621171a4aa038f09db0ddc5f071da19cf0a03a00d74bd0
 ---
 
 

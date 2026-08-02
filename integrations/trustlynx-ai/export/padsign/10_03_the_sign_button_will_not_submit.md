@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:01eb7f71dc7fcd02050f87b213a0142a2b72f98aa2d979b07eb2c0029ca79856
+checksum: sha256:977c3b7d6ae332287cf65d606e7604ce10a28d87c460c3212e45c26f6b86e6a9
 tags:
   - padsign
   - troubleshooting
@@ -26,6 +26,7 @@ extra:
   confidence: verified
   do_not_state:
     - Specific field names, since those come from each organisation's own document.
+  source_checksum: sha256:01eb7f71dc7fcd02050f87b213a0142a2b72f98aa2d979b07eb2c0029ca79856
 ---
 
 

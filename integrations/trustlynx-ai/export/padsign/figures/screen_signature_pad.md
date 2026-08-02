@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:928e59e17f5542dfa4375d8f0566a52707c6839cc0b56eb5d8fa8f13e1e78cc7
+checksum: sha256:76f152c4598aaf49739c12b200b9bfbffafbdc7105debc3abc2860e7ee9bee56
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
     - 02-05-drawing-and-submitting-your-signature
     - 03-01-screen-signature-pad
   capture_note: Demo mode, generated sample PDF. Signature box empty. No customer data.
+  source_checksum: sha256:928e59e17f5542dfa4375d8f0566a52707c6839cc0b56eb5d8fa8f13e1e78cc7
 ---
 
 # Screen: The empty signature box with Clear and Sign buttons underneath
 
-![The empty signature box with Clear and Sign buttons underneath.](knowledge/raw/padsign/images/screen-signature-pad.png)
+![The empty signature box with Clear and Sign buttons underneath.](../images/screen-signature-pad.png)
 
 
 The signature area, shown at the bottom of the signing screen and cropped here to show it on

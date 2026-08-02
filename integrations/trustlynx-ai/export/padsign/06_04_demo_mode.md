@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:eb6ae561dd41ddf004f15320d06885540d7125ad14dd6662f73a4c3d104d9350
+checksum: sha256:80942a70dd5165d9522898e58694c6adfc6cd2529dbbd21144fc384fa34bc71c
 tags:
   - padsign
   - deployment
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - The configuration setting name or value that enables demo mode.
     - That demo mode is appropriate for production use.
+  source_checksum: sha256:eb6ae561dd41ddf004f15320d06885540d7125ad14dd6662f73a4c3d104d9350
 ---
 
 
@@ -47,12 +48,12 @@ pick a PDF from the device itself, and the full signing flow runs on it.
 **A "Load DEMO PDF" button.** Opens a file picker so you can choose any PDF on the device.
 It uploads, and the document appears on the pad exactly as if a system had sent it.
 
-![The demo controls with a Load DEMO PDF button and the signed-in account below it](knowledge/raw/padsign/images/screen-demo-controls.png)
+![The demo controls with a Load DEMO PDF button and the signed-in account below it](images/screen-demo-controls.png)
 
 **A "Download signed PDF" button**, which appears after signing so you can save the finished
 file and inspect it — including opening it in a PDF reader to look at the signature.
 
-![The demo controls after signing, showing both buttons](knowledge/raw/padsign/images/screen-download-signed.png)
+![The demo controls after signing, showing both buttons](images/screen-download-signed.png)
 
 **The signed-in account on display**, so you can see which account and organisation the pad
 is using.

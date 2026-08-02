@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:8c512f004547e7c72c2d67c6054b33fb4e16ab832b758a0f05d3c207645fa594
+checksum: sha256:dbd4210a75b8940abf2325df7d67b162af0f28178521057b276b4751e8d8eb8a
 tags:
   - padsign
   - positioning
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Specific configuration file names, setting names, or values.
     - That any change not listed here is possible without confirming with TrustLynx.
+  source_checksum: sha256:8c512f004547e7c72c2d67c6054b33fb4e16ab832b758a0f05d3c207645fa594
 ---
 
 

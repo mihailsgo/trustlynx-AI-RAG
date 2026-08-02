@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:f3356c4acde9d07fc01ccd44f9035959525aa6d782d373bc0575ffc7587846a6
+checksum: sha256:e4448686f063c471f53e77852dba214e78991c44e93defe816d306ce62cc7e92
 tags:
   - padsign
   - positioning
@@ -32,6 +32,7 @@ extra:
       That a specific combination of products is a supported configuration, without confirming with
       TrustLynx.
     - Feature claims about sibling products beyond what is summarised here from their public pages.
+  source_checksum: sha256:f3356c4acde9d07fc01ccd44f9035959525aa6d782d373bc0575ffc7587846a6
 ---
 
 

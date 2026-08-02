@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:a217aef20e5712bb4ddf902a670a0d7d101dd42e50a2e7dd811119a3df33039e
+checksum: sha256:e452899c9001c772c66f2d6487257367f42d0b26ff549db7a4b87e8b704a6ddd
 tags:
   - padsign
   - companions
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Endpoint paths, request or response shapes, authentication schemes, or API keys.
     - That any specific named product has a ready-made connector, without confirming with TrustLynx.
+  source_checksum: sha256:a217aef20e5712bb4ddf902a670a0d7d101dd42e50a2e7dd811119a3df33039e
 ---
 
 

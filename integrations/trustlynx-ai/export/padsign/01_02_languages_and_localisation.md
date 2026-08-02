@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:9670ec99593b0e887cdf4638ab0f37058d8b82d898b8b1545c7eb6e46752ed6f
+checksum: sha256:f6311c1e30a8941dd701342773187bef60610871235a0f5a143a4a0d1ef7a703
 tags:
   - padsign
   - positioning
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That any language other than Latvian and English is supported out of the box.
     - Whether adding a new language is included in a licence or is chargeable work.
+  source_checksum: sha256:9670ec99593b0e887cdf4638ab0f37058d8b82d898b8b1545c7eb6e46752ed6f
 ---
 
 

@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:386748ab2ffe978dbe88dceae6415789137ad179547f30454391456048e68157
+checksum: sha256:977278ba8bf92b5d849d31345b889464be103c06aa9d15a31548f658ceca9742
 tags:
   - padsign
   - deployment
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Specific container image names, registry accounts, ports, or hostnames.
     - Pricing figures.
+  source_checksum: sha256:386748ab2ffe978dbe88dceae6415789137ad179547f30454391456048e68157
 ---
 
 

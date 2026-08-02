@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:728ffaddf97e1568d0c12d87cdfef4f9d1b9ab4ff80ede0eaf7a635c4354b0c9
+checksum: sha256:b954f9b4bbc14c4123bdc603529089316970c6848c552b5a6ae8343565c27b13
 tags:
   - padsign
   - signature-law
@@ -31,6 +31,7 @@ extra:
     - That the drawn image is itself an advanced or qualified electronic signature.
     - That the seal identifies the individual person who signed.
     - That sealing happens in every deployment.
+  source_checksum: sha256:728ffaddf97e1568d0c12d87cdfef4f9d1b9ab4ff80ede0eaf7a635c4354b0c9
 ---
 
 
@@ -69,7 +70,7 @@ Two consequences worth being clear about:
 The progress panel shows them as separate steps: "Applying visual signature", then
 "Applying digital stamp".
 
-![A progress panel showing the visual signature step complete and the digital stamp step active](knowledge/raw/padsign/images/screen-progress-steps.png)
+![A progress panel showing the visual signature step complete and the digital stamp step active](images/screen-progress-steps.png)
 
 ## The seal is optional
 

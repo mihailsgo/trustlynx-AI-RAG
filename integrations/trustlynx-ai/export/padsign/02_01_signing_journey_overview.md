@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:c60df7e92fadbde47a4f3862c2dede143d9107b917c084f9fcf1dbd58a6e11b3
+checksum: sha256:464e99273b9ba68246f22f0761c8bdd84e1200190392a1da99be0b5cb53531ce
 tags:
   - padsign
   - journey
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - A specific duration for the signing process.
     - That the signer needs to log in or create an account.
+  source_checksum: sha256:c60df7e92fadbde47a4f3862c2dede143d9107b917c084f9fcf1dbd58a6e11b3
 ---
 
 
@@ -50,7 +51,7 @@ The PDF fills most of the screen. Scroll through it the way you would any page o
 a tablet. Read as much as you want; nothing is submitted until you choose to
 submit it.
 
-![A document open on the signing screen with a signature box below it](knowledge/raw/padsign/images/screen-document-view.png)
+![A document open on the signing screen with a signature box below it](images/screen-document-view.png)
 
 ## 3. You fill in whatever it asks for
 

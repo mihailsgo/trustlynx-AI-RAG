@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:3d4806f0bcc51a67efdef4eb7435342a7625dd7ed4bfa009e2d657fac9c08f0f
+checksum: sha256:27f6a555e75a8b936800377916d8da56e0f11b6344a460a9b81b68d53c7b32ae
 tags:
   - padsign
   - devices
@@ -34,6 +34,7 @@ extra:
       screen.
     - That a screen reader is or is not supported, since neither is documented.
     - That accessibility features exist beyond the ones named here.
+  source_checksum: sha256:3d4806f0bcc51a67efdef4eb7435342a7625dd7ed4bfa009e2d657fac9c08f0f
 ---
 
 

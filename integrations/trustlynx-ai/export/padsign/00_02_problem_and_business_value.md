@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:dcddd181c9fd923396e6481a42c0b258166b507e85500a57045e3e04b06a6bf2
+checksum: sha256:612293f01064cd65163e0fb163eb34b77e4d3575aaf5c0efd56eb04ac9f11bce
 tags:
   - padsign
   - product
@@ -30,6 +30,7 @@ extra:
       Any specific figure for savings, payback period, or return on investment beyond what the
       published customer testimonial says.
     - That results seen by one customer are typical or guaranteed.
+  source_checksum: sha256:dcddd181c9fd923396e6481a42c0b258166b507e85500a57045e3e04b06a6bf2
 ---
 
 

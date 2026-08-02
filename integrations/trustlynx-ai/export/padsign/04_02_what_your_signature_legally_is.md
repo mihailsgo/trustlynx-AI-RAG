@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:b5c0c5dc91a77c2ce3ca906ca9525c0e5998bc8d0e41f7ed4c91a1afa4be0633
+checksum: sha256:2b676f9dcb1b5e69f2bec21780477233051f73d35e5b7289389d9b2a29f5f5c4
 tags:
   - padsign
   - signature-law
@@ -32,6 +32,7 @@ extra:
     - That PadSign produces qualified electronic signatures or qualified seals.
     - That any particular certificate authority or timestamp authority is in use.
     - Any assessment of validity in a named jurisdiction or before a named court.
+  source_checksum: sha256:b5c0c5dc91a77c2ce3ca906ca9525c0e5998bc8d0e41f7ed4c91a1afa4be0633
 ---
 
 

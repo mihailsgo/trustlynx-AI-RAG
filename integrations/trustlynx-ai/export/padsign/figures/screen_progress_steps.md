@@ -12,7 +12,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:5c5e7fe06def2f50b1f36a70b9605afa90c9b62f624bf8e1015375470fc739de
+checksum: sha256:bc017b31adf1e6e0cbde98b1b026f4d27614b592f02cac83f0a0f10edbcc5304
 tags:
   - padsign
   - screenshot
@@ -28,11 +28,12 @@ extra:
     - 03-02-screen-signing-progress-and-outcome
     - 04-01-two-things-that-happen-when-you-sign
   capture_note: Demo mode. Captured mid-flow with the sealing step deliberately held open.
+  source_checksum: sha256:5c5e7fe06def2f50b1f36a70b9605afa90c9b62f624bf8e1015375470fc739de
 ---
 
 # Screen: A progress panel showing four signing steps, with the digital stamp step in progress at 63 per cent
 
-![A progress panel showing four signing steps, with the digital stamp step in progress at 63 per cent.](knowledge/raw/padsign/images/screen-progress-steps.png)
+![A progress panel showing four signing steps, with the digital stamp step in progress at 63 per cent.](../images/screen-progress-steps.png)
 
 
 The progress panel that appears after tapping **Sign**, captured while signing is still under

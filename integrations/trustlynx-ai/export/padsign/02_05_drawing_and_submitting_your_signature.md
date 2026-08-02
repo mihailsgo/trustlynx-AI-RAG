@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:af8a1e08537cd007712afefbd0ac0f1e122010426e19285dfb1c295c1499ba68
+checksum: sha256:c50457ec4c7ce16c76a774443756a6fbc5403424b21c88625e7735f70940612e
 tags:
   - padsign
   - journey
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That the drawn image alone is a legally qualified electronic signature.
     - That signature pressure, speed, or any other biometric data is captured.
+  source_checksum: sha256:af8a1e08537cd007712afefbd0ac0f1e122010426e19285dfb1c295c1499ba68
 ---
 
 
@@ -49,11 +50,11 @@ is your signature.
    many times as you like. Nothing is submitted until you tap Sign.
 4. **Tap Sign.** This submits the document.
 
-![The empty signature box with Clear and Sign buttons underneath](knowledge/raw/padsign/images/screen-signature-pad.png)
+![The empty signature box with Clear and Sign buttons underneath](images/screen-signature-pad.png)
 
 Drawn and ready to submit:
 
-![The signature box with a handwritten signature drawn in it](knowledge/raw/padsign/images/screen-signature-pad-signed.png)
+![The signature box with a handwritten signature drawn in it](images/screen-signature-pad-signed.png)
 
 ## The line above the box
 
@@ -61,7 +62,7 @@ Some setups show **Signer: <name>** just above the signature box. That name come
 from the system that sent the document, and it is there so you can check the
 document is meant for you before signing.
 
-![The signature box with a Signer name label above it](knowledge/raw/padsign/images/screen-signer-name-label.png)
+![The signature box with a Signer name label above it](images/screen-signer-name-label.png)
 
 If the name is wrong, **do not sign** — tell the person at the desk. If your setup
 does not show this line at all, that is also normal; it is an option each

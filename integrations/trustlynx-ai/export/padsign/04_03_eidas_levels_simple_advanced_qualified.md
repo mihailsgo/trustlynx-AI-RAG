@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:cb05a265d9b5fa0ab31a1da6a00c83d46c460495ef32806b109616d1591ec305
+checksum: sha256:f6d8007b91f2cb7483e2d1b4fddf3e357397c3f8db9408af859b839b963aabae
 tags:
   - padsign
   - signature-law
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - That PadSign produces a signature at any particular eIDAS level.
     - That a level described here is achieved by installing the software.
+  source_checksum: sha256:cb05a265d9b5fa0ab31a1da6a00c83d46c460495ef32806b109616d1591ec305
 ---
 
 

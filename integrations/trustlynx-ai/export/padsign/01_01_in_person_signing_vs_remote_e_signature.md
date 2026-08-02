@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:d44e0d63731c1ae85be09d27a3460a7651ed82627bedd1ada9075e198c78cd08
+checksum: sha256:f546b2a36c5a6df2f187dbb97a4a78a0f9f2b7abf220cb0caa72408946d2c474
 tags:
   - padsign
   - positioning
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Any comparative claim about a named competitor's features, security, pricing, or compliance.
     - That PadSign cannot be used alongside a remote e-signature service.
+  source_checksum: sha256:d44e0d63731c1ae85be09d27a3460a7651ed82627bedd1ada9075e198c78cd08
 ---
 
 

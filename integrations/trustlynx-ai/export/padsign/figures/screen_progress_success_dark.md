@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:3377e3abf7cd116152931dfa772a0ab6c5a5819714b94822ac0e9a4b7312d1f6
+checksum: sha256:0b31143c632e0c52b78ab1fcf4df581fea9850a6df52262ca87a17725f6457bb
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
   used_by:
     - 09-01-devices-and-input
   capture_note: Demo mode, all steps mocked to succeed, dark colour scheme. No customer data.
+  source_checksum: sha256:3377e3abf7cd116152931dfa772a0ab6c5a5819714b94822ac0e9a4b7312d1f6
 ---
 
 # Screen: The signing success panel in dark mode, with all four steps complete
 
-![The signing success panel in dark mode, with all four steps complete.](knowledge/raw/padsign/images/screen-progress-success-dark.png)
+![The signing success panel in dark mode, with all four steps complete.](../images/screen-progress-success-dark.png)
 
 
 The signing confirmation panel on a device set to dark mode.

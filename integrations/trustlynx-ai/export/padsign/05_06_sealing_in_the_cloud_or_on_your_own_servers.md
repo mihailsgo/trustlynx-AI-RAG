@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:9030609fa9303bc602bd9f763963b7bb9d36dd69a9e5790cd9bc30fba1f33dc3
+checksum: sha256:907990b8e440f93ab3753add5ad343c059a1ed38d8f63c69d55eb195f3a43638
 tags:
   - padsign
   - components
@@ -31,6 +31,7 @@ extra:
       That the TrustLynx cloud sealing service uses a qualified certificate, which must be confirmed
       with TrustLynx.
     - That the demonstration seal certificate is suitable for production use.
+  source_checksum: sha256:9030609fa9303bc602bd9f763963b7bb9d36dd69a9e5790cd9bc30fba1f33dc3
 ---
 
 

@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:cae17debeb8cbc8a6c62df32cb07edf1a1d53216220e25ac3584321f376b2029
+checksum: sha256:213085c9b90f159d4265832622517c0e5d4f1d0a4ae3abe5593fffdef161b18f
 tags:
   - padsign
   - signature-law
@@ -29,6 +29,7 @@ extra:
   do_not_state:
     - That a "valid" verdict in a PDF reader establishes legal validity.
     - Instructions for importing certificates into a trust store, which is operator work.
+  source_checksum: sha256:cae17debeb8cbc8a6c62df32cb07edf1a1d53216220e25ac3584321f376b2029
 ---
 
 

@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:2a7bf91ccdac6babc01d0b6e51aa79c00ad007a4f3c7bae959728e0f71f3539c
+checksum: sha256:57e346b750b1bfe71f8cf829a591011e18ff1fc4dbfd663bbccf41f59a2e7077
 tags:
   - padsign
   - positioning
@@ -34,6 +34,7 @@ extra:
       That combining PadSign with the TrustLynx Authentication Service is a supported product
       configuration, without confirming with TrustLynx.
     - That PadSign performs KYC or any identity check against a register.
+  source_checksum: sha256:2a7bf91ccdac6babc01d0b6e51aa79c00ad007a4f3c7bae959728e0f71f3539c
 ---
 
 

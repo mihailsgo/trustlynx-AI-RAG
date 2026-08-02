@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:b233950e0407364ee852432e599d46e7e02b16316712d388b8e0c8c58cc80458
+checksum: sha256:ce12f8f270af72a15af3ffef30780b0324f585ca4a3c893823cf280073321276
 tags:
   - padsign
   - journey
@@ -27,6 +27,7 @@ extra:
   do_not_state:
     - That every document has fillable fields — many are read-and-sign only.
     - Specific field names or form content, which differ entirely between organisations.
+  source_checksum: sha256:b233950e0407364ee852432e599d46e7e02b16316712d388b8e0c8c58cc80458
 ---
 
 
@@ -59,7 +60,7 @@ what appears — PadSign neither adds questions nor needs to be told about them 
 
 Tick boxes and choice fields work by tapping directly on them.
 
-![A close-up showing highlighted fillable fields with a name and email typed in](knowledge/raw/padsign/images/screen-form-field-focus.png)
+![A close-up showing highlighted fillable fields with a name and email typed in](images/screen-form-field-focus.png)
 
 ## What counts as required
 

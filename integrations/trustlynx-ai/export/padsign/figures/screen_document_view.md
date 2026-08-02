@@ -12,7 +12,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:cca169d02423962c40d5bd91e70e7c1f4eb0e7b3c8101f1b248b95905d8d06d1
+checksum: sha256:b9b5c0faeed82af0d70c2c6ec747ab068821b7898415d7c6919deb58799623ff
 tags:
   - padsign
   - screenshot
@@ -26,11 +26,12 @@ extra:
     - 02-01-signing-journey-overview
     - 05-02-the-portal-and-pdf-viewer
   capture_note: Demo mode, neutral logo, generated sample PDF, placeholder account. No customer data.
+  source_checksum: sha256:cca169d02423962c40d5bd91e70e7c1f4eb0e7b3c8101f1b248b95905d8d06d1
 ---
 
 # Screen: A document open on the signing screen with a signature box and Clear and Sign buttons below it
 
-![A document open on the signing screen with a signature box and Clear and Sign buttons below it.](knowledge/raw/padsign/images/screen-document-view.png)
+![A document open on the signing screen with a signature box and Clear and Sign buttons below it.](../images/screen-document-view.png)
 
 
 The main signing screen, with a document open. This is what the person signing spends most of

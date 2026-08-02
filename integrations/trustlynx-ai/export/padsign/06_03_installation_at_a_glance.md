@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:1c9f7ca09129ec6f40bda487ea70787069d086b04d3f1e97c5e8940cc0c01b00
+checksum: sha256:96abc61164b46d0dcce3518e27243c6fc5ee977727d81da9a7e5980dfce6b9ca
 tags:
   - padsign
   - deployment
@@ -28,6 +28,7 @@ extra:
     - An installation duration, since none is published.
     - Script names, command lines, file paths, credentials, or default usernames.
     - Details of how the wizard authenticates or what privileges it holds.
+  source_checksum: sha256:1c9f7ca09129ec6f40bda487ea70787069d086b04d3f1e97c5e8940cc0c01b00
 ---
 
 

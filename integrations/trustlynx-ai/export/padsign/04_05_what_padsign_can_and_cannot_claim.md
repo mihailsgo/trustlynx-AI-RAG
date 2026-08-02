@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:3a9a36878d479f7f9e5eb027d61fe866589e36c2c7b80bdd03bcd806ec318982
+checksum: sha256:a2bbf09da487b78e19cca088d1d7c9a2e0e788f6b0a65f9689c886ded0131296
 tags:
   - padsign
   - signature-law
@@ -31,6 +31,7 @@ extra:
     - That any specific certificate authority or timestamp authority is in use.
     - Any assessment of validity in a named jurisdiction or before a named court.
     - That TrustLynx holds any particular compliance certification.
+  source_checksum: sha256:3a9a36878d479f7f9e5eb027d61fe866589e36c2c7b80bdd03bcd806ec318982
 ---
 
 

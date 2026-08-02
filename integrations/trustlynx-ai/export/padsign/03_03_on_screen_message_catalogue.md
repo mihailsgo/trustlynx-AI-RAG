@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:9b8a1989a5f88bbb258779157f1eae311f2745c4572eaa7303bf8e5a063627fe
+checksum: sha256:2297b34ce6a6d3f8a183da4bbafa28651a5b93ac0f986cf46c45767f9cce9418
 tags:
   - padsign
   - screens
@@ -27,6 +27,7 @@ extra:
   do_not_state:
     - Any message text specific to one organisation's own document or form content.
     - That an error message indicates a partially signed or corrupted document.
+  source_checksum: sha256:9b8a1989a5f88bbb258779157f1eae311f2745c4572eaa7303bf8e5a063627fe
 ---
 
 
@@ -45,7 +46,7 @@ phrased slightly differently.
 | **A new visitor has been registered. Document generation is in progress.** | The system has been told about you and is producing your document. |
 | **Signing process is in progress** | Your submission is being worked on. |
 
-![A spinner card reading Loading document over a dimmed document](knowledge/raw/padsign/images/screen-document-loading.png)
+![A spinner card reading Loading document over a dimmed document](images/screen-document-loading.png)
 
 ## Before submission
 

@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:5e812d179acc8e090587f0a626dcdcfdbf80544157b151d605bd976fdb14ee6d
+checksum: sha256:e9b36dc6025e847d3bfd9f95f0e174014675cec7662ca896ab644ddb16eb9721
 tags:
   - padsign
   - product
@@ -31,6 +31,7 @@ extra:
       names - none of these are published on the company's own site and third-party data is
       unverified.
     - The names of any customers other than the testimonials TrustLynx itself publishes.
+  source_checksum: sha256:5e812d179acc8e090587f0a626dcdcfdbf80544157b151d605bd976fdb14ee6d
 ---
 
 

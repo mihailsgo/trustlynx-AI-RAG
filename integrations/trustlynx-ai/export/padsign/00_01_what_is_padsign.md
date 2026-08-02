@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:ee40db36e3dcf0d4c068d79e71a8d4bf27cbcdf2cebe32157f8c9c5ba798cd70
+checksum: sha256:bf793198488774f43c2272919adb2f9359eb4579e291731be1be8a9de2b050ef
 tags:
   - padsign
   - product
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That PadSign is a remote or email-based e-signature service.
     - That PadSign is a document management system or an archive product.
+  source_checksum: sha256:ee40db36e3dcf0d4c068d79e71a8d4bf27cbcdf2cebe32157f8c9c5ba798cd70
 ---
 
 
@@ -56,7 +57,7 @@ The signer sees a normal web page on the device. The document fills most of the
 screen, and a signature area sits along the bottom with **Clear** and **Sign**
 buttons.
 
-![A document open on the signing screen with a signature box below it](knowledge/raw/padsign/images/screen-document-view.png)
+![A document open on the signing screen with a signature box below it](images/screen-document-view.png)
 
 There is nothing to install on the tablet — it runs in the device's browser.
 

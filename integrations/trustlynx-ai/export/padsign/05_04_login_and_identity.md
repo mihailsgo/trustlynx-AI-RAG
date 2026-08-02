@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:656be5e9fa9b4df75f5684d1202bc57a9c2ab6ad7825af311eee5d1e948c6016
+checksum: sha256:45f9c97e31221c77eaf20693df1eb9f273bb08f1993d5de6de51f67fe9a84ef0
 tags:
   - padsign
   - components
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Realm names, client names, role names, or any credential.
     - That an arbitrary external identity provider is supported without confirming with TrustLynx.
+  source_checksum: sha256:656be5e9fa9b4df75f5684d1202bc57a9c2ab6ad7825af311eee5d1e948c6016
 ---
 
 

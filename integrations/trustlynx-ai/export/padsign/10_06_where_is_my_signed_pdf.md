@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:435d6e47fd18820c9a5007566d98028f8eef78ffbca5429354e1fb0989c522bd
+checksum: sha256:b7043f3b522d6c783aeb15d2c73fb7065fed5c657fc2b0154ec7773e22d06fa3
 tags:
   - padsign
   - troubleshooting
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That signers automatically receive a copy of what they signed.
     - Specific folder paths, which are configured per deployment.
+  source_checksum: sha256:435d6e47fd18820c9a5007566d98028f8eef78ffbca5429354e1fb0989c522bd
 ---
 
 

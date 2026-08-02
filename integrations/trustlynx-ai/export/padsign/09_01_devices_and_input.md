@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:875bcbaee2d6bb1bba3250058fab83f5d793992ffaee087a0a7c17a7b18cc8fb
+checksum: sha256:4d75e3dae668499e139ae430139234faac65c885e3b5b4e13cc0d98a7b9d0713
 tags:
   - padsign
   - devices
@@ -33,6 +33,7 @@ extra:
       published.
     - Any accessibility conformance level for the signing interface.
     - That specific tablet models are supported or certified.
+  source_checksum: sha256:875bcbaee2d6bb1bba3250058fab83f5d793992ffaee087a0a7c17a7b18cc8fb
 ---
 
 
@@ -71,17 +72,17 @@ with gaps or separate initials are handled normally.
 The interface follows the device's own appearance setting automatically. A tablet set to dark
 mode shows a dark interface, with no configuration.
 
-![The resting screen in dark mode](knowledge/raw/padsign/images/screen-idle-waiting-dark.png)
+![The resting screen in dark mode](images/screen-idle-waiting-dark.png)
 
 The document itself stays on a light background regardless — inverting a legal document's
 colours would be a poor idea, and this is deliberate. So a dark-mode device shows a dark
 interface wrapped around a normally-rendered document:
 
-![A document open on the signing screen in dark mode, the document still on a light background](knowledge/raw/padsign/images/screen-document-view-dark.png)
+![A document open on the signing screen in dark mode, the document still on a light background](images/screen-document-view-dark.png)
 
 The panels shown during and after signing follow the dark scheme too:
 
-![The signing success panel in dark mode with all four steps complete](knowledge/raw/padsign/images/screen-progress-success-dark.png)
+![The signing success panel in dark mode with all four steps complete](images/screen-progress-success-dark.png)
 
 ## Practical device advice
 

@@ -28,7 +28,7 @@ not prerequisites.
 | `doc_qa_system_public.txt` | → `config/prompts/` | Public system prompt (the profile template lists this as TODO) |
 | `doc_qa_no_answer_public.txt` | → `config/prompts/` | Public no-answer message |
 | `public.yaml` | → `config/profiles/` | Corrected public profile — **do not use the app's own `public.yaml.example`**, see finding 3 |
-| `eval-questions-padsign.yaml` | → append to `eval/questions.yaml` | 63 eval cases |
+| `eval-questions-padsign.yaml` | → append to `eval/questions.yaml`, or keep as its own file and pass `--questions` | 63 eval cases, 13 of them annotated with `expects_screenshot` / `expected_figures` / `wrong_figures` |
 
 ## Quick start on the GPU machine
 
@@ -66,11 +66,18 @@ tagged `public` are already visible under the existing internal profile — inge
 and ask away. Switching to the public profile is what swaps in the
 customer-facing prompt and narrows retrieval to public-only.
 
-Step 2 puts the images at `knowledge/raw/padsign/images/`, which is exactly the
-path the exported markdown references. If you place them anywhere else, re-run
-the export with `--image-prefix <path-relative-to-app-root>`, because the
-assistant's UI resolves screenshot paths against its own working directory, not
-against the markdown file.
+Step 2 puts the images at `knowledge/raw/padsign/images/`, which is where the
+exported markdown expects them — as `images/<file>.png` for the chunk documents
+and `../images/<file>.png` for the captions under `figures/`.
+
+Those refs are **relative to the markdown file that contains them**, not to the
+assistant's working directory. It resolves each one in `src/rag/citations.py`
+`_resolve_image_paths()` as `raw_dir / dirname(source_path) / ref`. If you move
+the images, re-run the export with `--image-prefix <path-relative-to-the-doc>`;
+an app-root path silently produces a doubled path, `os.path.isfile()` fails, and
+**every screenshot is dropped** while the eval still reports
+"Screenshot recall: 0/0 (100%)" because no case is annotated. An earlier version
+of this adapter defaulted to the app-root form and shipped exactly that bug.
 
 ## What the export does, and why
 
@@ -155,16 +162,39 @@ Run against the assistant's **own code**, not a reimplementation:
   sources, and all 64 `expected_sources_contain` fragments matched against real
   exported doc_ids.
 
-Not verified locally, and worth confirming on the GPU machine:
+## Confirmed on the GPU machine (2026-07-31)
 
-- The **full chunker** could not run here (`langchain_text_splitters` and
-  `tiktoken` are not installed), so the single-chunk expectation is inferred
-  from its configured target size and its own token counter, not observed.
-  `ingest stats` after the first scan will confirm it — expect roughly 75
-  chunks, not several hundred.
-- Retrieval quality with real embeddings. This package's own
-  `retrieval-smoke.mjs` is a **lexical** floor (37/39 top-1); the eval set here
-  is the real test.
+The two items previously listed as unverified were both checked against a real
+ingest and a real eval:
+
+- **Chunking:** 75 documents → **85 chunks**, 0 failures. The single-chunk design
+  mostly holds; nine documents split into 2–3 (the message catalogue is the
+  widest at 3).
+- **Retrieval with real embeddings**, public profile, `--product padsign_2_0`:
+  **43/54 positives (80%)**, 7/9 negatives, screenshot recall **12/13 (92%)**,
+  figure precision **6/6** (never showed a figure listed in `wrong_figures`),
+  latency mean 6.5 s / p95 13.2 s. Meets that app's v1.0 bar.
+
+Getting there took the two export fixes described above. Worth knowing about the
+run in between: with the image paths broken the same suite reported 72% positives
+and "Screenshot recall: 0/0 (100%)" and declared *Meets the v1.0 success bar* —
+a false pass, because no eval case was annotated and a screenshot-less answer
+therefore could not fail. Annotating 13 cases is what made the regression visible.
+
+Known remaining gaps, all in answer quality rather than in the corpus:
+
+- `ps114` (WiFi drops mid-signature) invents a recovery procedure — "staff can
+  tap Retry Now", "data entered is lost" — which chunk `11-03` explicitly says
+  must not be promised, and some of those claims carry no citation. `11-03` does
+  not retrieve for interruption phrasings.
+- `ps116` (retention) answers correctly but grounds in `05-05` instead of `11-03`.
+- `ps112` / `ps115` are behaviourally correct and fail only on the literal bigram
+  `not published` — the model writes "not *publicly* published". That is the
+  missing `expected_answer_contains_any` field, not a wrong answer.
+- Adding this corpus to an index that also holds the internal SignBox corpus costs
+  the **internal** suite screenshot recall (87% → 78% at `top_k=4`) because the
+  two corpora compete for the four slots. `--product` isolation restores it. Plan
+  for a separate deployment rather than a shared index.
 
 ## Two findings worth passing upstream
 
@@ -174,13 +204,26 @@ pre-authored markdown — not just ours.
 **1. Machine-derived frontmatter fields should not be overridable.** The
 converter merges `auto < existing < user_metadata`, so a document that supplies
 its own `checksum`, `source_path`, `ingested_at` or `loader_*` overrides the
-values the pipeline computed. For `checksum` this has a visible effect: a file
-cannot contain its own hash, so our export stores the hash of the *source* chunk
-in this repo (a meaningful provenance value, but not the raw file's hash).
-`_is_file_unchanged()` compares the processed checksum against the raw file's,
-so **exported documents are re-processed on every `scan`** instead of being
-skipped as unchanged. Idempotent and harmless, just not free. A one-line fix —
-letting `auto` win for the machine-derived keys — would resolve it generally.
+values the pipeline computed.
+
+For `checksum` this is not cosmetic, and an earlier version of this README got it
+wrong by calling it "idempotent and harmless". `Indexer.index()` opens with
+`is_already_indexed(doc_id, frontmatter.checksum)` and returns immediately when
+that value matches what is already in Chroma. So a supplied checksum that does
+not track the file's own content means **a changed document is never re-indexed**
+— it is reported as `status=indexed, chunks_added=0`, printed under *Indexed*
+rather than *Failed*, and the stale chunks stay. `scan --force` does not rescue
+it: force only deletes the processed twin to bypass `_is_file_unchanged()`, and
+never reaches this check.
+
+This adapter now hashes the exported frontmatter plus body, so the value moves
+whenever the export moves; the source-chunk hash lives on as
+`extra.source_checksum`. Omitting the field is **not** a workaround — see
+finding 2, which is what happens when you try.
+
+Letting `auto` win for the machine-derived keys would fix the class properly. The
+zero-chunk reporting is a second, separable bug: CLAUDE.md §9 says a document
+producing no chunks must be surfaced as `failed`, and this path violates it.
 
 **2. Frontmatter validation failure is caught and downgraded.** In
 `converter.convert()`, a `FrontmatterValidationError` from an existing block is
@@ -238,7 +281,7 @@ node integrations/trustlynx-ai/export-to-trustlynx-ai.mjs [options]
 | Option | Default | Purpose |
 |---|---|---|
 | `--out <dir>` | `integrations/trustlynx-ai/export/padsign` | Output directory |
-| `--image-prefix <path>` | `knowledge/raw/padsign/images` | Image path written into markdown, relative to the assistant's working directory |
+| `--image-prefix <path>` | `images` | Image path written into markdown, relative to the DOCUMENT that references it (captions under `figures/` automatically get one `../` more) |
 | `--product <name>` | `padsign_2_0` | Must exist in the assistant's `settings.yaml` products list |
 | `--doc-prefix <name>` | `padsign` | doc_id and tag prefix |
 

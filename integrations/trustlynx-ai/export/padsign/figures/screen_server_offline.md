@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:f4c15e7841463e12ede070693c6ad96249b00bbe303803c779f8e723105e2d7d
+checksum: sha256:4e901f1563fdb59456b490581d6ed9894bda5059d75ca1fd4c531f108afd7717
 tags:
   - padsign
   - screenshot
@@ -21,11 +21,12 @@ extra:
   used_by:
     - 10-05-cannot-get-into-the-portal
   capture_note: Demo mode with the health check deliberately failing. No customer data.
+  source_checksum: sha256:f4c15e7841463e12ede070693c6ad96249b00bbe303803c779f8e723105e2d7d
 ---
 
 # Screen: A full-screen message reading Application server is not available, with a Retry Now button
 
-![A full-screen message reading Application server is not available, with a Retry Now button.](knowledge/raw/padsign/images/screen-server-offline.png)
+![A full-screen message reading Application server is not available, with a Retry Now button.](../images/screen-server-offline.png)
 
 
 The connection-failure screen. It replaces the entire interface — there is no logo, no document

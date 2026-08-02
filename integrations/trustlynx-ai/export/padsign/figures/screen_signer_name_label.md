@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:6d31707e4372a6d07529dab13bd4537ae14acbde0893439c8d8b49c6a433a85d
+checksum: sha256:69f5593b16f86425199191b807791202fae400f6e63db005396c984126a82f60
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
     - 02-05-drawing-and-submitting-your-signature
     - 03-01-screen-signature-pad
   capture_note: Demo mode, generated sample PDF, fictional signer name. Signature is a synthetic stroke.
+  source_checksum: sha256:6d31707e4372a6d07529dab13bd4537ae14acbde0893439c8d8b49c6a433a85d
 ---
 
 # Screen: The signature box with a Signer name label displayed above it
 
-![The signature box with a Signer name label displayed above it.](knowledge/raw/padsign/images/screen-signer-name-label.png)
+![The signature box with a Signer name label displayed above it.](../images/screen-signer-name-label.png)
 
 
 The signature area with the optional signer-name label switched on.

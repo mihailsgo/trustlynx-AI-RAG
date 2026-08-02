@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:f39c0735e7e9a0fa22fe026649fa5e6bcfe27da2f83ad3b0a915c40b522c7573
+checksum: sha256:e1b710a4dd7f08c780723269ce343451442c17ed008c811a0c516909cd9b4797
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
   used_by:
     - 09-01-devices-and-input
   capture_note: Demo mode, neutral logo, placeholder account, dark colour scheme. No customer data.
+  source_checksum: sha256:f39c0735e7e9a0fa22fe026649fa5e6bcfe27da2f83ad3b0a915c40b522c7573
 ---
 
 # Screen: The resting screen in dark mode, showing the logo on a dark background
 
-![The resting screen in dark mode, showing the logo on a dark background.](knowledge/raw/padsign/images/screen-idle-waiting-dark.png)
+![The resting screen in dark mode, showing the logo on a dark background.](../images/screen-idle-waiting-dark.png)
 
 
 The same resting screen as in normal light mode, but on a device whose system appearance is

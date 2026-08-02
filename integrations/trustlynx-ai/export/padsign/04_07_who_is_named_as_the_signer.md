@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:94f3a4a0903b4d5e346faa335d810e3923172945d25b161e435d7710e5c0bf11
+checksum: sha256:117c95a34fd2ce14ce79dcbd3a66c07ea93e731da76f6c6692ffc80aecdb5c11
 tags:
   - padsign
   - signature-law
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That the seal identifies or authenticates the individual signer.
     - That PadSign checks the signer's identity against an identity document or official register.
+  source_checksum: sha256:94f3a4a0903b4d5e346faa335d810e3923172945d25b161e435d7710e5c0bf11
 ---
 
 

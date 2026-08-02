@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:06bc4fdd51dd1cd8bacf51e40ea854f585fd7381f4a5753a7a1814ae85522484
+checksum: sha256:b731b90087d8aaef15d1932b4d60279340de5313ab1c35d1319407aa1bc900e2
 tags:
   - padsign
   - troubleshooting
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - Any instruction to change network, server, or device configuration.
     - That a signer should attempt to log in.
+  source_checksum: sha256:06bc4fdd51dd1cd8bacf51e40ea854f585fd7381f4a5753a7a1814ae85522484
 ---
 
 
@@ -43,7 +44,7 @@ The whole screen is replaced by:
 
 with a **Retry Now** button.
 
-![A full-screen message reading Application server is not available with a Retry Now button](knowledge/raw/padsign/images/screen-server-offline.png)
+![A full-screen message reading Application server is not available with a Retry Now button](images/screen-server-offline.png)
 
 ## What it means
 

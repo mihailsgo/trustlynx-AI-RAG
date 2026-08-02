@@ -12,7 +12,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:0dce3e77151467b88f26ac0b24e7337915b32b82bb462b490e6b32ecb4f1a708
+checksum: sha256:7ec10cbf55e6bc80294a9e9ec81f8b9ffee9bbdb1fd498006d570efb4bea40a8
 tags:
   - padsign
   - screenshot
@@ -26,11 +26,12 @@ extra:
   capture_note: >-
     Demo mode with a signed demo document present, placeholder account. Cropped to the control
     cluster.
+  source_checksum: sha256:0dce3e77151467b88f26ac0b24e7337915b32b82bb462b490e6b32ecb4f1a708
 ---
 
 # Screen: The demo controls after signing, showing both Load DEMO PDF and Download signed PDF buttons
 
-![The demo controls after signing, showing both Load DEMO PDF and Download signed PDF buttons.](knowledge/raw/padsign/images/screen-download-signed.png)
+![The demo controls after signing, showing both Load DEMO PDF and Download signed PDF buttons.](../images/screen-download-signed.png)
 
 
 The demo control cluster after a document has been signed. Two outlined buttons now sit side by

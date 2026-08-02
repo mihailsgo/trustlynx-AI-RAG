@@ -12,7 +12,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:7c8fd16a5c018c7bf95422dd4ee1ac2f37d7d87f38714706803300e26af9c649
+checksum: sha256:6dbd7b81ae99d101627c84e09663948fdbda51359818ac5098e7e8c338afc511
 tags:
   - padsign
   - screenshot
@@ -24,11 +24,12 @@ extra:
   used_by:
     - 06-04-demo-mode
   capture_note: Demo mode, placeholder account. Cropped to the control cluster. No customer data.
+  source_checksum: sha256:7c8fd16a5c018c7bf95422dd4ee1ac2f37d7d87f38714706803300e26af9c649
 ---
 
 # Screen: The demo control cluster with a Load DEMO PDF button and the signed-in account shown beneath it
 
-![The demo control cluster with a Load DEMO PDF button and the signed-in account shown beneath it.](knowledge/raw/padsign/images/screen-demo-controls.png)
+![The demo control cluster with a Load DEMO PDF button and the signed-in account shown beneath it.](../images/screen-demo-controls.png)
 
 
 The demo control cluster, which sits in the top-right corner of the screen. Cropped here to show

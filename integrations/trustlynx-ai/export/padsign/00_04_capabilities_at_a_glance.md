@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:0e769e0a6268143c4539233c8fe15e517c83d467304dbc0cd9c37106c954ca66
+checksum: sha256:b6e6db9f12fc2a4c2a52135f4a58eeb3048b76a1ff0d6f1eefe926dfd35e3bc2
 tags:
   - padsign
   - product
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That every capability listed is switched on in every deployment.
     - That the seal step is mandatory — it is optional and configurable.
+  source_checksum: sha256:0e769e0a6268143c4539233c8fe15e517c83d467304dbc0cd9c37106c954ca66
 ---
 
 
@@ -70,7 +71,7 @@ the reference and status are reported back to whatever sent them.
 The steps are shown on screen as they complete, so the person signing knows
 progress is being made and when it is safe to walk away.
 
-![A progress panel showing four signing steps with the digital stamp step active](knowledge/raw/padsign/images/screen-progress-steps.png)
+![A progress panel showing four signing steps with the digital stamp step active](images/screen-progress-steps.png)
 
 ## Also available
 

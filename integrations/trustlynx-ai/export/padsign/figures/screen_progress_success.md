@@ -12,7 +12,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:70121a8e3912bb25db4da87a27a86136c078aab7103c12bd0e1628969e1c6270
+checksum: sha256:cb19607131237398358017068ebd900555a8f2868af26e7d89c2984700b4d287
 tags:
   - padsign
   - screenshot
@@ -26,11 +26,12 @@ extra:
     - 03-02-screen-signing-progress-and-outcome
     - 07-01-what-happens-to-the-document-after-signing
   capture_note: Demo mode, generated sample PDF, all steps mocked to succeed. No customer data.
+  source_checksum: sha256:70121a8e3912bb25db4da87a27a86136c078aab7103c12bd0e1628969e1c6270
 ---
 
 # Screen: The progress panel with all four steps complete and a message that the document was signed successfully
 
-![The progress panel with all four steps complete and a message that the document was signed successfully.](knowledge/raw/padsign/images/screen-progress-success.png)
+![The progress panel with all four steps complete and a message that the document was signed successfully.](../images/screen-progress-success.png)
 
 
 The confirmation panel, shown once signing has completed successfully.

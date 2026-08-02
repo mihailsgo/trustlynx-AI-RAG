@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:d0d3a94a7dd395a1a58225dc1b1b6740f7ba389b729351226713b17901fb8959
+checksum: sha256:4f7f786f91d41d480958b090d6fffca8650677638c6770275b7fc38e2e70f203
 tags:
   - padsign
   - screenshot
@@ -22,11 +22,12 @@ extra:
     - 02-02-a-document-arrives-on-the-pad
     - 10-01-nothing-appears-on-the-pad
   capture_note: Demo mode, neutral logo, placeholder account. No customer data.
+  source_checksum: sha256:d0d3a94a7dd395a1a58225dc1b1b6740f7ba389b729351226713b17901fb8959
 ---
 
 # Screen: The resting screen, showing only a centred logo and a footer
 
-![The resting screen, showing only a centred logo and a footer.](knowledge/raw/padsign/images/screen-idle-waiting.png)
+![The resting screen, showing only a centred logo and a footer.](../images/screen-idle-waiting.png)
 
 
 The pad's resting screen, which is what it shows between visitors. A single logo sits

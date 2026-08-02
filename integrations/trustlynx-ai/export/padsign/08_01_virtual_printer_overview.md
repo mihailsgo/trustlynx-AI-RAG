@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:6215868b53138f949408e9448e1e84bc7de0fc057332f80003e074ff8ca4229a
+checksum: sha256:6f9305c10ce0d70e0404420640fef4792fa2e4e13227c1103604dfd08700e635
 tags:
   - padsign
   - companions
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - A download location, installer name, version number, or supported Windows versions.
     - Configuration field names, API keys, or local file paths.
+  source_checksum: sha256:6215868b53138f949408e9448e1e84bc7de0fc057332f80003e074ff8ca4229a
 ---
 
 

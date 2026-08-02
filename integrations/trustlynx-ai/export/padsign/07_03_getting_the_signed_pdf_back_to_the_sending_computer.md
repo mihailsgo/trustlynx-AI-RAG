@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:39f9149a04bb2ac3e963d4c73d6d82d0cfaa535952115d60a5a213bdbcf43573
+checksum: sha256:47232cefc54e26a3a8b67364050b3c5d3a1ec9aa613e8e254436663e95d83195
 tags:
   - padsign
   - delivery
@@ -29,6 +29,7 @@ extra:
   do_not_state:
     - Endpoint names, configuration paths, or local file paths on any customer machine.
     - A retention or expiry period for buffered documents.
+  source_checksum: sha256:39f9149a04bb2ac3e963d4c73d6d82d0cfaa535952115d60a5a213bdbcf43573
 ---
 
 

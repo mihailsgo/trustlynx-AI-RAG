@@ -10,7 +10,7 @@ product: padsign_2_0
 department: support
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:3c538e302b698c4abcfb87b9bd1edbe21e97b5440396a512c1ae8967b7060705
+checksum: sha256:25169f82bf5d5e97c0f2991f772c6df89bb28b62ffddfc4e753d78efc5cc9bb8
 tags:
   - padsign
   - companions
@@ -27,6 +27,7 @@ extra:
   do_not_state:
     - A specific local folder path, since that is configured per installation.
     - Installation or configuration instructions, which are for whoever set the machine up.
+  source_checksum: sha256:3c538e302b698c4abcfb87b9bd1edbe21e97b5440396a512c1ae8967b7060705
 ---
 
 

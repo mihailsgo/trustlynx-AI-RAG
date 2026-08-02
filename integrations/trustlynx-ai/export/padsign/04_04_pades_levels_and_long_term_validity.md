@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:406a4951ff57bbb1753334d2b700e580a791954295c2d35d2e8950ec0e2c9d00
+checksum: sha256:e5d12ddd588f8b5f11ecf75efd2c36be3a39fe2d2f7d2299e7d838a39f4c053a
 tags:
   - padsign
   - signature-law
@@ -28,6 +28,7 @@ extra:
   do_not_state:
     - That PadSign is configured at any particular PAdES level by default.
     - The names or addresses of specific timestamp or revocation services in use.
+  source_checksum: sha256:406a4951ff57bbb1753334d2b700e580a791954295c2d35d2e8950ec0e2c9d00
 ---
 
 

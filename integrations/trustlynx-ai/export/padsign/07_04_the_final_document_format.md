@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:bb1ce4708cb8f70f3ea76b7e9802a11cc8641a08e60e38a78ca7a8bb7c832d81
+checksum: sha256:1f3d5990623758b1413bf71585282cd758cc3e3eadb48cdbebe192a6f2aaa745
 tags:
   - padsign
   - delivery
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That every deployment produces the same signature level or the same output format.
     - That a PDF reader's verdict establishes legal validity.
+  source_checksum: sha256:bb1ce4708cb8f70f3ea76b7e9802a11cc8641a08e60e38a78ca7a8bb7c832d81
 ---
 
 

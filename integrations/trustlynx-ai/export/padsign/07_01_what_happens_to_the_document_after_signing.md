@@ -10,7 +10,7 @@ product: padsign_2_0
 department: shared
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:d30b30182cd71388be2f11cb6b9158a61959a8cb376ce25dd92f14a6ae8e71e2
+checksum: sha256:b7667bcd75fdbed5cf0aaedd3465201f41d75c7c595265c4820744b7211796b8
 tags:
   - padsign
   - delivery
@@ -30,6 +30,7 @@ extra:
   do_not_state:
     - That the signer automatically receives a copy — that depends on the organisation's process.
     - Any retention period for the stored document.
+  source_checksum: sha256:d30b30182cd71388be2f11cb6b9158a61959a8cb376ce25dd92f14a6ae8e71e2
 ---
 
 
@@ -59,7 +60,7 @@ knows the document is ready.
 
 You see steps 1 to 3 as they happen, and then a confirmation.
 
-![The progress panel with all steps complete and a success message](knowledge/raw/padsign/images/screen-progress-success.png)
+![The progress panel with all steps complete and a success message](images/screen-progress-success.png)
 
 ## The screen reset is not a problem
 

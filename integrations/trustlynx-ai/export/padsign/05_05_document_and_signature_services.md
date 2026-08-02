@@ -10,7 +10,7 @@ product: padsign_2_0
 department: sales
 version: 2026.07.2
 last_updated: '2026-07-31'
-checksum: sha256:ca35dd09f4778113e98695b5ef9081f7d8e39640a18c8717e49ddfdb93f41a9e
+checksum: sha256:bd6b3abeb8f8fc8aca8f743bc6c02f51fda74f43cc68f326997454ff15b6bf18
 tags:
   - padsign
   - components
@@ -29,6 +29,7 @@ extra:
     - Any data-retention period, since that depends on deployment configuration.
     - Service names, ports, container image names, or database details.
     - That the included storage is intended as a long-term records archive.
+  source_checksum: sha256:ca35dd09f4778113e98695b5ef9081f7d8e39640a18c8717e49ddfdb93f41a9e
 ---
 
 
