@@ -170,10 +170,23 @@ ingest and a real eval:
 - **Chunking:** 75 documents → **85 chunks**, 0 failures. The single-chunk design
   mostly holds; nine documents split into 2–3 (the message catalogue is the
   widest at 3).
-- **Retrieval with real embeddings**, public profile, `--product padsign_2_0`:
-  **43/54 positives (80%)**, 7/9 negatives, screenshot recall **12/13 (92%)**,
-  figure precision **6/6** (never showed a figure listed in `wrong_figures`),
-  latency mean 6.5 s / p95 13.2 s. Meets that app's v1.0 bar.
+- **Retrieval with real embeddings**, public profile, `--product padsign_2_0`.
+  Measured over four runs of the same configuration, because at
+  `temperature: 0.2` a single run is not a result. Single runs landed at 69% /
+  74% / 80% positives with screenshot recall 62% / 62% / 92%. Under
+  `--repeat 3` — where a question must pass **every** iteration and a screenshot
+  counts on a **majority** — the suite gives **37/54 positives (69%), 5/9
+  negatives, screenshot recall 10/13 (77%), figure precision 6/6** (never showed
+  a figure listed in `wrong_figures`), latency mean 4.4 s / p95 6.5 s.
+
+  That places it **at or just under** the app's v1.0 bar (≥70% positives, ≥80%
+  screenshot recall), not comfortably above it. An earlier version of this
+  section quoted the single best run, 80% / 92%; treat that as the optimistic
+  tail, not the expected value.
+
+  Screenshot recall is the volatile number because that app derives screenshots
+  from the **cited** sources, so recall follows whichever source the model cited
+  that run. Consistently weak: `ps008` and `ps023`, both 1/3.
 
 Getting there took the two export fixes described above. Worth knowing about the
 run in between: with the image paths broken the same suite reported 72% positives
